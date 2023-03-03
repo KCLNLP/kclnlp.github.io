@@ -1,0 +1,531 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>King's College London NLP</title>
+    <link rel="shortcut icon" type="image/x-icon" href="favicon.ico" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+        integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="./styles.css">
+    <style>
+        body,
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
+            font-family: "Lato", sans-serif
+        }
+
+        .w3-bar,
+        h1,
+        button {
+            font-family: "Montserrat", sans-serif
+        }
+
+        .fa-anchor,
+        .fa-coffee {
+            font-size: 200px
+        }
+
+        .homebackground {
+            background-image: url('./pictures/background/home.webp');
+            height: 350px;
+            overflow: hidden;
+        }
+
+        .maintopic {
+            margin-top: 150px;
+            color: white;
+            font-size: 65px;
+            text-align: left;
+        }
+
+        .topic {
+            margin-top: 10px;
+            color: white;
+            font-size: 35px;
+            text-align: left;
+        }
+
+        .jumpbutton {
+            background-color: rgba(43, 43, 43, 0.9);
+            border: none;
+            color: white;
+            padding: 15px 32px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin: 4px 2px;
+            cursor: pointer;
+        }
+
+        .backgroundlayer {
+            background-color: rgba(255, 255, 255, 0);
+            position: absolute;
+            top: 100px;
+            left: 50%;
+            z-index: 15;
+            margin: 0 0 0 -35%;
+            width: 70%;
+            font-size: large;
+        }
+
+        .maintitle {
+            margin-top: 10px;
+            color: black;
+            font-size: 35px;
+            text-align: left;
+        }
+
+        .maintext {
+            color: rgb(107, 107, 107);
+            font-size: 17px;
+            text-align: left;
+        }
+
+        .background1 {
+            background-color: rgba(76, 83, 82, 0.2)
+        }
+
+        .toptopic {
+            width: 100%;
+            background-color: rgb(49, 49, 49);
+        }
+
+        .navbarbutton {
+            background-color: black;
+            border: none;
+            color: white;
+            padding: 15px 32px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin: 4px 2px;
+            cursor: pointer;
+        }
+
+        li.space {
+            margin: 10px 0;
+        }
+    </style>
+</head>
+
+
+<body>
+
+    <!-- Navbar -->
+
+    <div class="w3-top toptopic">
+        <div class="col-xs-4">
+            <div style="height: 10px;"></div>
+            <b style="color: rgb(219, 219, 219); font-size: 25px; height: 40px; margin-left: 10px;">
+                King's College London NLP </b>
+            <div style="height: 2px;"></div>
+        </div>
+        <div class="col-xs-8">
+
+            <ul class="nav nav-pills">
+                <li class="nav-item">
+                    <a class="nav-link" aria-current="page" href="./about.html">About</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" aria-current="page" href="./research.html">Research</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" aria-current="page" href="./team.html">Team</a>
+                </li>
+                <li class="nav-item active font-weight-bold">
+                    <a class="nav-link" aria-current="page" href="./publications.html">Publications</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" aria-current="page" href="./resource.html">Resource</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" aria-current="page" href="./contact.html">Contact</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+
+
+
+
+
+    <!-- Header -->
+    <div class="backgroundlayer" style="font-size:16px">
+        <div style="font-size: 25px; margin-bottom:10px">
+            <b style="color: rgba(98, 73, 31, 0.691);">2023</b>
+        </div>
+        <ul>
+            <li class="space">
+                X. Tan, G. Pergola and Y. He.
+                <a href="https://arxiv.org/abs/2302.04985">A User-Centered, Interactive, Human-in-the-Loop Topic
+                    Modelling System</a>,
+                <em>The 17th Conference of the European Chapter of the Association for Computational Linguistics </em>
+                (<b>EACL</b>), May. 2023.
+            </li>
+
+            <li class="space">
+                Z. Fang, Y. He, R. Procter, L.A. Alqazlan and D. Liu.
+                <a href="">Event Temporal Relation Extraction with Bayesian Translational Model</a>,
+                <em>The 17th Conference of the European Chapter of the Association for Computational Linguistics </em>
+                (<b>EACL</b>), May. 2023.
+            </li>
+
+            <li class="space">
+                J. Lu, J. Li, B.C. Wallace, Y. He and G. Pergola.
+                <a href="https://arxiv.org/abs/2302.05574">NapSS: Paragraph-level Medical Text Simplification via
+                    Narrative Prompting and Sentence-matching Summarization</a>,
+                <em>Findings of EACL</em>, May. 2023.
+            </li>
+
+            <li class="space">
+                H. Li, H. Yan, Y. Li, L. Qian, Y. He and L. Gui.
+                <a href="https://arxiv.org/abs/2302.06198">Distinguishability Calibration to In-Context Learning</a>,
+                <em>Findings of EACL</em>, May. 2023.
+            </li>
+
+            <li class="space">
+                R. Zhao, L. Gui, H. Yan and Y. He.
+                <a href="https://arxiv.org/abs/2301.07183">Tracking Brand-Associated Polarity-Bearing Topics in User
+                    Reviews</a>,
+                <em>Transactions of the Association for Computational Linguistics</em>, accepted.
+            </li>
+
+            <li class="space">
+                E. Kochkina, T. Hossain, R.L. Logan, M. Arana-Catania, R. Procter, A. Zubiaga, S. Singh, Y. He and M.
+                Liakata.
+                <a href="https://www.sciencedirect.com/science/article/pii/S0306457322002175">Evaluating the
+                    Generalisability of Neural Rumour Verification Models</a>,
+                <em>Information Processing & Management </em>, Volume 60, Issue 1, 2023.
+            </li>
+
+            <li class="space">
+                S. Gao, C. Gao, Y. He, J. Zeng, L. Nie, X. Xia, M. Lyu.
+                <a href="https://arxiv.org/abs/2104.09340">Code Structure Guided Transformer for Source Code
+                    Summarization</a>,
+                <em>ACM Transactions on Software Engineering and Methodology</em>, 32(1):1-32, 2023.
+            </li>
+        </ul>
+
+        <div style="font-size: 25px; margin-bottom:10px">
+            <b style="color: rgba(98, 73, 31, 0.691);">2022</b>
+        </div>
+        <ul>
+            <li class="space">
+                Z. Sun, J. Li, G. Pergola, B.C. Wallace, B. John, N. Greene, J. Kim and Y. He.
+                <a href="https://arxiv.org/abs/2210.12560">PHEE: A Dataset for Pharmacovigilance Event Extraction
+                    from Text</a>,
+                <em>The 2022 Conference on Empirical Methods in Natural Language Processing </em> (<b>EMNLP</b>),
+                Dec. 2022.
+            </li>
+
+            <li class="space">
+                J. Lu, X. Tan, G. Pergola, L. Gui and Y. He.
+                <a href="https://arxiv.org/abs/2210.12902#">Event-Centric Question Answering via Contrastive Learning
+                    and Invertible Event Transformation</a>,
+                <em>Findings of EMNLP</em>, Dec. 2022.
+            </li>
+
+            <li class="space">
+                H. Yan, L. Gui and Y. He.
+                <a
+                    href="https://direct.mit.edu/coli/article/48/4/987/112768/Hierarchical-Interpretation-of-Neural-Text">Hierarchical
+                    Interpretation of Neural Text
+                    Classification</a>,
+                <em>Computational Linguistics</em>, to appear.
+            </li>
+
+            <li class="space">
+                J. Wang, A. Bhalerao and Y. He.
+                <a href="https://arxiv.org/abs/2207.04818">Cross-modal Prototype Driven Network for Radiology Report
+                    Generation</a>,
+                <em>17th European Conference on Computer Vision</em> (<b>ECCV</b>), Oct. 2022.
+            </li>
+
+            <li class="space">
+                H. Yan, L. Gui, W. Li ad Y. He.
+                <a href="https://openreview.net/forum?id=BtUxE_8i5l5">Addressing Token
+                    Uniformity in Transformers via Singular Value Transformation</a>,
+                <em>38th Conference on Uncertainty in Artificial Intelligence</em> (<b>UAI</b>), Aug. 2022.
+            </li>
+
+            <li class="space">
+                L. Zhu, Z. Fang, G. Pergola, R. Procter and Y. He.
+                <a href="https://arxiv.org/abs/2205.03296">Disentangled Learning of Stance and Aspect Topics for
+                    Vaccine Attitude Detection in Social Media</a>,
+                <em>2022 Annual Conference of the North American Chapter of the Association for Computational
+                    Linguistics </em> (<b>NAACL</b>), Jul. 2022.
+            </li>
+
+            <li class="space">
+                M. Arana Catania, E. Kochkina, A. Zubiaga, M. Liakata, R. Procter and Y. He.
+                <a href="https://arxiv.org/abs/2205.02596">Natural Language Inference with Self-Attention for
+                    Veracity Assessment of Pandemic Claims</a>,
+                <em>2022 Annual Conference of the North American Chapter of the Association for Computational
+                    Linguistics </em> (<b>NAACL</b>), Jul. 2022.
+            </li>
+
+            <li class="space">
+                B. Liang, Q. Zhu, X. Li, M. Yang, L. Gui, Y. He and R. Xu.
+                <a href="https://aclanthology.org/2022.acl-long.7/">JointCL: A Joint Contrastive Learning Framework for
+                    Zero-Shot Stance Detection</a>,
+                <em>The 60th Annual Meeting of the Association for Computational Linguistics </em> (<b>ACL</b>), May
+                2022.
+            </li>
+
+            <li class="space">
+                B. Liang, C. Lou, X. Li, M. Yang, L. Gui, Y. He, W. Pei and R. Xu.
+                <a href="https://dl.acm.org/doi/abs/10.1145/3474085.3475190">Multi-Modal Sarcasm Detection via
+                    Cross-Modal Graph
+                    Convolutional Network</a>,
+                <em>The 60th Annual Meeting of the Association for Computational Linguistics </em> (<b>ACL</b>), May
+                2022.
+            </li>
+
+            <li class="space">
+                J. Dougrez-Lewis, M. Arana Catania, E. Kochkina, M. Liakata and Y. He.
+                <a href="http://wrap.warwick.ac.uk/165272/">PHEMEPlus: Enriching Social Media Rumour Verification
+                    with External Evidence</a>,
+                <b>The 5th FEVER Workshop, co-located with ACL</b> May 2022.
+            </li>
+
+            <li class="space">
+                S. Salawu, J. Lumsden, Y. He.
+                <a href="https://link.springer.com/article/10.1007/s42380-021-00115-5">A Mobile-Based System for
+                    Preventing Online Abuse and
+                    Cyberbullying</a>,
+                <em>International Journal of Bullying Prevention</em> (<b>ACL</b>), to appear.
+            </li>
+
+            <li class="space">
+                B. Liang, Z. Chen, L. Gui, Y. He, M. Yang and R. Xu.
+                <a href="https://dl.acm.org/doi/10.1145/3485447.3511994">Zero-Shot Stance Detection via Contrastive
+                    Learning</a>,
+                <em>The Web Conference </em> (<b>WWW</b>), Apr. 2022.
+            </li>
+
+            <li class="space">
+                B. Liang, R. Yin, J. Du, L. Gui, Y. He, M. Yang and R. Xu.
+                <a href="https://arxiv.org/abs/2205.02596">Embedding Refinement Framework for Targeted Aspect-based
+                    Sentiment Analysis</a>,
+                <em>IEEE Transactions in Affective Computing </em>, to appear.
+            </li>
+
+            <li class="space">
+                B. Liang, X. Li, L. Gui, Y. Fu, Y. He, M. Yang, R. Xu.
+                <a href="https://arxiv.org/abs/2205.02596">Few-Shot Aspect Category Sentiment Analysis via
+                    Meta-Learning</a>,
+                <em>ACM Transactions on Information Systems </em>, to appear.
+            </li>
+        </ul>
+
+
+        <div style="font-size: 25px; margin-bottom:10px">
+            <b style="color: rgba(98, 73, 31, 0.691);">2021</b>
+        </div>
+        <ul>
+            <li class="space">
+                L. Gui and Y. He.
+                <a href="https://www.sciencedirect.com/science/article/pii/S0933365721001536">Understanding Patient Reviews with Minimum Supervision</a>,
+                <em>Artificial Intelligence in Medicine</em>
+                , to appear.
+            </li>
+
+            <li class="space">
+                X. Tan, G. Pergola and Y. He.
+                <a href="https://aclanthology.org/2021.emnlp-main.636/">Extracting Event Temporal Relations via Hyperbolic Geometry</a>,
+                <em>Conference on Empirical Methods in Natural Language Processing</em>
+                (<b>EMNLP</b>), Nov. 2021.
+            </li>
+
+            <li class="space">
+                D. Zhou, J. Wang, L. Zhang and Y. He.
+                <a href="https://aclanthology.org/2021.emnlp-main.551/">Implicit Sentiment Analysis with Event-Centered Text
+                    Representation</a>,
+                <em>Conference on Empirical Methods in Natural Language Processing</em>
+                (<b>EMNLP</b>), Nov. 2021.
+            </li>
+
+            <li class="space">
+                C. Ye, L. Zhang, D. Zhou, Y. He and J. Wu.
+                <a href="https://aclanthology.org/2021.emnlp-main.253/">Beyond Text: Incorporating Metadata and Label Structure for
+                    Multi-Label Document Classification using Heterogeneous Graphs</a>,
+                <em>Conference on Empirical Methods in Natural Language Processing</em>
+                (<b>EMNLP</b>), Nov. 2021.
+            </li>
+
+            <li class="space">
+                L. Zhang, D. Zhou, C. Lin and Y. He.
+                <a href="https://aclanthology.org/2021.findings-emnlp.404/">A Multi-label Multi-hop Relation Detection Model based on Relation-aware Sequence Generation</a>,
+                <em>Findings of EMNLP</em>, Nov. 2021.
+            </li>
+
+            <li class="space">
+                W. Zhang, L. Gui and Y. He.
+                <a href="https://arxiv.org/abs/2109.01850">Supervised Contrastive Learning for Multi-modal Unreliable News Detection in COVID-19 Pandemic</a>,
+                <em>The 30th ACM International Conference on Information and Knowledge Management</em>
+                (<b>CIKM</b>), Nov. 2021.
+            </li>
+
+            <li class="space">
+                H. Yan, L. Gui, G. Pergola and Y. He.
+                <a href="https://arxiv.org/abs/2106.03518">Position Bias Mitigation: A Knowledge-Aware Graph Model for Emotion Cause Extraction</a>,
+                <em>The 59th Annual Meeting of the Association for Computational Linguistics</em>
+                (<b>ACL</b>), Aug. 2021.
+            </li>
+
+            <li class="space">
+                L. Zhu, G. Pergola, L. Gui, D. Zhou and Y. He.
+                <a href="https://arxiv.org/abs/2106.01071v1">Topic-Driven and Knowledge-Aware Transformer for Dialogue Emotion Detection</a>,
+                <em>The 59th Annual Meeting of the Association for Computational Linguistics</em>
+                (<b>ACL</b>), Aug. 2021.
+            </li>
+
+            <li class="space">
+                J. Si, D. Zhou, T. Li, X. Shi and Y. He. 
+                <a href="https://arxiv.org/abs/2106.01191">Topic-aware Evidence Reasoning and Stance-aware Aggregating for Fact Verification</a>,
+                <em>The 59th Annual Meeting of the Association for Computational Linguistics</em>
+                (<b>ACL</b>), Aug. 2021.
+            </li>
+
+            <li class="space">
+                J. Dougrez-Lewis, E. Kochkina, M. Liakata and Y. He.
+                <a href="https://aclanthology.org/2021.findings-acl.341.pdf">Learning Disentangled Latent Topics for Twitter Rumour Veracity Classificationn</a>,
+                <em>Findings of ACL</em>, Aug. 2021.
+            </li>
+
+            <li class="space">
+                Z. Fang, Y. He and R. Procter. 
+                <a href="https://arxiv.org/abs/2106.07346">Query-Driven Topic Model</a>,
+                <em>Findings of ACL</em>, Aug. 2021.
+            </li>
+
+            <li class="space">
+                S. Salawu, J. Lumsden and Y. He.
+                <a href="https://aclanthology.org/2021.woah-1.16/">A Large-Scale English Multi-Label Twitter Dataset for Cyberbullying and Online Abuse Detection</a>,
+                <em>Proceedings of the 5th Workshop on Online Abuse and Harms, co-located with ACL</em>, Aug. 2021.
+            </li>
+
+            <li class="space">
+                C. Lou, B. Liang, L. Gui, Y. He, Y. Dang and R. Xu.
+                <a href="https://dl.acm.org/doi/10.1145/3404835.3463061">Affective Dependency Graph for Sarcasm Detection</a>,
+                <em>The 44th International ACM SIGIR Conference on Research and Development in Information Retrieval</em>
+                (<b>SIGIR</b>), Jul. 2021.
+            </li>
+
+            <li class="space">
+                B. Liang, R. Yin, J. Du, L. Gui, Y. He, M. Yang and R. Xu. 
+                <a href="https://ieeexplore.ieee.org/document/9397340">Embedding Refinement Framework for Targeted Aspect-based Sentiment Analysis</a>,
+                <em>IEEE Transactions in Affective Computing</em>, to appear.
+            </li>
+
+            <li class="space">
+                D. Zhou, K. Sun, M. Hu and Y. He. 
+                <a href="https://www.sciencedirect.com/science/article/abs/pii/S0950705121004627?dgcid=coauthor">Image Generation from Text with Entity Information Fusion</a>,
+                <em>Knowledge-Based Systems</em>, Vol. 227, 107200, 2021.
+            </li>
+
+            <li class="space">
+                G. Pergola, L. Gui and Y. He. 
+                <a href="https://arxiv.org/abs/2010.11384">A Disentangled Adversarial Neural Topic Model for Separating Opinions from Plots in User Reviews</a>,
+                <em>Annual Conference of the North American Chapter of the Association for Computational Linguistics</em>
+                (<b>NAACL</b>), Jun. 2021.
+            </li>
+
+            <li class="space">
+                B. Liang, Y. Fu, L. Gui, M. Yang, J. Du, Y. He and R. Xu.
+                <a href="https://dl.acm.org/doi/abs/10.1145/3442381.3449790">Target-adaptive Graph for Cross-target Stance Detection</a>,
+                <em>The Web Conference</em>
+                (<b>WWW</b>), Apr. 2021.
+            </li>
+
+            <li class="space">
+                R. Zhao, L. Gui, G. Pergola and Y. He. 
+                <a href="https://arxiv.org/abs/2101.10150">Adversarial Learning of Poisson Factorisation Model for Gauging Brand Sentiment in User Reviews</a>,
+                <em>The 16th Conference of the European Chapter of the Association for Computational Linguistics</em>
+                (<b>EACL</b>), Apr. 2021.
+            </li>
+
+            <li class="space">
+                G. Pergola, E. Kochkina, L. Gui, M. Liakata and Y. He. 
+                <a href="https://arxiv.org/abs/2102.08366">Boosting Low-Resource Biomedical QA via Entity-Aware Masking Strategies</a>,
+                <em>The 16th Conference of the European Chapter of the Association for Computational Linguistics</em>
+                (<b>EACL</b>), Apr. 2021.
+            </li>
+
+            <li class="space">
+                L. Zhang, D. Zhou, Y. He and Z. Yang. 
+                <a href="https://ojs.aaai.org/index.php/AAAI/article/view/17695">MERL: Multimodal Event Representation Learning in Heterogeneous Embedding Spaces</a>,
+                <em>The 35th AAAI Conference on Artificial Intelligence</em>
+                (<b>AAAI</b>), Feb. 2021.
+            </li>
+
+            <li class="space">
+                D. Zhou, M. Zhang, L. Zhang and Y. He. 
+                <a href="https://ojs.aaai.org/index.php/AAAI/article/view/17715">A Neural Group-wise Sentiment Analysis Model with Data Sparsity Awareness</a>,
+                <em>The 35th AAAI Conference on Artificial Intelligence</em>
+                (<b>AAAI</b>), Feb. 2021.
+            </li>
+
+            <li class="space">
+                M. Arana-Catania, F. A. Van Lier, R. Procter, N. Tkachenko, Y. He, A. Zubiaga, M. Liakata. 
+                <a href="https://arxiv.org/abs/2103.00508">Citizen Participation and Machine Learning for a Better Democracy</a>,
+                <em>Digital Government: Research and Practice</em>, to appear.
+            </li>
+
+            <li class="space">
+                D. Zhou, M. Zhang, L. Zhang and Y. He.
+                <a href="https://www.sciencedirect.com/science/article/abs/pii/S0885230820301108?via%3Dihub">A Neural Group-wise Sentiment Analysis Model with Data Sparsity Awareness</a>,
+                <em>The 35th AAAI Conference on Artificial Intelligence</em>
+                (<b>AAAI</b>), Feb. 2021.
+            </li>
+
+            <li class="space">
+                D. Zhou, M. Zhang, Y. Yang and Y. He. . 
+                <a href="https://linkinghub.elsevier.com/retrieve/pii/S0885230820301005">Hierarchical State Recurrent Neural Network for Social Emotion Ranking</a>,
+                <em>Computer Speech & Language</em>, Vol. 68, 101177, 2021.
+            </li>
+        </ul>
+
+        
+        <div style="height:120px">
+        </div>
+    </div>
+
+
+    <div class="w3-bottom w3-container w3-grey w3-center w3-opacity">
+        <h5 class="w3-margin">© 2023 Copyright: <a href="https://warwick.ac.uk/fac/sci/dcs/research/nlp/">KCL/Warwick
+                NLP Group</a> and <a href="http://cogsci.eecs.qmul.ac.uk/">QUML Cognitive Science Research Group</a>
+        </h5>
+    </div>
+
+    <script>
+        // Used to toggle the menu on small screens when clicking on the menu button
+        function myFunction() {
+            var x = document.getElementById("navDemo");
+            if (x.className.indexOf("w3-show") == -1) {
+                x.className += " w3-show";
+            } else {
+                x.className = x.className.replace(" w3-show", "");
+            }
+        }
+
+    </script>
+
+</body>
+
+</html>

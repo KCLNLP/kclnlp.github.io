@@ -1,0 +1,499 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>King's College London NLP</title>
+    <link rel="shortcut icon" type="image/x-icon" href="favicon.ico" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+        integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="./styles.css">
+    <style>
+        body,
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
+            font-family: "Lato", sans-serif
+        }
+
+        .w3-bar,
+        h1,
+        button {
+            font-family: "Montserrat", sans-serif
+        }
+
+        .fa-anchor,
+        .fa-coffee {
+            font-size: 200px
+        }
+
+        .homebackground {
+            background-image: url('./pictures/background/home.webp');
+            overflow: hidden;
+        }
+
+        .maintopic {
+            margin-top: 150px;
+            color: white;
+            font-size: 65px;
+            text-align: left;
+        }
+
+        .topic {
+            margin-top: 10px;
+            color: white;
+            font-size: 35px;
+            text-align: left;
+        }
+
+        .jumpbutton {
+            background-color: rgba(43, 43, 43, 0.9);
+            border: none;
+            color: white;
+            padding: 15px 32px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin: 4px 2px;
+            cursor: pointer;
+        }
+
+        .maintitle {
+            margin-top: 10px;
+            color: rgba(98, 73, 31, 0.691);
+            font-size: 35px;
+            text-align: left;
+            padding-bottom: 20px;
+            background-color: white;
+        }
+
+        .maintitle:after {
+            background-color: grey;
+            content: '';
+            display: block;
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            right: 10px;
+            bottom: 10px;
+            z-index: -1;
+        }
+
+        .maintext {
+            color: rgb(107, 107, 107);
+            font-size: 17px;
+            text-align: left;
+        }
+
+        .background1 {
+            background-color: rgba(76, 83, 82, 0.2)
+        }
+
+        .toptopic {
+            width: 100%;
+            background-color: rgb(49, 49, 49);
+            z-index: 100;
+        }
+
+        .navbarbutton {
+            background-color: black;
+            border: none;
+            color: white;
+            padding: 15px 32px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin: 4px 2px;
+            cursor: pointer;
+        }
+
+        .logo {
+            margin: 10px;
+            display: table-cell;
+            vertical-align: middle;
+            text-align: center
+        }
+
+        .backgroundlayer {
+            margin-left: 15%;
+            width: 70%;
+        }
+
+        li.space {
+            margin: 10px 0;
+        }
+
+        button {
+            --b: 3px;
+            /* border thickness */
+            --s: .15em;
+            /* size of the corner */
+            --c: #BD5532;
+
+            padding: calc(.05em + var(--s)) calc(.3em + var(--s));
+            color: var(--c);
+            --_p: var(--s);
+            background:
+                conic-gradient(from 90deg at var(--b) var(--b), #0000 90deg, var(--c) 0) var(--_p) var(--_p)/calc(100% - var(--b) - 2*var(--_p)) calc(100% - var(--b) - 2*var(--_p));
+            transition: .3s linear, color 0s, background-color 0s;
+            outline: var(--b) solid #0000;
+            outline-offset: .2em;
+        }
+
+        button:hover,
+        button:focus-visible {
+            --_p: 0px;
+            outline-color: var(--c);
+            outline-offset: .05em;
+        }
+
+        button:active {
+            background: var(--c);
+            color: #fff;
+        }
+
+        button {
+            font-family: system-ui, sans-serif;
+            font-weight: bold;
+            font-size: 15px;
+            cursor: pointer;
+            border: none;
+            margin: .1em;
+        }
+    </style>
+</head>
+
+
+<body>
+
+    <!-- Navbar -->
+
+    <div class="w3-top toptopic">
+        <div class="col-xs-4">
+            <div style="height: 10px;"></div>
+            <b style="color: rgb(219, 219, 219); font-size: 25px; height: 40px; margin-left: 10px;">
+                King's College London NLP </b>
+            <div style="height: 2px;"></div>
+        </div>
+        <div class="col-xs-8">
+
+            <ul class="nav nav-pills">
+                <li class="nav-item">
+                    <a class="nav-link" aria-current="page" href="./about.html">About</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" aria-current="page" href="./research.html">Research</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" aria-current="page" href="./team.html">Team</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" aria-current="page" href="./publications.html">Publications</a>
+                </li>
+                <li class="nav-item  active font-weight-bold">
+                    <a class="nav-link" aria-current="page" href="./resource.html">Resource</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" aria-current="page" href="./contact.html">Contact</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+
+    <!-- Header -->
+    <div class="backgroundlayer  col-xs-12" style="margin-top: 120px;">
+        <div class="col-xs-12 maintitle">
+            <b>Code & Dataset</b>
+        </div>
+        <div class="maintext">
+            <ul>
+                <li class="space">
+                    <b>NapSS</b>
+                    <a href="https://github.com/LuJunru/NapSS">
+                        <button>Code</button>
+                    </a>
+                    - Paragraph-level Medical Text Simplification
+                </li>
+                <dl style="font-size:16px">
+                    <dt>
+                    </dt>
+                    <dd>
+                        <a href="https://arxiv.org/abs/2302.05574">NapSS: Paragraph-level Medical Text Simplification via
+                            Narrative Prompting and Sentence-matching Summarization</a>,
+                        <em>Findings of EACL</em>, May. 2023.
+                    </dd>
+                </dl>
+
+                <li class="space">
+                    <b>Bayesian-Trans</b>
+                    <a href="https://github.com/Xingwei-Warwick/Bayesian-Trans">
+                        <button>Code</button>
+                    </a>
+                    - Extracting Event Temporal Relations
+                </li>
+                <dl style="font-size:16px">
+                    <dt>
+                    </dt>
+                    <dd>
+                        <a href="https://aclanthology.org/2021.emnlp-main.636/">Event Temporal Relation Extraction with
+                            Bayesian Translational Model</a>,
+                        2023
+                    </dd>
+                </dl>
+
+                <li class="space">
+                    <b>dynamic Brand-Topic Model (dBTM)</b>
+                    <a href="https://github.com/BLPXSPG/dBTM">
+                        <button>Code</button>
+                    </a>
+                    - models the evolution of the latent brand polarity
+                    scores and the topic-word distributions over time.
+                </li>
+                <dl style="font-size:16px">
+                    <dt>
+                    </dt>
+                    <dd>
+                        <a href="https://arxiv.org/abs/2301.07183">Tracking Brand-Associated Polarity-Bearing Topics in
+                            User Reviews</a>,
+                        <em>Transactions of the Association for Computational Linguistics</em>, accepted.
+                    </dd>
+                </dl>
+
+                <li class="space">
+                    <b>PHEE</b>
+                    <a href="https://github.com/ZhaoyueSun/PHEE">
+                        <button>Code</button>
+                        <button style="--c: #373B44">Data</button>
+                    </a>
+                    - A Dataset for Pharmacovigilance Event Extraction from Text
+                </li>
+                <dl style="font-size:16px">
+                    <dt>
+                    </dt>
+                    <dd>
+                        <a href="https://arxiv.org/abs/2210.12560">PHEE: A Dataset for Pharmacovigilance Event
+                            Extraction
+                            from Text</a>,
+                        <em>The 2022 Conference on Empirical Methods in Natural Language Processing </em>
+                        (<b>EMNLP</b>),
+                        Dec. 2022.
+                    </dd>
+                </dl>
+
+                <li class="space">
+                    <b>TranCLR</b>
+                    <a href="https://github.com/LuJunru/TranCLR">
+                        <button>Code</button>
+                    </a>
+                    - Event-Centric Question Answering
+                </li>
+                <dl style="font-size:16px">
+                    <dt>
+                    </dt>
+                    <dd>
+                        <a href="https://arxiv.org/abs/2210.12902#">Event-Centric Question Answering via Contrastive
+                            Learning
+                            and Invertible Event Transformation</a>,
+                        <em>Findings of EMNLP</em>, Dec. 2022.
+                    </dd>
+                </dl>
+
+                <li class="space">
+                    <b>HINT</b>
+                    <a href="https://github.com/hanqi-qi/HINT">
+                        <button>Code</button>
+                    </a>
+                    - Hierarchical Interpretation of Neural Text Classification
+                </li>
+                <dl style="font-size:16px">
+                    <dt>
+                    </dt>
+                    <dd>
+                        <a
+                            href="https://direct.mit.edu/coli/article/48/4/987/112768/Hierarchical-Interpretation-of-Neural-Text">
+                            Hierarchical Interpretation of Neural Text Classification</a>,
+                        <em>Computational Linguistics</em>, to appear.
+                    </dd>
+                </dl>
+
+                <li class="space">
+                    <b>XProNet</b>
+                    <a href="https://github.com/Markin-Wang/XProNet">
+                        <button>Code</button>
+                    </a>
+                    - Cross-modal Prototype Driven Network for Radiology Report Generation
+                </li>
+                <dl style="font-size:16px">
+                    <dt>
+                    </dt>
+                    <dd>
+                        <a href="https://arxiv.org/abs/2207.04818">Cross-modal Prototype Driven Network for Radiology
+                            Report Generation</a>,
+                        <em>17th European Conference on Computer Vision</em> (<b>ECCV</b>), Oct. 2022.
+                    </dd>
+                </dl>
+
+                <li class="space">
+                    <b>tokenUni</b>
+                    <a href="https://github.com/hanqi-qi/tokenUni">
+                        <button>Code</button>
+                    </a>
+                    - Addressing Token Uniformity in Transformers via Singular Value Transformation
+                </li>
+                <dl style="font-size:16px">
+                    <dt>
+                    </dt>
+                    <dd>
+                        <a href="https://openreview.net/forum?id=BtUxE_8i5l5">Addressing Token
+                            Uniformity in Transformers via Singular Value Transformation</a>,
+                        <em>38th Conference on Uncertainty in Artificial Intelligence</em> (<b>UAI</b>), Aug. 2022.
+                    </dd>
+                </dl>
+
+                <li class="space">
+                    <b>PANACEA dataset</b>
+                    <a href="https://doi.org/10.5281/zenodo.6493847">
+                        <button style="--c: #373B44">Data</button>
+                    </a>
+                    - Heterogeneous COVID-19 Claims
+                </li>
+                <dl style="font-size:16px">
+                    <dt>
+                    </dt>
+                    <dd>
+                        <a href="https://arxiv.org/abs/2205.02596">Natural Language Inference with Self-Attention for
+                            Veracity Assessment of Pandemic Claims</a>,
+                        <em>2022 Annual Conference of the North American Chapter of the Association for Computational
+                            Linguistics </em> (<b>NAACL</b>), Jul. 2022.
+                    </dd>
+                </dl>
+
+                <li class="space">
+                    <b>VADet</b>
+                    <a href="https://github.com/somethingx1202/VADet">
+                        <button>Code</button>
+                        <button style="--c: #373B44">Data</button>
+                    </a>
+                    - Vaccine Attitude Detection
+                </li>
+                <dl style="font-size:16px">
+                    <dt>
+                    </dt>
+                    <dd>
+                        <a href="https://arxiv.org/abs/2205.03296">Disentangled Learning of Stance and Aspect Topics for
+                            Vaccine Attitude Detection in Social Media</a>,
+                        <em>2022 Annual Conference of the North American Chapter of the Association for Computational
+                            Linguistics </em> (<b>NAACL</b>), Jul. 2022.
+                    </dd>
+                </dl>
+
+                <li class="space">
+                    <b>hyper-event-TempRel</b>
+                    <a href="hhttps://github.com/Xingwei-Warwick/hyper-event-TempRel">
+                        <button>Code</button>
+                    </a>
+                    - Poincaré Event Temporal Embeddings and Hyperbolic GRU for Event TempRel Extraction
+                </li>
+                <dl style="font-size:16px">
+                    <dt>
+                    </dt>
+                    <dd>
+                        <a href="https://aclanthology.org/2021.emnlp-main.636/">Extracting Event Temporal Relations via
+                            Hyperbolic Geometry</a>,
+                        <em>Conference on Empirical Methods in Natural Language Processing</em>
+                        (<b>EMNLP</b>), Nov. 2021.
+                    </dd>
+                </dl>
+
+
+
+
+                <li class="space">
+                    <b>Position Bias Mitigation</b>
+                    <a href="https://github.com/hanqi-qi/Position-Bias-Mitigation-in-Emotion-Cause-Analysis">
+                        <button>Code</button>
+                    </a>
+                    - A Knowledge-Aware Graph Model for Emotion Cause Extraction
+                </li>
+                <dl style="font-size:16px">
+                    <dt>
+                    </dt>
+                    <dd>
+                        <a href="https://arxiv.org/abs/2106.03518">Position Bias Mitigation: A Knowledge-Aware Graph
+                            Model for Emotion Cause Extraction</a>,
+                        <em>The 59th Annual Meeting of the Association for Computational Linguistics</em>
+                        (<b>ACL</b>), Aug. 2021.
+                    </dd>
+                </dl>
+
+                <li class="space">
+                    <b>topical_wordvec_models</b>
+                    <a href="https://github.com/somethingx02/topical_wordvec_models">
+                        <button>Code</button>
+                    </a>
+                    - A Neural Generative Model for Joint Learning Topics and Topic-Specific Word Embeddings
+                </li>
+                <dl style="font-size:16px">
+                    <dt>
+                    </dt>
+                    <dd>
+                        <a href="https://aclanthology.org/2020.tacl-1.31/">A Neural Generative Model for Joint Learning
+                            Topics
+                            and Topic-Specific Word Embeddings</a>,
+                        <em>Transactions of the Association for Computational Linguistics</em>, accepted.
+                    </dd>
+                </dl>
+
+
+
+
+
+
+
+
+
+
+
+            </ul>
+
+        </div>
+
+        <div id="applications" class="col-xs-3" style="height: 20px; width: 100%;"></div>
+    </div>
+
+    <div id="projectaims" class="col-xs-3" style="height: 200px; width: 100%;"></div>
+
+
+
+
+
+    <div class="w3-bottom w3-container w3-grey w3-center w3-opacity">
+        <h5 class="w3-margin">© 2023 Copyright: KCL NLP Group </h5>
+    </div>
+
+    <script type="text/javascript">
+        function scrollto(element) {
+            console.log(3);
+            // get the element on the page related to the button
+            var scrollToId = element.getAttribute("data-scroll");
+            document.getElementById(scrollToId).scrollIntoView({ block: "end", behavior: "smooth" });
+            console.log(scrollToId);
+        }
+    </script>
+
+</body>
+
+</html>

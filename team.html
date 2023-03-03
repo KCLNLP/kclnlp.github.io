@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>King's College London NLP</title>
+    <link rel="shortcut icon" type="image/x-icon" href="favicon.ico" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+        integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="./styles.css">
+    <style>
+        body,
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
+            font-family: "Lato", sans-serif
+        }
+
+        .w3-bar,
+        h1,
+        button {
+            font-family: "Montserrat", sans-serif
+        }
+
+        .fa-anchor,
+        .fa-coffee {
+            font-size: 200px
+        }
+
+        .backgroundlayer {
+            background-color: rgba(255, 255, 255, 0);
+            position: absolute;
+            top: 100px;
+            left: 50%;
+            z-index: 15;
+            margin: 0 0 0 -35%;
+            width: 70%;
+        }
+
+        .maintopic {
+            margin-top: 150px;
+            color: black;
+            font-size: 65px;
+            text-align: left;
+        }
+
+        .topic {
+            margin-top: 10px;
+            color: white;
+            font-size: 35px;
+            text-align: left;
+        }
+
+        .jumpbutton {
+            background-color: rgba(43, 43, 43, 0.9);
+            border: none;
+            color: white;
+            padding: 15px 32px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin: 4px 2px;
+            cursor: pointer;
+        }
+
+        .maintitle {
+            margin-top: 10px;
+            color: rgba(98, 73, 31, 0.691);
+            font-size: 35px;
+            text-align: left;
+            padding-bottom: 20px;
+            background-color: white;
+        }
+
+        .maintitle:after {
+            background-color: grey;
+            content: '';
+            display: block;
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            right: 10px;
+            bottom: 10px;
+            z-index: -1;
+        }
+
+        .maintext {
+            color: rgb(107, 107, 107);
+            font-size: 17px;
+            text-align: left;
+        }
+
+        .background1 {
+            background-color: rgba(76, 83, 82, 0.2)
+        }
+
+        .toptopic {
+            width: 100%;
+            background-color: rgb(49, 49, 49);
+            z-index: 100;
+        }
+
+        .navbarbutton {
+            background-color: black;
+            border: none;
+            color: white;
+            padding: 15px 32px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin: 4px 2px;
+            cursor: pointer;
+        }
+
+        .teammemberpic {
+            width: 150px;
+            height: 200px;
+            overflow: hidden;
+            margin: 0 auto;
+        }
+
+        .teammember {
+            margin-left: 70px;
+            width: 200px;
+            height: 385px;
+        }
+
+        li.space {
+            margin: 10px 0;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Navbar -->
+
+    <div class="w3-top toptopic">
+        <div class="col-xs-4">
+            <div style="height: 10px;"></div>
+            <b style="color: rgb(219, 219, 219); font-size: 25px; height: 40px; margin-left: 10px;">
+                King's College London NLP </b>
+            <div style="height: 2px;"></div>
+        </div>
+        <div class="col-xs-8">
+
+            <ul class="nav nav-pills">
+                <li class="nav-item">
+                    <a class="nav-link" aria-current="page" href="./about.html">About</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" aria-current="page" href="./research.html">Research</a>
+                </li>
+                <li class="nav-item active font-weight-bold">
+                    <a class="nav-link" aria-current="page" href="./team.html">Team</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" aria-current="page" href="./publications.html">Publications</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" aria-current="page" href="./resource.html">Resource</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" aria-current="page" href="./contact.html">Contact</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+
+    <!-- Header -->
+    <div class="backgroundlayer">
+        <div class="col-xs-12 maintitle">
+            <b>Investigators</b>
+        </div>
+        <div class="col-xs-3 teammember">
+            <div class="teammemberpic">
+                <img src="./pictures/team/yulan_he.jpg" alt="Prof. Yulan He" style="width:150px">
+            </div>
+            <h5> <a href="https://www.kcl.ac.uk/people/yulan-he">Prof. Yulan He</a></h5>
+            <h6>Professor</h6>
+        </div>
+        <div class="col-xs-3 teammember">
+            <div class="teammemberpic">
+                <img src="./pictures/team/lin_gui.jpg" alt="Dr. Lin Gui" style="width:150px">
+            </div>
+            <h5> <a href="https://kclpure.kcl.ac.uk/portal/lin.1.gui.html">Dr. Lin Gui</a></h5>
+            <h6>Assistant Professor</h6>
+        </div>
+
+
+        <div class="col-xs-12 maintitle">
+            <b>Research Associates</b>
+        </div>
+        <div class="col-xs-3" style="margin-left:70px; width:200px;height:385px;">
+            <div class="teammemberpic">
+                <img src="./pictures/team/yuxiang_zhou.jpg" alt="Dr. Yuxiang Zhou" style="width:150px">
+            </div>
+            <h5> <a href="https://kclpure.kcl.ac.uk/portal/yuxiang.zhou.html">Dr. Yuxiang Zhou</a>
+            </h5>
+            <h6>Research Fellow</h6>
+        </div>
+        <div class="col-xs-3" style="margin-left:70px; width:200px;height:385px;">
+            <div class="teammemberpic">
+                <img src="./pictures/team/lixing_zhu.png" alt="Lixing Zhu" style="width:150px">
+            </div>
+            <h5> <a href="https://warwick.ac.uk/fac/sci/dcs/people/u1954212/">Lixing Zhu</a></h5>
+            <h6>Research Assistant</h6>
+        </div>
+        <div class="col-xs-3" style="margin-left:70px; width:200px;height:385px;">
+            <div class="teammemberpic">
+                <img src="./pictures/team/runcong_zhao.jpg" alt="Runcong Zhao" style="width:150px">
+            </div>
+            <h5> <a href="https://github.com/BLPXSPG">Runcong Zhao</a></h5>
+            <h6>Research Assistant</h6>
+        </div>
+
+        <div class="col-xs-12 maintitle">
+            <b>PhD Students</b>
+        </div>
+        <div class="col-xs-3" style="margin-left:70px; width:200px;height:385px;">
+            <div class="teammemberpic">
+                <img src="./pictures/team/jiazheng_li.jpg" alt="Jiazheng Li" style="width:150px">
+            </div>
+            <h5> <a href="https://warwick.ac.uk/fac/sci/dcs/people/u2119229/">Jiazheng Li</a></h5>
+            <h6>Model Interpretability</h6>
+        </div>
+        <div class="col-xs-3" style="margin-left:70px; width:200px;height:385px;">
+            <div class="teammemberpic">
+                <img src="./pictures/team/missing.jpg" alt="Italo Da Silva" style="width:150px">
+            </div>
+            <h5> <a href="https://warwick.ac.uk/fac/sci/dcs/people/u2119229/">Italo Da Silva</a></h5>
+            <h6>Causal QA</h6>
+        </div>
+        
+    </div>
+
+
+
+
+
+
+
+
+
+  <div class="w3-bottom w3-container w3-grey w3-center w3-opacity"  style="z-index: 200">
+    <h5 class="w3-margin">© 2023 Copyright: <a href="https://warwick.ac.uk/fac/sci/dcs/research/nlp/">KCL/Warwick NLP Group</a> and <a href="http://cogsci.eecs.qmul.ac.uk/">QUML Cognitive Science Research Group</a></h5>
+  </div>
+
+
+    <script>
+        // Used to toggle the menu on small screens when clicking on the menu button
+        function myFunction() {
+            var x = document.getElementById("navDemo");
+            if (x.className.indexOf("w3-show") == -1) {
+                x.className += " w3-show";
+            } else {
+                x.className = x.className.replace(" w3-show", "");
+            }
+        }
+
+    </script>
+
+</body>
+
+</html>
