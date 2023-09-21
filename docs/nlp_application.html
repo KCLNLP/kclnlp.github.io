@@ -90,11 +90,11 @@
         }
 
         .subtitle {
-            margin-top: 10px;
+            margin-top: 20px;
             color: rgba(98, 73, 31, 0.691);
             font-size: 25px;
             text-align: left;
-            padding-top: 5px;
+            padding-top: 10px;
             background-color: white;
         }
 
@@ -286,29 +286,18 @@
 
                 <div id="sidebar-nav">
                     <ul class="nav nav-stacked">
-                        <li><a href="#sentiment-topic">
-                                <span class="glyphicon glyphicon-star"></span>Sentiment-topic analysis</a>
+
+                        <li><a href="#finance">
+                                <span class="glyphicon glyphicon-star"></span>NLP for Finance</a>
                         </li>
-                        <li><a href="#twitter-sentiment">
-                                <span class="glyphicon glyphicon-star"></span>Twitter sentiment analysis</a>
+                        <li><a href="#education">
+                                <span class="glyphicon glyphicon-star"></span>NLP for Education</a>
                         </li>
-                        <li><a href="#dialogue-emotion">
-                                <span class="glyphicon glyphicon-star"></span>Dialogue emotion detection</a>
+                        <li><a href="#biomedical">
+                                <span class="glyphicon glyphicon-star"></span>Biomedical NLP</a>
                         </li>
-                        <li><a href="#emotion-cause">
-                                <span class="glyphicon glyphicon-star"></span>Emotion cause detection</a>
-                        </li>
-                        <li><a href="#sentiment-classification">
-                                <span class="glyphicon glyphicon-star"></span>Sentiment/emotion classification</a>
-                        </li>
-                        <li><a href="#sentiment-classification">
-                            <span class="glyphicon glyphicon-star"></span>Aspect-based sentiment analysis</a>
-                        </li>
-                        <li><a href="#sentiment-classification">
-                            <span class="glyphicon glyphicon-star"></span>Stance detection / argument mining</a>
-                        </li>
-                        <li><a href="#sentiment-classification">
-                            <span class="glyphicon glyphicon-star"></span>Sarcasm detection / blame/praise detection</a>
+                        <li><a href="#social-media">
+                                <span class="glyphicon glyphicon-star"></span>NLP for Social Media</a>
                         </li>
                     </ul>
                 </div>
@@ -321,19 +310,12 @@
 
             <!-- Header -->
             <div class="backgroundlayer  col-xs-12" style="margin-top: 120px;">
-                <div class="col-xs-9 maintitle">
-                    <b>Sentiment Analysis</b>
+                <div class="col-xs-9 maintitle" id="finance">
+                    <b>NLP in Various Application Domains</b>
                     <div class="maintext">
-                        We carry out research in a range of tasks in sentiment analysis, including sentiment
-                        classification,
-                        emotion ranking, sentiment-topic extraction, Twitter sentiment analysis, dialogue emotion
-                        detection,
-                        emotion cause extraction, aspect-based sentiment analysis, stance detection and sarcasm
-                        detection.
+                        We employ NLP methods across diverse domains, encompassing finance, education, biomedicine, healthcare, and social media.
                         <div id="challenges" class="col-xs-3" style="height: 20px; width: 100%;"></div>
                     </div>
-                    <div class="subtitle"><b>Participants</b></div>
-                    <div class="maintext">Lin Gui, Gabriele Pergola, Hanqi Yan, Runcong Zhao, Lixing Zhu</div>
                 </div>
                 <div class="col-xs-3">
                     <div class="col-xs-12 logo">
@@ -349,8 +331,117 @@
                 <div class="col-xs-12 maintitle">
                     <div></div>
                     <div class="col-xs-12" id="sentiment-topic"></div>
-                    <div class="subtitle"><b>Publications (since 2021)</b></div>
-                    <div class="subsubtitle"><b>Sentiment-topic analysis</b></div>
+                    
+                    <div class="subtitle"><b>NLP for Finance</b></div>
+                    <div class="maintext">
+                        Work in NLP for Finance includes financial event extraction from financial statements, opinion mining of customer reviews, ESG report analysis, and causal inference from earnings call transcripts.
+                        <div id="challenges" class="col-xs-3" style="height: 20px; width: 100%;"></div>
+                    </div>
+                    <div class="subsubtitle"><b>Participants</b></div>
+                    <div class="maintext">Lin Gui, Xinyu Wang, Runcong Zhao, Yuxiang Zhou</div>
+                    <div class="subsubtitle"><b>Publications (since 2021)</b></div>
+                    <div class="maintext">
+                        <ul>
+                            <li class="space">
+                                X. Wang, L. Gui and Y. He.
+                                <a href="">Document-Level Multi-Event Extraction with Event Proxy Nodes and Hausdorff Distance Minimization</a>,
+                                <em>The 61st Annual Meeting of the Association for Computational Linguistics </em>
+                                (<b>ACL</b>), Jul. 2023.
+                            </li>
+
+                            <li class="space">
+                                R. Zhao, L. Gui and Y. He.
+                                <a href="https://arxiv.org/abs/2305.04599">CONE: Unsupervised Contrastive Opinion Extraction</a>,
+                                <em>The 46th International ACM SIGIR Conference on Research and Development in Information Retrieval </em>
+                                (<b>SIGIR</b>), Jul. 2023.
+                            </li>
+
+                            <li class="space" id="education">
+                                R. Zhao, L. Gui, H. Yan and Y. He.
+                                <a href="https://arxiv.org/abs/2301.07183">Tracking Brand-Associated Polarity-Bearing Topics in User
+                                    Reviews</a>,
+                                <em>Transactions of the Association for Computational Linguistics</em>, accepted.
+                            </li>
+                        </ul>
+                    </div>
+
+
+                    <div class="subtitle"><b>NLP for Education</b></div>
+                    <div class="maintext">
+                        We collaborate with AQA to develop explainable student answer scoring systems for GCSE Science. 
+                        <div id="challenges" class="col-xs-3" style="height: 20px; width: 100%;"></div>
+                    </div>
+                    <div class="subsubtitle"><b>Participants</b></div>
+                    <div class="maintext">Jiazheng Li, Yuxiang Zhou, Lin Gui</div>
+                    <div class="subsubtitle"><b>Publications (since 2021)</b></div>
+                    <div class="maintext">
+                        <ul>
+                            <li class="space" id="biomedical">
+                                J. Li, L. Gui, Y. Zhou, D. West, C. Aloisi and Y. He.
+                                <a href="https://arxiv.org/abs/2305.12962">Distilling ChatGPT for Explainable Automated Student Answer Assessment</a>, 
+                                <em>arXiv:2305.12962.</em>
+                            </li>
+                        </ul>
+                    </div>
+
+                    
+                    <div class="subtitle"><b>Biomedical NLP</b></div>
+                    <div class="maintext">
+                        Our work in biomedical and clinical NLP includes developing a biomedical QA system, drug-drug interaction extraction from biomedical literature, topical phrase extraction from clinical reports, understanding patient reviews and adverse drug reaction detection in social media.
+                        <div id="challenges" class="col-xs-3" style="height: 20px; width: 100%;"></div>
+                    </div>
+                    <div class="subsubtitle"><b>Participants</b></div>
+                    <div class="maintext">Lin Gui, Gabriele Pergola, Zhaoyue Sun, Jiazheng Li</div>
+                    <div class="subsubtitle"><b>Project</b></div>
+                    <div class="maintext">DeepPatient - Deep Understanding of Patient Experience of Healthcare from Social Media</div>
+                    <div class="subsubtitle"><b>Publications (since 2021)</b></div>
+                    <div class="maintext">
+                        <ul>
+                            <li class="space">
+                                J. Wang, A. Bhalerao, T. Yin, S. See, Y. He. 
+                                <a href="https://arxiv.org/abs/2211.01412">CAMANet: Class Activation Map Guided Attention Network for Radiology Report Generation</a>, 
+                                <em>arXiv:2211.01412.</em>
+                            </li>
+
+                            <li class="space">
+                                J. Lu, J. Li, B.C. Wallace, Y. He and G. Pergola.
+                                <a href="https://arxiv.org/abs/2302.05574">NapSS: Paragraph-level Medical Text Simplification via
+                                    Narrative Prompting and Sentence-matching Summarization</a>,
+                                <em>Findings of EACL</em>, May. 2023.
+                            </li>
+
+                            <li class="space">
+                                Z. Sun, J. Li, G. Pergola, B.C. Wallace, B. John, N. Greene, J. Kim and Y. He.
+                                <a href="https://arxiv.org/abs/2210.12560">PHEE: A Dataset for Pharmacovigilance Event Extraction
+                                    from Text</a>,
+                                <em>The 2022 Conference on Empirical Methods in Natural Language Processing </em> (<b>EMNLP</b>),
+                                Dec. 2022.
+                            </li>
+
+                            <li class="space">
+                                L. Gui and Y. He.
+                                <a href="https://www.sciencedirect.com/science/article/pii/S0933365721001536">Understanding Patient Reviews with Minimum Supervision</a>,
+                                <em>Artificial Intelligence in Medicine</em>
+                                , to appear.
+                            </li>
+
+                            <li class="space" id="social-media">
+                                G. Pergola, E. Kochkina, L. Gui, M. Liakata and Y. He. 
+                                <a href="https://arxiv.org/abs/2102.08366">Boosting Low-Resource Biomedical QA via Entity-Aware Masking Strategies</a>,
+                                <em>The 16th Conference of the European Chapter of the Association for Computational Linguistics</em>
+                                (<b>EACL</b>), Apr. 2021.
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="subtitle"><b>NLP for Social Media</b></div>
+                    <div class="maintext">
+                        In social media analysis, we carry out research in understanding microblog conversations, Twitter sentiment analysis, cyberbullying detection, event extraction and visualisation on Twitter, and analysis of persuasive argumentation in political debates.
+                        <div id="challenges" class="col-xs-3" style="height: 20px; width: 100%;"></div>
+                    </div>
+                    <div class="subsubtitle"><b>Participants</b></div>
+                    <div class="maintext">Miguel Arana-Catania, Lin Gui, John Dougrez-Lewis, Wenjia Zhang, Lixing Zhu</div>
+                    <div class="subsubtitle"><b>Publications (since 2021)</b></div>
                     <div class="maintext">
                         <ul>
                             <li class="space">
@@ -367,31 +458,24 @@
                             </li>
 
                             <li class="space">
+                                W. Zhang, L. Gui, R. Procter and Y. He.
+                                <a href="https://arxiv.org/abs/2302.04985">NewsQuote: A Dataset Built on Quote Extraction and Attribution for Expert Recommendation in Fact-Checking</a>,
+                                <em>The 17th International AAAI Conference on Web and Social Media: News Media and Computational Journalism Workshop</em>, Jun. 2023.
+                            </li>
+
+                            <li class="space">
+                                R. Zhao, M. Arana Catania, L. Zhu, E. Kochkina, L. Gui, A. Zubiaga, R. Procter, M. Liakata and Y. He.
+                                <a href="https://arxiv.org/abs/2302.04985">PANACEA: An Automated Misinformation Detection System on COVID-19</a>,
+                                <em>EACL system demonstration track</em>, May. 2023.
+                            </li>
+
+                            <li class="space">
                                 R. Zhao, L. Gui, H. Yan and Y. He.
                                 <a href="https://arxiv.org/abs/2301.07183">Tracking Brand-Associated Polarity-Bearing Topics in User
                                     Reviews</a>,
                                 <em>Transactions of the Association for Computational Linguistics</em>, accepted.
                             </li>
-                            
-                            <li class="space">
-                                G. Pergola, L. Gui and Y. He. 
-                                <a href="https://arxiv.org/abs/2010.11384">A Disentangled Adversarial Neural Topic Model for Separating Opinions from Plots in User Reviews</a>,
-                                <em>Annual Conference of the North American Chapter of the Association for Computational Linguistics</em>
-                                (<b>NAACL</b>), Jun. 2021.
-                            </li>
 
-                            <li class="space">
-                                R. Zhao, L. Gui, G. Pergola and Y. He. 
-                                <a href="https://arxiv.org/abs/2101.10150">Adversarial Learning of Poisson Factorisation Model for Gauging Brand Sentiment in User Reviews</a>,
-                                <em>The 16th Conference of the European Chapter of the Association for Computational Linguistics</em>
-                                (<b>EACL</b>), Apr. 2021.
-                            </li>
-                        </ul>
-                    </div>
-
-                    <div class="subsubtitle"><b>Twitter sentiment analysis</b></div>
-                    <div class="maintext">
-                        <ul>
                             <li class="space">
                                 L. Zhu, Z. Fang, G. Pergola, R. Procter and Y. He.
                                 <a href="https://arxiv.org/abs/2205.03296">Disentangled Learning of Stance and Aspect Topics for
@@ -399,111 +483,50 @@
                                 <em>2022 Annual Conference of the North American Chapter of the Association for Computational
                                     Linguistics </em> (<b>NAACL</b>), Jul. 2022.
                             </li>
-                        </ul>
-                    </div>
 
-                    <div class="subsubtitle"><b>Dialogue emotion detection</b></div>
-                    <div class="maintext">
-                        <ul>
                             <li class="space">
-                                L. Zhu, G. Pergola, L. Gui, D. Zhou and Y. He.
-                                <a href="https://arxiv.org/abs/2106.01071v1">Topic-Driven and Knowledge-Aware Transformer for Dialogue Emotion Detection</a>,
-                                <em>The 59th Annual Meeting of the Association for Computational Linguistics</em>
-                                (<b>ACL</b>), Aug. 2021.
+                                J. Dougrez-Lewis, M. Arana Catania, E. Kochkina, M. Liakata and Y. He.
+                                <a href="http://wrap.warwick.ac.uk/165272/">PHEMEPlus: Enriching Social Media Rumour Verification
+                                    with External Evidence</a>,
+                                <b>The 5th FEVER Workshop, co-located with ACL</b> May 2022.
+                            </li>
+
+                            <li class="space">
+                                S. Salawu, J. Lumsden, Y. He.
+                                <a href="https://link.springer.com/article/10.1007/s42380-021-00115-5">A Mobile-Based System for
+                                    Preventing Online Abuse and
+                                    Cyberbullying</a>,
+                                <em>International Journal of Bullying Prevention</em> (<b>ACL</b>), to appear.
+                            </li>
+
+                            <li class="space">
+                                W. Zhang, L. Gui and Y. He.
+                                <a href="https://arxiv.org/abs/2109.01850">Supervised Contrastive Learning for Multi-modal Unreliable News Detection in COVID-19 Pandemic</a>,
+                                <em>The 30th ACM International Conference on Information and Knowledge Management</em>
+                                (<b>CIKM</b>), Nov. 2021.
+                            </li>
+
+                            <li class="space">
+                                J. Dougrez-Lewis, E. Kochkina, M. Liakata and Y. He.
+                                <a href="https://aclanthology.org/2021.findings-acl.341.pdf">Learning Disentangled Latent Topics for Twitter Rumour Veracity Classificationn</a>,
+                                <em>Findings of ACL</em>, Aug. 2021.
+                            </li>
+
+                            <li class="space">
+                                M. Arana-Catania, F. A. Van Lier, R. Procter, N. Tkachenko, Y. He, A. Zubiaga, M. Liakata. 
+                                <a href="https://arxiv.org/abs/2103.00508">Citizen Participation and Machine Learning for a Better Democracy</a>,
+                                <em>Digital Government: Research and Practice</em>, to appear.
+                            </li>
+
+                            <li class="space">
+                                S. Salawu, J. Lumsden and Y. He.
+                                <a href="https://aclanthology.org/2021.woah-1.16/">A Large-Scale English Multi-Label Twitter Dataset for Cyberbullying and Online Abuse Detection</a>,
+                                <em>Proceedings of the 5th Workshop on Online Abuse and Harms, co-located with ACL</em>, Aug. 2021.
                             </li>
                         </ul>
                     </div>
 
-                    <div class="subsubtitle"><b>Emotion cause detection</b></div>
-                    <div class="maintext">
-                        <ul>
-                            <li class="space">
-                                H. Yan, L. Gui, G. Pergola and Y. He.
-                                <a href="https://arxiv.org/abs/2106.03518">Position Bias Mitigation: A Knowledge-Aware Graph Model for Emotion Cause Extraction</a>,
-                                <em>The 59th Annual Meeting of the Association for Computational Linguistics</em>
-                                (<b>ACL</b>), Aug. 2021.
-                            </li>
-                        </ul>
-                    </div>
 
-                    <div class="subsubtitle"><b>Sentiment/emotion classification</b></div>
-                    <div class="maintext">
-                        <ul>
-                            <li class="space">
-                                D. Zhou, M. Zhang, L. Zhang and Y. He. 
-                                <a href="https://ojs.aaai.org/index.php/AAAI/article/view/17715">A Neural Group-wise Sentiment Analysis Model with Data Sparsity Awareness</a>,
-                                <em>The 35th AAAI Conference on Artificial Intelligence</em>
-                                (<b>AAAI</b>), Feb. 2021.
-                            </li>
-
-                            <li class="space">
-                                D. Zhou, M. Zhang, Y. Yang and Y. He. . 
-                                <a href="https://linkinghub.elsevier.com/retrieve/pii/S0885230820301005">Hierarchical State Recurrent Neural Network for Social Emotion Ranking</a>,
-                                <em>Computer Speech & Language</em>, Vol. 68, 101177, 2021.
-                            </li>
-                        </ul>
-                    </div>
-
-
-                    <div class="subsubtitle"><b>Aspect-based sentiment analysis</b></div>
-                    <div class="maintext">
-                        <ul>
-                            <li class="space">
-                                B. Liang, R. Yin, J. Du, L. Gui, Y. He, M. Yang and R. Xu.
-                                <a href="https://arxiv.org/abs/2205.02596">Embedding Refinement Framework for Targeted Aspect-based
-                                    Sentiment Analysis</a>,
-                                <em>IEEE Transactions in Affective Computing </em>, to appear.
-                            </li>
-                        </ul>
-                    </div>
-                    
-
-                    <div class="subsubtitle"><b>Stance detection / argument mining</b></div>
-                    <div class="maintext">
-                        <ul>
-                            <li class="space">
-                                J. Si, Y. Zhu, X. Shi, D. Zhou and Y. He. 
-                                <a href="https://arxiv.org/abs/2307.12131">Explainable Topic-Enhanced Argument Mining from Heterogeneous Sources</a>, 
-                                <em>arXiv:2307.12131.</em>
-                            </li>
-
-                            <li class="space">
-                                B. Liang, Q. Zhu, X. Li, M. Yang, L. Gui, Y. He and R. Xu.
-                                <a href="https://aclanthology.org/2022.acl-long.7/">JointCL: A Joint Contrastive Learning Framework for
-                                    Zero-Shot Stance Detection</a>,
-                                <em>The 60th Annual Meeting of the Association for Computational Linguistics </em> (<b>ACL</b>), May
-                                2022.
-                            </li>
-
-                            <li class="space">
-                                B. Liang, Y. Fu, L. Gui, M. Yang, J. Du, Y. He and R. Xu.
-                                <a href="https://dl.acm.org/doi/abs/10.1145/3442381.3449790">Target-adaptive Graph for Cross-target Stance Detection</a>,
-                                <em>The Web Conference</em>
-                                (<b>WWW</b>), Apr. 2021.
-                            </li>
-                        </ul>
-                    </div>
-
-                    <div class="subsubtitle"><b>Sarcasm detection / blame/praise detection</b></div>
-                    <div class="maintext">
-                        <ul>
-                            <li class="space">
-                                B. Liang, C. Lou, X. Li, M. Yang, L. Gui, Y. He, W. Pei and R. Xu.
-                                <a href="https://dl.acm.org/doi/abs/10.1145/3474085.3475190">Multi-Modal Sarcasm Detection via
-                                    Cross-Modal Graph
-                                    Convolutional Network</a>,
-                                <em>The 60th Annual Meeting of the Association for Computational Linguistics </em> (<b>ACL</b>), May
-                                2022.
-                            </li>
-
-                            <li class="space">
-                                C. Lou, B. Liang, L. Gui, Y. He, Y. Dang and R. Xu.
-                                <a href="https://dl.acm.org/doi/10.1145/3404835.3463061">Affective Dependency Graph for Sarcasm Detection</a>,
-                                <em>The 44th International ACM SIGIR Conference on Research and Development in Information Retrieval</em>
-                                (<b>SIGIR</b>), Jul. 2021.
-                            </li>
-                        </ul>
-                    </div>
 
                 </div>
                 <div id="applications" class="col-xs-3" style="height: 20px; width: 100%;"></div>

@@ -89,15 +89,6 @@
             z-index: -1;
         }
 
-        .subtitle {
-            margin-top: 10px;
-            color: rgba(98, 73, 31, 0.691);
-            font-size: 25px;
-            text-align: left;
-            padding-top: 5px;
-            background-color: white;
-        }
-        
         .maintext {
             color: rgb(107, 107, 107);
             font-size: 17px;
@@ -199,6 +190,15 @@
             display: table-cell;
             vertical-align: middle;
         }
+
+        .subtitle {
+            margin-top: 10px;
+            color: rgba(98, 73, 31, 0.691);
+            font-size: 25px;
+            text-align: left;
+            padding-top: 5px;
+            background-color: white;
+        }
     </style>
 </head>
 
@@ -249,16 +249,30 @@
     <!-- Header -->
     <div class="backgroundlayer  col-xs-12" style="margin-top: 120px;">
         <div class="col-xs-9 maintitle">
-            <b>Claim Veracity Assessment</b>
+            <div><b>Long Narrative Understanding</b></div>
+
+            <div class="subtitle"><b>Challenges</b></div>
             <div class="maintext">
-                Claim veracity detection aims to automatically infer the veracity of a given claim based on relevant evidence retrieved from multiple documents. Work carried out in our group includes fact checking, multimodal fake news detection, and COVID-related claim veracity detection.
+                For humans, successful reading comprehension depends on the construction of an event structure that represents what is happening in the text, often referred to as the situation model in cognitive psychology. This situation model also involves the integration of prior knowledge with information presented in text for reasoning and inference.
+                <br>
+                Language understanding requires a combination of relevant evidence, such as from contextual knowledge, common sense or world knowledge, to infer meaning underneath. It also requires a constant update of memory as reading progresses. In machine reading comprehension, a computer could continuously build and update a graph of eventualities as reading progresses. Question-answering could, in principle, be based on such a dynamically updated event graph.
                 <div id="challenges" class="col-xs-3" style="height: 20px; width: 100%;"></div>
             </div>
+
+            <div class="subtitle"><b>Project Aims</b></div>
+            <div class="maintext">
+                The UKRI-funded Turing Ai Fellowship project aims to develop a knowledge-aware and event-centric framework for NLU, in which event graphs are built as reading progresses; event representations are learned with the incorporation of background knowledge; implicit knowledge is derived by performing reasoning over event graphs; and the comprehension model is developed with built-in interpretability and robustness against adversarial attacks.                <div id="challenges" class="col-xs-3" style="height: 20px; width: 100%;"></div>
+            </div>
+
+            <div class="subtitle"><b>Impact</b></div>
+            <div class="maintext">
+                Since spoken and written communication plays a central part in our daily work and life, the proposed framework will have a profound impact on a variety of application areas, including drug discovery, intelligent virtual assistants, automated customer services, smart home, and question-answering in the finance and legal domains, benefiting industries such as healthcare, finance, law, insurance and education.
+            </div>
+
             <div class="subtitle"><b>Participants</b></div>
-            <div class="maintext">Miguel Arana Catania, Lin Gui, John Dougrez-Lewis, Wenjia Zhang, Runcong Zhao</div>
-            <div class="subtitle"><b>Project</b></div>
-            <div class="maintext"> <a href="https://panacea2020.github.io/">PANACEA: PANdemic Ai Claim vEracity
-                    Assessment</a></div>
+            <div class="maintext">
+                Lin Gui, Gabriele Pergola, Zhaoyue Sun, Xingwei Tan, Yuxiang Zhou
+            </div>
         </div>
         <div class="col-xs-3">
             <div class="col-xs-12 logo">
@@ -276,65 +290,103 @@
             <div class="maintext">
                 <ul>
                     <li class="space">
-                        W. Zhang, L. Gui, R. Procter and Y. He.
-                        <a href="https://arxiv.org/abs/2302.04985">NewsQuote: A Dataset Built on Quote Extraction and Attribution for Expert Recommendation in Fact-Checking</a>,
-                        <em>The 17th International AAAI Conference on Web and Social Media: News Media and Computational Journalism Workshop</em>, Jun. 2023.
+                        J. Lu, S. An, M. Lin, G. Pergola, Y. He, D. Yin, X. Sun and Y. Wu. 
+                        <a href="https://arxiv.org/abs/2308.08239">MemoChat: Tuning LLMs to Use Memos for Consistent Long-Range Open-Domain Conversation</a>, 
+                        <em>arXiv:2308.08239.</em>
                     </li>
 
                     <li class="space">
-                        R. Procter, M. Arana Catania, Y. He, M. Liakata, A. Zubiaga, E. Kochkina, R. Zhao.
-                        <a href="https://arxiv.org/abs/2305.02224">Some Observations on Fact-Checking Work with Implications for Computational Support</a>,
-                        <em>The 17th International AAAI Conference on Web and Social Media: News Media and Computational Journalism Workshop</em>, Jun. 2023.
+                        J. Lu, G. Pergola, L. Gui and Y. He. 
+                        <a href="https://arxiv.org/abs/2305.04522">Event Knowledge Incorporation with Posterior Regularization for Event-Centric Question Answering</a>, 
+                        <em>arXiv:2305.04522.</em>
                     </li>
 
                     <li class="space">
-                        R. Zhao, M. Arana Catania, L. Zhu, E. Kochkina, L. Gui, A. Zubiaga, R. Procter, M. Liakata and Y. He.
-                        <a href="https://arxiv.org/abs/2302.04985">PANACEA: An Automated Misinformation Detection System on COVID-19</a>,
-                        <em>EACL system demonstration track</em>, May. 2023.
-                    </li>
-                    
-                    <li class="space">
-                        E. Kochkina, T. Hossain, R.L. Logan, M. Arana-Catania, R. Procter, A. Zubiaga, S. Singh, Y. He and M.
-                        Liakata.
-                        <a href="https://www.sciencedirect.com/science/article/pii/S0306457322002175">Evaluating the
-                            Generalisability of Neural Rumour Verification Models</a>,
-                        <em>Information Processing & Management </em>, Volume 60, Issue 1, 2023.
-                    </li>
-                    
-                    <li class="space">
-                        M. Arana Catania, E. Kochkina, A. Zubiaga, M. Liakata, R. Procter and Y. He.
-                        <a href="https://arxiv.org/abs/2205.02596">Natural Language Inference with Self-Attention for
-                            Veracity Assessment of Pandemic Claims</a>,
-                        <em>2022 Annual Conference of the North American Chapter of the Association for Computational
-                            Linguistics </em> (<b>NAACL</b>), Jul. 2022.
+                        X. Wang, L. Gui and Y. He.
+                        <a href="">Document-Level Multi-Event Extraction with Event Proxy Nodes and Hausdorff Distance Minimization</a>,
+                        <em>The 61st Annual Meeting of the Association for Computational Linguistics </em>
+                        (<b>ACL</b>), Jul. 2023.
                     </li>
 
                     <li class="space">
-                        J. Dougrez-Lewis, M. Arana Catania, E. Kochkina, M. Liakata and Y. He.
-                        <a href="http://wrap.warwick.ac.uk/165272/">PHEMEPlus: Enriching Social Media Rumour Verification
-                            with External Evidence</a>,
-                        <b>The 5th FEVER Workshop, co-located with ACL</b> May 2022.
+                        X. Tan, G. Pergola and Y. He.
+                        <a href="https://arxiv.org/abs/2302.04985"> Event Temporal Relation Extraction with Bayesian Translational Model</a>,
+                        <em>The 17th Conference of the European Chapter of the Association for Computational Linguistics </em>
+                        (<b>EACL</b>), May. 2023.
                     </li>
 
                     <li class="space">
-                        W. Zhang, L. Gui and Y. He.
-                        <a href="https://arxiv.org/abs/2109.01850">Supervised Contrastive Learning for Multi-modal Unreliable News Detection in COVID-19 Pandemic</a>,
-                        <em>The 30th ACM International Conference on Information and Knowledge Management</em>
-                        (<b>CIKM</b>), Nov. 2021.
+                        J. Lu, J. Li, B.C. Wallace, Y. He and G. Pergola.
+                        <a href="https://arxiv.org/abs/2302.05574">NapSS: Paragraph-level Medical Text Simplification via
+                            Narrative Prompting and Sentence-matching Summarization</a>,
+                        <em>Findings of EACL</em>, May. 2023.
                     </li>
 
                     <li class="space">
-                        J. Si, D. Zhou, T. Li, X. Shi and Y. He. 
-                        <a href="https://arxiv.org/abs/2106.01191">Topic-aware Evidence Reasoning and Stance-aware Aggregating for Fact Verification</a>,
+                        H. Li, H. Yan, Y. Li, L. Qian, Y. He and L. Gui.
+                        <a href="https://arxiv.org/abs/2302.06198">Distinguishability Calibration to In-Context Learning</a>,
+                        <em>Findings of EACL</em>, May. 2023.
+                    </li>
+
+                    <li class="space">
+                        Z. Sun, J. Li, G. Pergola, B.C. Wallace, B. John, N. Greene, J. Kim and Y. He.
+                        <a href="https://arxiv.org/abs/2210.12560">PHEE: A Dataset for Pharmacovigilance Event Extraction
+                            from Text</a>,
+                        <em>The 2022 Conference on Empirical Methods in Natural Language Processing </em> (<b>EMNLP</b>),
+                        Dec. 2022.
+                    </li>
+
+                    <li class="space">
+                        J. Lu, X. Tan, G. Pergola, L. Gui and Y. He.
+                        <a href="https://arxiv.org/abs/2210.12902#">Event-Centric Question Answering via Contrastive Learning
+                            and Invertible Event Transformation</a>,
+                        <em>Findings of EMNLP</em>, Dec. 2022.
+                    </li>
+
+                    <li class="space">
+                        H. Yan, L. Gui and Y. He.
+                        <a
+                            href="https://direct.mit.edu/coli/article/48/4/987/112768/Hierarchical-Interpretation-of-Neural-Text">Hierarchical
+                            Interpretation of Neural Text
+                            Classification</a>,
+                        <em>Computational Linguistics</em>, to appear.
+                    </li>
+
+                    <li class="space">
+                        H. Yan, L. Gui, W. Li ad Y. He.
+                        <a href="https://openreview.net/forum?id=BtUxE_8i5l5">Addressing Token
+                            Uniformity in Transformers via Singular Value Transformation</a>,
+                        <em>38th Conference on Uncertainty in Artificial Intelligence</em> (<b>UAI</b>), Aug. 2022.
+                    </li>
+
+                    <li class="space">
+                        R. Adewoyin, R. Dutta and Y. He.
+                        <a href="https://openreview.net/forum?id=BtUxE_8i5l5">RSTGen: Imbuing Fine-Grained Interpretable Control into Long-FormText Generators</a>,
+                        <em>2022 Annual Conference of the North American Chapter of the Association for Computational Linguistics</em> (<b>NAACL</b>), Jul. 2022.
+                    </li>
+
+                    <li class="space">
+                        X. Tan, G. Pergola and Y. He.
+                        <a href="https://aclanthology.org/2021.emnlp-main.636/">Extracting Event Temporal Relations via Hyperbolic Geometry</a>,
+                        <em>Conference on Empirical Methods in Natural Language Processing</em>
+                        (<b>EMNLP</b>), Nov. 2021.
+                    </li>
+
+                    <li class="space">
+                        L. Zhu, G. Pergola, L. Gui, D. Zhou and Y. He.
+                        <a href="https://arxiv.org/abs/2106.01071v1">Topic-Driven and Knowledge-Aware Transformer for Dialogue Emotion Detection</a>,
                         <em>The 59th Annual Meeting of the Association for Computational Linguistics</em>
                         (<b>ACL</b>), Aug. 2021.
                     </li>
 
                     <li class="space">
-                        J. Dougrez-Lewis, E. Kochkina, M. Liakata and Y. He.
-                        <a href="https://aclanthology.org/2021.findings-acl.341.pdf">Learning Disentangled Latent Topics for Twitter Rumour Veracity Classificationn</a>,
-                        <em>Findings of ACL</em>, Aug. 2021.
+                        L. Zhang, D. Zhou, Y. He and Z. Yang. 
+                        <a href="https://ojs.aaai.org/index.php/AAAI/article/view/17695">MERL: Multimodal Event Representation Learning in Heterogeneous Embedding Spaces</a>,
+                        <em>The 35th AAAI Conference on Artificial Intelligence</em>
+                        (<b>AAAI</b>), Feb. 2021.
                     </li>
+
+
 
                 </ul>
 

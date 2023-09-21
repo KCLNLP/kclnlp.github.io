@@ -72,9 +72,8 @@
         .maintitle {
             margin-top: 10px;
             color: rgba(98, 73, 31, 0.691);
-            font-size: 35px;
+            font-size: 45px;
             text-align: left;
-            padding-bottom: 20px;
             background-color: white;
         }
 
@@ -88,6 +87,15 @@
             right: 10px;
             bottom: 10px;
             z-index: -1;
+        }
+
+        .subtitle {
+            margin-top: 10px;
+            color: rgba(98, 73, 31, 0.691);
+            font-size: 25px;
+            text-align: left;
+            padding-top: 5px;
+            background-color: white;
         }
 
         .maintext {
@@ -241,21 +249,21 @@
     <!-- Header -->
     <div class="backgroundlayer  col-xs-12" style="margin-top: 120px;">
         <div class="col-xs-9 maintitle">
-            <b>Model Interpretability
+            <b>Model Interpretability and Trustworthy AI
             </b>
             <div class="maintext">
-                In our EPSRC-funded project, “Twenty20Insights”, we aim to investigate explainable AI (XAI) approaches
-                which can provide interpretations both faithful to model decisions and are also better understood by
-                humans. Most existing XAI approaches aim at identifying input features such as words or phrases
-                important for model predictions. Neural models developed in NLP however often compose word semantics in
-                a hierarchical manner. Interpretation by words or phrases only thus cannot faithfully explain model
-                decisions. We have proposed a Hierarchical Interpretable Neural Text classifier, called Hint, which is
-                able to identify the latent semantic factors and their compositions which contribute to the model’s
-                final decisions. This is often beyond what word-level interpretations could capture.
+                In recent years, we have witnessed the shift of paradigms in NLP from fine-tuning large-scale pre-trained language models (PLMs) on task-specific data to prompt-based learning. In the latter, the task description is embedded into the PLM input, enabling the same model to handle multiple tasks. While both approaches have demonstrated impressive performance in various NLP tasks, their opaque nature makes comprehending their inner workings and decision-making processes challenging for humans. We conduct research to address the interpretability concerns surrounding neural models in language understanding. Our work includes a hierarchical interpretable text classifier going beyond word-level interpretations, uncertainty interpretation of text classifiers built on PLMs, explainable recommender systems by harnessing information across diverse modalities, and explainable student answer scoring.
                 <div id="challenges" class="col-xs-3" style="height: 20px; width: 100%;"></div>
             </div>
-            <b>Participants</b>
+            <div class="subtitle"><b>Participants</b></div>
             <div class="maintext">Lin Gui, Hanqi Yan, Jiazheng Li</div>
+            <div class="subtitle"><b>Projects</b></div>
+            <ul class="maintext">
+                <li>A Lebesgue Integral based Approximation for Language Modelling (2023-2025), funded by the EPSRC.</li>
+                <li>Automated Scoring System for GCSE Science Exams, (2022-2026), funded by AQA.</li>
+                <li>Event-Centric Framework for Natural Language Understanding (Jan 2021-Dec 2025), Turing AI Acceleration Fellowship, funded by the UKRI.</li>
+                <li>Twenty20Insight (2020-2023). Funded by the EPSRC.</li>
+            </ul>
         </div>
         <div class="col-xs-3">
             <div class="col-xs-12 logo">
@@ -266,53 +274,73 @@
             </div>
         </div>
     </div>
-
-    <div class="backgroundlayer  col-xs-12" style="margin-top: 35px;">
+    <div class="backgroundlayer  col-xs-12">
         <div class="col-xs-12 maintitle">
-            <b>Publications (since 2021)</b>
+            <div class="subtitle"><b>Publications (since 2021)</b></div>
             <div class="maintext">
                 <ul>
-                    <div class="col-xs-11 paper-box">
-                        <div class="col-xs-4 container">
-                            <div class="child">
-                                <img src="./pictures/model/missing.jpg" style="max-height:300px;max-width: 100%;">
-                            </div>
-                        </div>
-                        <div class="col-xs-8">
-                            <a
-                                href="https://direct.mit.edu/coli/article/48/4/987/112768/Hierarchical-Interpretation-of-Neural-Text"><b
-                                    style="font-size: 22px;">
-                                    Hierarchical Interpretation of Neural Text Classification (Computational
-                                    Linguistics)</b></a>
-                            <a href="./claim_veracity.html">
-                                <button>Interpretability</button>
-                            </a>
-                            <br>
-                            H. Yan, L. Gui and Y. He.<br>
-                            DESCRIPTION HERE
-                        </div>
-                    </div>
+                    <li class="space">
+                        J. Li, Z. Sun, B. Liang, L. Gui and Y. He. 
+                        <a href="">CUE: An Uncertainty Interpretation Framework for Text Classifiers Built on Pre-Trained Language Models</a>,
+                        <em>The 39th Conference on Uncertainty in Artificial Intelligence </em>
+                        (<b>UAI</b>), Aug. 2023.
+                    </li>
 
-                    <div class="col-xs-11 paper-box">
-                        <div class="col-xs-4 container">
-                            <div class="child">
-                                <img src="./pictures/model/missing.jpg" style="max-height:300px;max-width: 100%;">
-                            </div>
-                        </div>
-                        <div class="col-xs-8">
-                            <a href="https://openreview.net/forum?id=BtUxE_8i5l5">
-                                <b　style="font-size: 22px;">
-                                    Addressing Token Uniformity in Transformers via Singular Value Transformation
-                                    (UAI)</b></a>
-                            <a href="./claim_veracity.html">
-                                <button>Interpretability</button>
-                            </a>
-                            <br>
-                            H. Yan, L. Gui, W. Li and Y. He. <br>
-                            DESCRIPTION HERE
-                        </div>
-                    </div>
+                    <li class="space">
+                        J. Li, L. Gui, Y. Zhou, D. West, C. Aloisi and Y. He.
+                        <a href="https://arxiv.org/abs/2305.12962">Distilling ChatGPT for Explainable Automated Student Answer Assessment</a>, 
+                        <em>arXiv:2305.12962.</em>
+                    </li>
 
+                    <li class="space">
+                        J. Li, R. ZHao, Y. He and L. Gui.
+                        <a href="https://arxiv.org/abs/2305.14973">OverPrompt: Enhancing ChatGPT Capabilities through an Efficient In-Context Learning Approach</a>, 
+                        <em>arXiv:2305.14973.</em>
+                    </li>
+
+                    <li class="space">
+                        H. Yan, L. Gui, M. Wang, K. Zhang and Y. He.
+                        <a href="https://arxiv.org/abs/2305.05331">Explainable Recommender with Geometric Information Bottleneck</a>,
+                        <em>arXiv:2305.05331.</em>
+                    </li>
+
+                    <li class="space">
+                        H. Li, H. Yan, Y. Li, L. Qian, Y. He and L. Gui.
+                        <a href="https://arxiv.org/abs/2302.06198">Distinguishability Calibration to In-Context Learning</a>,
+                        <em>Findings of EACL</em>, May. 2023.
+                    </li>
+
+                    <li class="space">
+                        Z. Fang, Y. He, R. Procter, L.A. Alqazlan and D. Liu.
+                        <a href="">A User-Centered, Interactive, Human-in-the-Loop Topic
+                            Modelling System</a>,
+                        <em>The 17th Conference of the European Chapter of the Association for Computational Linguistics </em>
+                        (<b>EACL</b>), May. 2023.
+                    </li>
+
+                    <li class="space">
+                        H. Yan, L. Gui and Y. He.
+                        <a
+                            href="https://direct.mit.edu/coli/article/48/4/987/112768/Hierarchical-Interpretation-of-Neural-Text">Hierarchical Interpretation of Neural Text
+                            Classification</a>,
+                        <em>Computational Linguistics</em>, 48 (4): 987–1020, 2022.
+                    </li>
+
+                    <li class="space">
+                        H. Yan, L. Gui, W. Li ad Y. He.
+                        <a href="https://openreview.net/forum?id=BtUxE_8i5l5">Addressing Token
+                            Uniformity in Transformers via Singular Value Transformation</a>,
+                        <em>38th Conference on Uncertainty in Artificial Intelligence</em> (<b>UAI</b>), Aug. 2022.
+                    </li>
+
+                    <li class="space">
+                        L. Zhu, Z. Fang, G. Pergola, R. Procter and Y. He.
+                        <a href="https://arxiv.org/abs/2205.03296">Disentangled Learning of Stance and Aspect Topics for
+                            Vaccine Attitude Detection in Social Media</a>,
+                        <em>2022 Annual Conference of the North American Chapter of the Association for Computational
+                            Linguistics </em> (<b>NAACL</b>), Jul. 2022.
+                    </li>
+                    
                 </ul>
 
             </div>
