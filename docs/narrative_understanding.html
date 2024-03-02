@@ -249,29 +249,169 @@
     <!-- Header -->
     <div class="backgroundlayer  col-xs-12" style="margin-top: 120px;">
         <div class="col-xs-9 maintitle">
-            <div><b>Long Narrative Understanding</b></div>
+            <div><b>Narrative Understanding with LLMs</b></div>
 
-            <div class="subtitle"><b>Challenges</b></div>
+            <div class="subtitle"><b>Introduction</b></div>
             <div class="maintext">
-                For humans, successful reading comprehension depends on the construction of an event structure that represents what is happening in the text, often referred to as the situation model in cognitive psychology. This situation model also involves the integration of prior knowledge with information presented in text for reasoning and inference.
-                <br>
-                Language understanding requires a combination of relevant evidence, such as from contextual knowledge, common sense or world knowledge, to infer meaning underneath. It also requires a constant update of memory as reading progresses. In machine reading comprehension, a computer could continuously build and update a graph of eventualities as reading progresses. Question-answering could, in principle, be based on such a dynamically updated event graph.
-                <div id="challenges" class="col-xs-3" style="height: 20px; width: 100%;"></div>
-            </div>
+				<p>
+					Narrative stories are characterised by their extended length
+					and depth. They consist of elements such as the viewpoint or
+					perspective from which the story is told, the characters
+					involved, and events that happened. All of these come together
+					to create a cohesive plot, whether it is in a book, a movie, or
+					other form of storytelling. Narrative understanding involves
+					comprehending these elements, how they connect or influence
+					each other, how the relationships between the characters change
+					over time, how events cause other events to happen, and how
+					events are interwoven to shape the narrative’s progression.
+				</p>
+
+				<p>
+					LLMs have demonstrated their impressive capabilities in
+					generating human-like language. However, using LLMs for
+					narratives understanding faces several challenges. For example,
+					LLMs have a difficulty in dealing with long narrative text.
+					Events or characters introduced early on in a narrative may
+					have a significant impact on later events. Also, relationships
+					among characters are not fixed and may evolve over time. LLMs
+					may struggle to monitor and capture these evolving
+					relationships. Furthermore, narratives often involve causal
+					relationships among events, characters, and actions. Extracting
+					and correctly inferring these causal links can be challenging
+					for LLMs, as it requires understanding not only what happened
+					but also why and how events are connected. Narrative
+					understanding also requires the ability of inferring the
+					emotional states of characters, their motivations and
+					intentions. This requires LLMs to possess the Theory of Mind
+					(ToM) capabilities. The question of whether LLMs can be trained
+					to develop such ToM capabilities remains open. Another
+					challenging task for LLMs is to accurately extract plots from
+					complex narratives, where they can have plots with multiple
+					storylines, flashbacks, or non-linear structures. Identifying
+					and presenting storylines in a coherent manner can be a
+					significant challenge for LLMs.
+				</p>
+			</div>
+
+            <div class="subtitle"><b>Projects</b></div>
+            <div class="maintext">
+				<ul>
+					<li>
+						<a href="https://gow.epsrc.ukri.org/NGBOViewGrant.aspx?GrantRef=EP/V020579/1">
+							Event-Centric Framework for Natural Language Understanding
+						</a> (Jan 2021-Dec 2025), Turing AI Fellowship, funded by the UKRI.
+					</li>
+					<li>
+						Character-Centric Narrative Understanding, (2023-2027), funded by EPSRC ICASE, with Huawei London Research
+						Centre.
+					</li>
+					<li>
+						<a href="https://gtr.ukri.org/projects?ref=EP%2FX019063%2F1">
+							A Lebesgue Integral based Approximation for Language Modelling
+						</a> (2023-2025), funded by the EPSRC.
+					</li>
+				</ul>
+			</div>
 
             <div class="subtitle"><b>Project Aims</b></div>
             <div class="maintext">
-                The UKRI-funded Turing Ai Fellowship project aims to develop a knowledge-aware and event-centric framework for NLU, in which event graphs are built as reading progresses; event representations are learned with the incorporation of background knowledge; implicit knowledge is derived by performing reasoning over event graphs; and the comprehension model is developed with built-in interpretability and robustness against adversarial attacks.                <div id="challenges" class="col-xs-3" style="height: 20px; width: 100%;"></div>
-            </div>
+				<p>Our project aims are:</p>
 
-            <div class="subtitle"><b>Impact</b></div>
+				<ul>
+					<li>
+						<b>Character-centric analysis</b>. We aim to develop automated
+						approaches for identifying key characters, their roles,
+						characteristics, and relationships within a narrative. This
+						involves tackling challenges such as character co-referencing
+						and linking. Also, detecting relationships among characters may
+						require addressing conflict and incomplete information in
+						narratives and tracking dynamic character relationships.
+					</li>
+
+					<li>
+						<b>Story map extraction</b>. Traditionally, events in a storyline
+						usually follow a chronological order. However, in narratives,
+						stories are complex. Narrative could be structured in many ways
+						including flashbacks, multiple stories happening
+						simultaneously, many smaller stories taking place within a
+						bigger plot, or even interwoven stories. We aim to develop
+						automated approaches for story map extraction.
+					</li>
+
+					<li>
+						<b>Reasoning in narratives</b>. We aim to enhance LLMs’ capabilities
+						to reason about the temporal order of events and their
+						relationships in narratives. We will also explore approaches to
+						enable LLMs to understanding cause-and-effect relationships and
+						perform theory-of-mind reasoning within narratives.
+					</li>
+
+					<li>
+						<b>Interactive narrative understanding</b>. We will investigate a
+						framework for interactive narrative understanding, which will
+						involve a few key components, including (1) Agents – extracting
+						comprehensive character-centric memory from narratives,
+						including aspects such as character’s personal traits and
+						preferences, beliefs and desires, their relationships with
+						other characters, their emotional states, their past
+						behaviours, and their anticipated actions. (2) Settings –
+						identifying character locations and settings, which are often
+						vaguely defined unless crucial to the plot. (3) Responses –
+						ensuring consistency and engagement in user interactions,
+						despite varying user inputs.
+					</li>
+				</ul>
+			</div>
+
+            <div class="subtitle"><b>Applications</b></div>
             <div class="maintext">
-                Since spoken and written communication plays a central part in our daily work and life, the proposed framework will have a profound impact on a variety of application areas, including drug discovery, intelligent virtual assistants, automated customer services, smart home, and question-answering in the finance and legal domains, benefiting industries such as healthcare, finance, law, insurance and education.
-            </div>
+				<p>
+					Narrative understanding can find a wide variety of
+					applications. Some example applications are listed below:
+				</p>
+
+				<ul>
+					<li>
+						<b>Personalised interactive narrative storytelling</b>. Creating
+						immersive and interactive narrative environments tailored
+						to individual preferences, resembling the dynamic
+						storylines experienced by individuals, as depicted in the
+						TV series “Westworld”.
+					</li>
+
+					<li>
+						<b>ESG report analysis</b>. Deriving insights from lengthy ESG
+						reports, which convey comprehensive and data-driven
+						narratives about companies’ performance and initiatives
+						related to environmental sustainability, social
+						responsibility, and corporate governance.
+					</li>
+
+					<li>
+						<b>News storyline generation</b>. In platforms like news aggregators, narrative
+						understanding could improve content relevance and
+						engagement by generating more coherent and informative news
+						storylines.
+					</li>
+
+					<li>
+						<b>Consistent and long-range conversations with LLM chatbots</b>. Long
+						conversations with LLM-based chatbots can be considered as
+						a form of narrative storytelling, although it is
+						interactive and dynamically generated. Such long-range
+						conversations that involve diverse topics presents a
+						challenge for conventional methods, as they struggle to
+						effectively address the issue of retaining contextual
+						coherence over long stretches of discourse.
+					</li>
+				</ul>
+			</div>
 
             <div class="subtitle"><b>Participants</b></div>
             <div class="maintext">
-                Lin Gui, Gabriele Pergola, Zhaoyue Sun, Xingwei Tan, Yuxiang Zhou
+				Lin Gui, Jiazheng Li, Junru Lu, Gabriele Pergola, Zhaoyue, Sun,
+				Xingwei Tan, Xinyu, Wang, Hainiu Xu, Wenjia Zhang, Runcong
+				Zhao, Yuxiang Zhou, Lixing Zhu, Qinglin Zhu
             </div>
         </div>
         <div class="col-xs-3">
@@ -289,15 +429,50 @@
             <div class="subtitle"><b>Publications (since 2021)</b></div>
             <div class="maintext">
                 <ul>
+					<li class="space">
+						H. Xu, R. Zhao, L. Zhu, J. Du, Y. He.
+						<a href="https://arxiv.org/abs/2402.06044">
+							OpenToM: A Comprehensive Benchmark for Evaluating Theory-of-Mind Reasoning Capabilities of Large Language Models
+						</a>,
+						<em>arXiv:2402.06044, 2024.</em>
+						<a href="https://seacowx.github.io/projects/opentom/OpenToM.html">[Website]</a>
+						<a href="https://huggingface.co/datasets/SeacowX/OpenToM">[Dataset]</a>
+					</li>
+					<li class="space">
+						R. Zhao, W. Zhang, J. Li, L. Zhu, Y. Li, Y. He and L. Gui.
+						<a href="https://arxiv.org/abs/2310.01459">
+							NarrativePlay: Interactive Narrative Understanding
+						</a>,
+						<em>The 18th Conference of the European Chapter of the Association for Computational Linguistics</em> (<b>EACL</b>), 2024.
+					</li>
+					<li class="space">
+						R. Zhao, W. Zhang, J. Li, L. Zhu, Y. Li, Y. He and L. Gui.
+						<a href="">
+							NarrativePlay: An Automated System for Crafting Visual Worlds in Novels for Role-Playing
+						</a>,
+						<em>The 38th Annual AAAI Conference on Artificial Intelligence</em> (<b>AAAI</b>), 2024.
+					</li>
+					<li class="space">
+						X. Wang, L. Gui and Y. He.
+						<a href="https://arxiv.org/abs/2310.18073">
+							A Scalable Framework for Table of Contents Extraction from Complex ESG Annual Reports
+						</a>,
+						<em>The 2023 Conference on Empirical Methods in Natural Language Processing</em> (<b>EMNLP</b>), 2023.
+					</li>
+					<li class="space">
+						L. Zhu, R. Zhao, L. Gui and Y. He.
+						<a href="https://arxiv.org/abs/2310.18783">Are NLP Models Good at Tracing Thoughts: An Overview of Narrative Understanding</a>,
+						<em>Findings of EMNLP</em>, 2023.
+					</li>
                     <li class="space">
-                        J. Lu, S. An, M. Lin, G. Pergola, Y. He, D. Yin, X. Sun and Y. Wu. 
-                        <a href="https://arxiv.org/abs/2308.08239">MemoChat: Tuning LLMs to Use Memos for Consistent Long-Range Open-Domain Conversation</a>, 
+                        J. Lu, S. An, M. Lin, G. Pergola, Y. He, D. Yin, X. Sun and Y. Wu.
+                        <a href="https://arxiv.org/abs/2308.08239">MemoChat: Tuning LLMs to Use Memos for Consistent Long-Range Open-Domain Conversation</a>,
                         <em>arXiv:2308.08239.</em>
                     </li>
 
                     <li class="space">
-                        J. Lu, G. Pergola, L. Gui and Y. He. 
-                        <a href="https://arxiv.org/abs/2305.04522">Event Knowledge Incorporation with Posterior Regularization for Event-Centric Question Answering</a>, 
+                        J. Lu, G. Pergola, L. Gui and Y. He.
+                        <a href="https://arxiv.org/abs/2305.04522">Event Knowledge Incorporation with Posterior Regularization for Event-Centric Question Answering</a>,
                         <em>arXiv:2305.04522.</em>
                     </li>
 
@@ -380,7 +555,7 @@
                     </li>
 
                     <li class="space">
-                        L. Zhang, D. Zhou, Y. He and Z. Yang. 
+                        L. Zhang, D. Zhou, Y. He and Z. Yang.
                         <a href="https://ojs.aaai.org/index.php/AAAI/article/view/17695">MERL: Multimodal Event Representation Learning in Heterogeneous Embedding Spaces</a>,
                         <em>The 35th AAAI Conference on Artificial Intelligence</em>
                         (<b>AAAI</b>), Feb. 2021.
