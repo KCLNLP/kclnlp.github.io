@@ -145,47 +145,16 @@
 
     <!-- Navbar -->
 
-    <div class="w3-top toptopic">
-        <div class="col-xs-3">
-            <div style="height: 10px;"></div>
-            <b style="color: rgb(219, 219, 219); font-size: 23px; height: 40px; margin-left: 10px;">
-                King's College London NLP </b>
-            <div style="height: 2px;"></div>
-        </div>
-        <div class="col-xs-8">
+    <div id="navbar-placeholder"></div>
 
-            <ul class="nav nav-pills">
-                <li class="nav-item active font-weight-bold">
-                    <a class="nav-link" aria-current="page" href="./about.html">About</a>
-                </li>
-                <li class="nav-item ">
-                    <a class="nav-link" aria-current="page" href="./research.html">Research</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" aria-current="page" href="./projects.html">Projects</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" aria-current="page" href="./activities.html">Activities</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" aria-current="page" href="./team.html">Team</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" aria-current="page" href="./publications.html">Publications</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" aria-current="page" href="./code.html">Code</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" aria-current="page" href="./datasets.html">Datasets</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" aria-current="page" href="./contact.html">Contact</a>
-                </li>
-            </ul>
-        </div>
-    </div>
-
+    <script>
+        fetch('navbar.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('navbar-placeholder').innerHTML = data;
+            })
+            .catch(error => console.error('Error loading navbar:', error));
+    </script>
 
 
     <!-- Header -->
