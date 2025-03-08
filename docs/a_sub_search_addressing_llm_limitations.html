@@ -220,29 +220,13 @@
     <!-- Header -->
     <div class="backgroundlayer  col-xs-12" style="margin-top: 120px;">
         <div class="col-xs-9 maintitle">
-            <b>Trustworthy AI</b>
+            <b>Addressing LLM Limitations</b>
             <div class="maintext">
-				In recent years, we have witnessed the shift of paradigms in
-				NLP from fine-tuning large-scale pre-trained language
-				models (PLMs) on task-specific data to prompt-based
-				learning. In the latter, the task description is embedded
-				into the PLM input, enabling the same model to handle
-				multiple tasks. While both approaches have demonstrated
-				impressive performance in various NLP tasks, their opaque
-				nature makes comprehending their inner workings and
-				decision-making processes challenging for humans. We
-				conduct research to address the interpretability concerns
-				surrounding neural models in language understanding. Our
-				work includes a hierarchical interpretable text classifier
-				going beyond word-level interpretations, uncertainty
-				interpretation of text classifiers built on PLMs,
-				explainable recommender systems by harnessing information
-				across diverse modalities, and explainable student answer
-				scoring.
+				LLMs suffer from various limitations, such as hallucination, lack of robust reasoning, and difficult to control their outputs. Our work includes multi-perspective LLM self-reflection to enhance QA accuracy, addressing the order sensitivity of in-context learning, addressing the length bias of the Direct Preference Optimisation (DPO) algorithm, task embedding learning, prompt optimisation, and encouraging monosemanticity of LLM neurons.
                 <div id="challenges" class="col-xs-3" style="height: 20px; width: 100%;"></div>
             </div>
             <div class="subtitle"><b>Participants</b></div>
-            <div class="maintext">Lin Gui, Jiazheng Li, Hanqi Yan, Runcong Zhao, Yuxiang Zhou, Lixing Zhu</div>
+            <div class="maintext">Hanqi Yan, Xinyu Wang, Yanzheng Xiang, Junru Lu, Lin Gui, Yulan He</div>
             <div class="subtitle"><b>Projects</b></div>
             <ul class="maintext">
 				<li>
@@ -251,11 +235,11 @@
 					</a> (Jan 2021-Dec 2025), Turing AI Acceleration Fellowship,
 					funded by the UKRI.
 					</li>
-                <li>
-					<a href="https://gtr.ukri.org/projects?ref=EP%2FX019063%2F1">
-						A Lebesgue Integral based Approximation for Language Modelling
-					</a> (2023-2025), funded by the EPSRC.</li>
-                <li><a href="https://gtr.ukri.org/projects?ref=EP%2FT017112%2F1">Twenty20Insight</a> (2020-2023). Funded by the EPSRC.</li>
+<!--                <li>-->
+<!--					<a href="https://gtr.ukri.org/projects?ref=EP%2FX019063%2F1">-->
+<!--						A Lebesgue Integral based Approximation for Language Modelling-->
+<!--					</a> (2023-2025), funded by the EPSRC.</li>-->
+<!--                <li><a href="https://gtr.ukri.org/projects?ref=EP%2FT017112%2F1">Twenty20Insight</a> (2020-2023). Funded by the EPSRC.</li>-->
             </ul>
         </div>
         <div class="col-xs-3">
@@ -272,6 +256,119 @@
             <div class="subtitle"><b>Publications (since 2021)</b></div>
             <div class="maintext">
                 <ul>
+                    <li class="space">
+                      J. Li, Y. Zhou, J. Lu, G. Tyen, L. Gui, C. Aloisi and Y. He.
+                      <a href="https://arxiv.org/abs/2502.19230">
+                        Two Heads Are Better Than One: Dual-Model Verbal Reflection at Inference-Time
+                      </a>,
+                      <em>arXiv:2502.19230, 2025.</em>
+                    </li>
+
+                    <li class="space">
+                      H. Yan, X. Cui, L. Yin, P.P. Liang, Y. He and Y. Wang.
+                      <a href="https://arxiv.org/abs/2502.14888">
+                        The Multi-Faceted Monosemanticity in Multimodal Representations
+                      </a>,
+                      <em>arXiv:2502.14888, 2025.</em>
+                    </li>
+
+                    <li class="space">
+                      L. Zhang, Z. Gao, D. Zhou and Y. He.
+                      <a href="https://arxiv.org/abs/2503.01315">
+                        Explainable Depression Detection in Clinical Interviews with Personalized Retrieval-Augmented Generation
+                      </a>,
+                      <em>arXiv:2503.01315, 2025.</em>
+                    </li>
+
+                    <li class="space">
+                      J. Li, A. Bobrov, D. West, C. Aloisi and Y. He.
+                      <a href="https://arxiv.org/abs/2412.13381">
+                        An Automated Explainable Educational Assessment System Built on LLMs
+                      </a>,
+                      <em>The 39th Annual AAAI Conference on Artificial Intelligence (AAAI), 2025.</em>
+                    </li>
+
+                    <li class="space">
+                      C. Zhang, L. Zhang, J. Wu, Y. He and D. Zhou.
+                      <a href="https://arxiv.org/abs/2403.02738v3">
+                        Causal Prompting: Debiasing Large Language Model Prompting based on Front-Door Adjustment
+                      </a>,
+                      <em>The 39th Annual AAAI Conference on Artificial Intelligence (AAAI), 2025.</em>
+                    </li>
+
+                    <li class="space">
+                      H. Yan, Y. Xiang, G. Chen, Y. Wang, L. Gui and Y. He.
+                      <a href="https://arxiv.org/abs/2406.17969v1">
+                        Encourage or Inhibit Monosemanticity? Revisit Monosemanticity from a Feature Decorrelation Perspective
+                      </a>,
+                      <em>The 2024 Conference on Empirical Methods in Natural Language Processing (EMNLP), 2024.</em>
+                    </li>
+
+                    <li class="space">
+                      J. Lu, J. Li, S. An, M. Zhao, Y. He, D. Yin and X. Sun.
+                      <a href="https://arxiv.org/abs/2406.10957v1">
+                        Eliminating Biased Length Reliance of Direct Preference Optimization via Down-Sampled KL Divergence
+                      </a>,
+                      <em>The 2024 Conference on Empirical Methods in Natural Language Processing (EMNLP), 2024.</em>
+                    </li>
+
+                    <li class="space">
+                      Y. Zhou, J. Li, Y. Xiang, H. Yan, L. Gui, and Y. He.
+                      <a href="https://arxiv.org/abs/2311.00237">
+                        The Mystery of In-Context Learning: A Comprehensive Survey on Interpretation and Analysis
+                      </a>,
+                      <em>The 2024 Conference on Empirical Methods in Natural Language Processing (EMNLP), 2024.</em>
+                    </li>
+
+                    <li class="space">
+                      S. Qi, Y. He and Z. Yuan.
+                      <a href="https://arxiv.org/abs/2404.12041v2">
+                        Can We Catch the Elephant? A Survey of the Evolvement of Hallucination Evaluation on Natural Language Generation
+                      </a>,
+                      <em>arXiv:2404.12041, 2024.</em>
+                    </li>
+
+                    <li class="space">
+                      H. Yan, Q. Zhu, X. Wang, L. Gui, and Y. He.
+                      <a href="https://arxiv.org/abs/2402.14963">
+                        Mirror: A Multiple-Perspective Self-Reflection Method for Knowledge-Rich Reasoning
+                      </a>,
+                      <em>The 62nd Annual Meeting of the Association for Computational Linguistics (ACL), 2024.</em>
+                    </li>
+
+                    <li class="space">
+                      X. Wang, H. Xu, L. Gui, and Y. He.
+                      <a href="https://arxiv.org/abs/2402.14522">
+                        Towards Unified Task Embeddings Across Multiple Models: Bridging the Gap for Prompt-Based Large Language Models and Beyond
+                      </a>,
+                      <em>Findings of ACL, 2024.</em>
+                    </li>
+
+                    <li class="space">
+                      Y. Xiang, H. Yan, L. Gui, and Y. He.
+                      <a href="https://arxiv.org/abs/2402.15637">
+                        Addressing Order Sensitivity of In-Context Demonstration Examples in Causal Language Models
+                      </a>,
+                      <em>Findings of ACL, 2024.</em>
+                    </li>
+
+                    <li class="space">
+                      J. Lu, S. An, M. Zhang, Y. He, D. Yin, and X. Sun.
+                      <a href="https://arxiv.org/abs/2402.11811">
+                        FIPO: Free-Form Instruction-Oriented Prompt Optimization with Preference Dataset and Modular Fine-Tuning Schema
+                      </a>,
+                      <em>arXiv:2402.11811, 2024.</em>
+                    </li>
+
+                    <li class="space">
+                      H. Zhang, L. Gui, Y. Lei, Y. Zhai, Y. Zhang, Y. He, H. Wang, Y. Yu, K.F. Wong, B. Liang, R. Xu.
+                      <a href="https://arxiv.org/abs/2402.14228">
+                        COPR: Continual Human Preference Learning via Optimal Policy Regularization
+                      </a>,
+                      <em>arXiv:2402.14228, 2024.</em>
+                    </li>
+
+
 					<li class="space">
 						H. Zhang, Y. Lei, L. Gui, M. Yang, Y. He, H. Wang, R. Xu.
 						<a href="https://openreview.net/forum?id=86zAUE80pP">

@@ -56,4 +56,15 @@
     .modal-lg {
       max-width: 80vw;
     }
+    /* 让所有 <a> 标签默认带有下划线 */
+    .maintext a {
+        text-decoration: underline;
+    }
+
+    /* 如果需要在鼠标悬停时加深下划线样式 */
+    .maintext a:hover {
+        text-decoration: underline;
+        color: blue; /* 可选：更明显的悬停颜色 */
+    }
+
   </style>
