@@ -4,50 +4,56 @@
 <style>
 /********** Base styles **********/
 
-.navbar-default .navbar-nav>.open>a,
-.navbar-default .navbar-nav>.open>a:focus,
-  {
-  background-color: rgb(206, 206, 206) !important;
-}
 
-.active a {
-  background-color: rgb(66, 66, 66) !important;
-  color: rgb(255, 255, 255) !important;
-}
+    .navbar-default .navbar-nav > .open > a,
+    .navbar-default .navbar-nav > .open > a:focus {
+      background-color: rgb(206, 206, 206) !important;
+    }
 
-.nav-pills a {
-  color: rgb(160, 160, 160);
-  font-size: 16px;
-}
+    .active a {
+      background-color: rgb(66, 66, 66) !important;
+      color: rgb(255, 255, 255) !important;
+    }
 
-.nav-pills a:hover {
-  background-color: rgb(66, 66, 66) !important;
-  color: rgb(160, 160, 160) !important;
-}
+    /* 调整导航链接的样式 */
+    .nav-pills a {
+      color: rgb(160, 160, 160);
+      font-size: 16px;
+      padding: 8px 10px;  /* 内边距调小 */
+      text-decoration: none;
+    }
 
-.nav-item {
-  width: 12%;
-  min-width: 80px;
-  text-align: center;
-  margin-top: 5px;
-}
+    .nav-pills a:hover {
+      background-color: rgb(66, 66, 66) !important;
+      color: rgb(160, 160, 160) !important;
+    }
 
-ul.nav li.dropdown:hover>ul.dropdown-menu {
-  display: block;
-}
+    /* 使用 Flex 布局让导航项在一行显示，并减少间距 */
+    .nav-pills {
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+      padding: 0;
+      margin: 0;
+    }
 
+    /* 调整每个导航项的间距 */
+    .nav-item {
+      margin: 0 5px;  /* 根据需要调小这个值 */
+      text-align: center;
+      margin-top: 5px;
+    }
 
-.dropdown-menu {
-  width: 12vw !important;
-  text-align: center;
-}
+    ul.nav li.dropdown:hover > ul.dropdown-menu {
+      display: block;
+    }
 
-.modal-lg {
-  max-width: 80vw;
-}
+    .dropdown-menu {
+      width: 12vw !important;
+      text-align: center;
+    }
 
-
-
-
-
-</style>
+    .modal-lg {
+      max-width: 80vw;
+    }
+  </style>
