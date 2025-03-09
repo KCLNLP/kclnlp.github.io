@@ -3,13 +3,13 @@
 
 <head>
     <title>King's College London NLP</title>
-    <link rel="shortcut icon" type="image/x-icon" href="favicon.ico" />
+    <link rel="shortcut icon" type="image/x-icon" href="favicon.ico"/>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
     <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
-        integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+          integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
@@ -162,8 +162,7 @@
             padding: calc(.05em + var(--s)) calc(.3em + var(--s));
             color: var(--c);
             --_p: var(--s);
-            background:
-                conic-gradient(from 90deg at var(--b) var(--b), #0000 90deg, var(--c) 0) var(--_p) var(--_p)/calc(100% - var(--b) - 2*var(--_p)) calc(100% - var(--b) - 2*var(--_p));
+            background: conic-gradient(from 90deg at var(--b) var(--b), #0000 90deg, var(--c) 0) var(--_p) var(--_p)/calc(100% - var(--b) - 2 * var(--_p)) calc(100% - var(--b) - 2 * var(--_p));
             transition: .3s linear, color 0s, background-color 0s;
             outline: var(--b) solid #0000;
             outline-offset: .2em;
@@ -195,7 +194,7 @@
             text-align: center;
         }
 
-        .container>.child {
+        .container > .child {
             display: table-cell;
             vertical-align: middle;
         }
@@ -205,282 +204,325 @@
 
 <body>
 
-    <!-- Navbar -->
-    <div id="navbar-placeholder"></div>
+<!-- Navbar -->
+<div id="navbar-placeholder"></div>
 
-    <script>
-        fetch('navbar.html')
-            .then(response => response.text())
-            .then(data => {
-                document.getElementById('navbar-placeholder').innerHTML = data;
-            })
-            .catch(error => console.error('Error loading navbar:', error));
-    </script>
+<script>
+    fetch('navbar.html')
+        .then(response => response.text())
+        .then(data => {
+            document.getElementById('navbar-placeholder').innerHTML = data;
+        })
+        .catch(error => console.error('Error loading navbar:', error));
+</script>
 
-    <!-- Header -->
-    <div class="backgroundlayer  col-xs-12" style="margin-top: 120px;">
-        <div class="col-xs-9 maintitle">
-            <b>Addressing LLM Limitations</b>
-            <div class="maintext">
-				LLMs suffer from various limitations, such as hallucination, lack of robust reasoning, and difficult to control their outputs. Our work includes multi-perspective LLM self-reflection to enhance QA accuracy, addressing the order sensitivity of in-context learning, addressing the length bias of the Direct Preference Optimisation (DPO) algorithm, task embedding learning, prompt optimisation, and encouraging monosemanticity of LLM neurons.
-                <div id="challenges" class="col-xs-3" style="height: 20px; width: 100%;"></div>
-            </div>
-            <div class="subtitle"><b>Participants</b></div>
-            <div class="maintext">Hanqi Yan, Xinyu Wang, Yanzheng Xiang, Junru Lu, Lin Gui, Yulan He</div>
-            <div class="subtitle"><b>Projects</b></div>
-            <ul class="maintext">
-				<li>
-					<a href="https://gow.epsrc.ukri.org/NGBOViewGrant.aspx?GrantRef=EP/V020579/1">
-						Event-Centric Framework for Natural Language Understanding
-					</a> (Jan 2021-Dec 2025), Turing AI Acceleration Fellowship,
-					funded by the UKRI.
-					</li>
-<!--                <li>-->
-<!--					<a href="https://gtr.ukri.org/projects?ref=EP%2FX019063%2F1">-->
-<!--						A Lebesgue Integral based Approximation for Language Modelling-->
-<!--					</a> (2023-2025), funded by the EPSRC.</li>-->
-<!--                <li><a href="https://gtr.ukri.org/projects?ref=EP%2FT017112%2F1">Twenty20Insight</a> (2020-2023). Funded by the EPSRC.</li>-->
-            </ul>
+<!-- Header -->
+<div class="backgroundlayer  col-xs-12" style="margin-top: 120px;">
+    <div class="col-xs-9 maintitle">
+        <b>Addressing LLM Limitations</b>
+        <div class="maintext">
+            LLMs suffer from various limitations, such as hallucination, lack of robust reasoning, and difficult to
+            control their outputs. Our work includes multi-perspective LLM self-reflection to enhance QA accuracy,
+            addressing the order sensitivity of in-context learning, addressing the length bias of the Direct Preference
+            Optimisation (DPO) algorithm, task embedding learning, prompt optimisation, and encouraging monosemanticity
+            of LLM neurons.
+            <div id="challenges" class="col-xs-3" style="height: 20px; width: 100%;"></div>
         </div>
-        <div class="col-xs-3">
-            <div class="col-xs-12 logo">
-                <img src="./pictures/logo/KCLNLP.png" alt="Challenges" style="width:150px">
-            </div>
-            <div class="col-xs-12 logo">
-                <img src="./pictures/logo/KCL.png" alt="Challenges" style="width:210px">
-            </div>
+        <div class="subtitle"><b>Participants</b></div>
+        <div class="maintext">Hanqi Yan, Xinyu Wang, Yanzheng Xiang, Junru Lu, Lin Gui, Yulan He</div>
+        <div class="subtitle"><b>Projects</b></div>
+        <ul class="maintext">
+            <li>
+                <a href="https://gow.epsrc.ukri.org/NGBOViewGrant.aspx?GrantRef=EP/V020579/1">
+                    Event-Centric Framework for Natural Language Understanding
+                </a> (Jan 2021-Dec 2025), Turing AI Acceleration Fellowship,
+                funded by the UKRI.
+            </li>
+            <!--                <li>-->
+            <!--					<a href="https://gtr.ukri.org/projects?ref=EP%2FX019063%2F1">-->
+            <!--						A Lebesgue Integral based Approximation for Language Modelling-->
+            <!--					</a> (2023-2025), funded by the EPSRC.</li>-->
+            <!--                <li><a href="https://gtr.ukri.org/projects?ref=EP%2FT017112%2F1">Twenty20Insight</a> (2020-2023). Funded by the EPSRC.</li>-->
+        </ul>
+    </div>
+    <div class="col-xs-3">
+        <div class="col-xs-12 logo">
+            <img src="./pictures/logo/KCLNLP.png" alt="Challenges" style="width:150px">
+        </div>
+        <div class="col-xs-12 logo">
+            <img src="./pictures/logo/KCL.png" alt="Challenges" style="width:210px">
         </div>
     </div>
-    <div class="backgroundlayer  col-xs-12">
-        <div class="col-xs-12 maintitle">
-            <div class="subtitle"><b>Publications (since 2021)</b></div>
-            <div class="maintext">
-                <ul>
-                    <li class="space">
-                      J. Li, Y. Zhou, J. Lu, G. Tyen, L. Gui, C. Aloisi and Y. He.
-                      <a href="https://arxiv.org/abs/2502.19230">
-                        Two Heads Are Better Than One: Dual-Model Verbal Reflection at Inference-Time
-                      </a>,
-                      <em>arXiv:2502.19230, 2025.</em>
-                    </li>
+</div>
+<div class="backgroundlayer  col-xs-12">
+    <div class="col-xs-12 maintitle">
+        <div class="subtitle"><b>Publications</b></div>
+        <div class="maintext">
+            <ul>
+                <li class="space">
+                    A. Suzuki, Y. He, F. Tian and Z. Wang.
+                    <a href="https://arxiv.org/abs/2502.12187">
+                        Hallucinations are inevitable but statistically negligible
+                    </a>,
+                    <em>arXiv:2502.12187, 2025.</em>
+                </li>
 
-                    <li class="space">
-                      H. Yan, X. Cui, L. Yin, P.P. Liang, Y. He and Y. Wang.
-                      <a href="https://arxiv.org/abs/2502.14888">
-                        The Multi-Faceted Monosemanticity in Multimodal Representations
-                      </a>,
-                      <em>arXiv:2502.14888, 2025.</em>
-                    </li>
+                <li class="space">
+                    Z. Shen, H. Yan, L. Zhang, Z. Hu, Y. Du and Y. He.
+                    <a href="https://arxiv.org/abs/2502.21074">
+                        CODI: Compressing Chain-of-Thought into Continuous Space via Self-Distillation
+                    </a>,
+                    <em>arXiv:2502.21074, 2025.</em>
+                </li>
 
-                    <li class="space">
-                      L. Zhang, Z. Gao, D. Zhou and Y. He.
-                      <a href="https://arxiv.org/abs/2503.01315">
-                        Explainable Depression Detection in Clinical Interviews with Personalized Retrieval-Augmented Generation
-                      </a>,
-                      <em>arXiv:2503.01315, 2025.</em>
-                    </li>
+                <li class="space">
+                    L. Zhang, J. Wu, D. Zhou and Y. He.
+                    <a href="https://arxiv.org/abs/2503.01303">
+                        PROPER: A Progressive Learning Framework for Personalized Large Language Models with Group-Level
+                        Adaptation
+                    </a>,
+                    <em>arXiv:2503.01303, 2025.</em>
+                </li>
 
-                    <li class="space">
-                      J. Li, A. Bobrov, D. West, C. Aloisi and Y. He.
-                      <a href="https://arxiv.org/abs/2412.13381">
-                        An Automated Explainable Educational Assessment System Built on LLMs
-                      </a>,
-                      <em>The 39th Annual AAAI Conference on Artificial Intelligence (AAAI), 2025.</em>
-                    </li>
+                <li class="space">
+                    J. Lu, J. Li, G. Shen, L. Gui, S. An, Y. He, D. Yin and X. Sun.
+                    <a href="https://arxiv.org/abs/2502.11387">
+                        RoleMRC: A Fine-Grained Composite Benchmark for Role-Playing and Instruction-Following
+                    </a>,
+                    <em>arXiv:2502.11387, 2025.</em>
+                </li>
 
-                    <li class="space">
-                      C. Zhang, L. Zhang, J. Wu, Y. He and D. Zhou.
-                      <a href="https://arxiv.org/abs/2403.02738v3">
+                <li class="space">
+                    S. Qi, R. Cao, Y. He and Z. Yuan.
+                    <a href="https://arxiv.org/abs/2503.01670">
+                        Evaluating LLMs' Assessment of Mixed-Context Hallucination Through the Lens of Summarization
+                    </a>,
+                    <em>arXiv:2503.01670, 2025.</em>
+                </li>
+
+                <li class="space">
+                    J. Wu, W. Yin, Y. Jiang, Z. Wang, Z. Xi, R. Fang, L. Zhang, Y. He, D. Zhou, P. Xie and F. Huang.
+                    <a href="https://arxiv.org/abs/2501.07572">
+                        WebWalker: Benchmarking LLMs in Web Traversal
+                    </a>,
+                    <em>arXiv:2501.07572, 2025.</em>
+                </li>
+
+                <li class="space">
+                    Z. Hu, H. Yan, Q. Zhu, Z. Shen, Y. He and L. Gui.
+                    <a href="https://arxiv.org/abs/2503.01606">
+                        Beyond Prompting: An Efficient Embedding Framework for Open-Domain Question Answering
+                    </a>,
+                    <em>arXiv:2503.01606, 2025.</em>
+                </li>
+
+                <li class="space">
+                    S. Liang, L. Zhang, H. Zhu, W. Wang, Y. He and D. Zhou.
+                    <a href="https://arxiv.org/abs/2502.13361">
+                        RGAR: Recurrence Generation-augmented Retrieval for Factual-aware Medical Question Answering
+                    </a>,
+                    <em>arXiv:2502.13361, 2025.</em>
+                </li>
+
+                <li class="space">
+                    X. Wang, Y. Xiang, L. Gui and Y. He.
+                    <a href="https://arxiv.org/abs/2410.04790">
+                        GARLIC: LLM-Guided Dynamic Progress Control with Hierarchical Weighted Graph for Long Document
+                        QA
+                    </a>,
+                    <em>arXiv:2410.04790, 2024.</em>
+                </li>
+
+                <li class="space">
+                    J. Lu, S. An, M. Zhang, Y. He, D. Yin and X. Sun.
+                    <a href="https://arxiv.org/abs/2402.11811">
+                        FIPO: Free-Form Instruction-Oriented Prompt Optimization with Preference Dataset and Modular
+                        Fine-Tuning Schema
+                    </a>,
+                    <em>The 31st International Conference on Computational Linguistics (COLING), 2025.</em>
+                </li>
+
+                <li class="space">
+                    C. Zhang, L. Zhang, J. Wu, Y. He and D. Zhou.
+                    <a href="https://arxiv.org/abs/2403.02738v3">
                         Causal Prompting: Debiasing Large Language Model Prompting based on Front-Door Adjustment
-                      </a>,
-                      <em>The 39th Annual AAAI Conference on Artificial Intelligence (AAAI), 2025.</em>
-                    </li>
+                    </a>,
+                    <em>The 39th Annual AAAI Conference on Artificial Intelligence (AAAI), 2025.</em>
+                </li>
 
-                    <li class="space">
-                      H. Yan, Y. Xiang, G. Chen, Y. Wang, L. Gui and Y. He.
-                      <a href="https://arxiv.org/abs/2406.17969v1">
-                        Encourage or Inhibit Monosemanticity? Revisit Monosemanticity from a Feature Decorrelation Perspective
-                      </a>,
-                      <em>The 2024 Conference on Empirical Methods in Natural Language Processing (EMNLP), 2024.</em>
-                    </li>
+                <li class="space">
+                    H. Yan, Y. Xiang, G. Chen, Y. Wang, L. Gui and Y. He.
+                    <a href="https://arxiv.org/abs/2406.17969v1">
+                        Encourage or Inhibit Monosemanticity? Revisit Monosemanticity from a Feature Decorrelation
+                        Perspective
+                    </a>,
+                    <em>The 2024 Conference on Empirical Methods in Natural Language Processing (EMNLP), 2024.</em>
+                </li>
 
-                    <li class="space">
-                      J. Lu, J. Li, S. An, M. Zhao, Y. He, D. Yin and X. Sun.
-                      <a href="https://arxiv.org/abs/2406.10957v1">
-                        Eliminating Biased Length Reliance of Direct Preference Optimization via Down-Sampled KL Divergence
-                      </a>,
-                      <em>The 2024 Conference on Empirical Methods in Natural Language Processing (EMNLP), 2024.</em>
-                    </li>
+                <li class="space">
+                    J. Lu, J. Li, S. An, M. Zhao, Y. He, D. Yin and X. Sun.
+                    <a href="https://arxiv.org/abs/2406.10957v1">
+                        Eliminating Biased Length Reliance of Direct Preference Optimization via Down-Sampled KL
+                        Divergence
+                    </a>,
+                    <em>The 2024 Conference on Empirical Methods in Natural Language Processing (EMNLP), 2024.</em>
+                </li>
 
-                    <li class="space">
-                      Y. Zhou, J. Li, Y. Xiang, H. Yan, L. Gui, and Y. He.
-                      <a href="https://arxiv.org/abs/2311.00237">
+                <li class="space">
+                    Y. Zhou, J. Li, Y. Xiang, H. Yan, L. Gui and Y. He.
+                    <a href="https://arxiv.org/abs/2311.00237">
                         The Mystery of In-Context Learning: A Comprehensive Survey on Interpretation and Analysis
-                      </a>,
-                      <em>The 2024 Conference on Empirical Methods in Natural Language Processing (EMNLP), 2024.</em>
-                    </li>
+                    </a>,
+                    <em>The 2024 Conference on Empirical Methods in Natural Language Processing (EMNLP), 2024.</em>
+                </li>
 
-                    <li class="space">
-                      S. Qi, Y. He and Z. Yuan.
-                      <a href="https://arxiv.org/abs/2404.12041v2">
-                        Can We Catch the Elephant? A Survey of the Evolvement of Hallucination Evaluation on Natural Language Generation
-                      </a>,
-                      <em>arXiv:2404.12041, 2024.</em>
-                    </li>
-
-                    <li class="space">
-                      H. Yan, Q. Zhu, X. Wang, L. Gui, and Y. He.
-                      <a href="https://arxiv.org/abs/2402.14963">
+                <li class="space">
+                    H. Yan, Q. Zhu, X. Wang, L. Gui and Y. He.
+                    <a href="https://arxiv.org/abs/2402.14963">
                         Mirror: A Multiple-Perspective Self-Reflection Method for Knowledge-Rich Reasoning
-                      </a>,
-                      <em>The 62nd Annual Meeting of the Association for Computational Linguistics (ACL), 2024.</em>
-                    </li>
+                    </a>,
+                    <em>The 62nd Annual Meeting of the Association for Computational Linguistics (ACL), 2024.</em>
+                </li>
 
-                    <li class="space">
-                      X. Wang, H. Xu, L. Gui, and Y. He.
-                      <a href="https://arxiv.org/abs/2402.14522">
-                        Towards Unified Task Embeddings Across Multiple Models: Bridging the Gap for Prompt-Based Large Language Models and Beyond
-                      </a>,
-                      <em>Findings of ACL, 2024.</em>
-                    </li>
+                <li class="space">
+                    X. Wang, H. Xu, L. Gui and Y. He.
+                    <a href="https://arxiv.org/abs/2402.14522">
+                        Towards Unified Task Embeddings Across Multiple Models: Bridging the Gap for Prompt-Based Large
+                        Language Models and Beyond
+                    </a>,
+                    <em>Findings of ACL, 2024.</em>
+                </li>
 
-                    <li class="space">
-                      Y. Xiang, H. Yan, L. Gui, and Y. He.
-                      <a href="https://arxiv.org/abs/2402.15637">
+                <li class="space">
+                    Y. Xiang, H. Yan, L. Gui and Y. He.
+                    <a href="https://arxiv.org/abs/2402.15637">
                         Addressing Order Sensitivity of In-Context Demonstration Examples in Causal Language Models
-                      </a>,
-                      <em>Findings of ACL, 2024.</em>
-                    </li>
+                    </a>,
+                    <em>Findings of ACL, 2024.</em>
+                </li>
 
-                    <li class="space">
-                      J. Lu, S. An, M. Zhang, Y. He, D. Yin, and X. Sun.
-                      <a href="https://arxiv.org/abs/2402.11811">
-                        FIPO: Free-Form Instruction-Oriented Prompt Optimization with Preference Dataset and Modular Fine-Tuning Schema
-                      </a>,
-                      <em>arXiv:2402.11811, 2024.</em>
-                    </li>
+                <li class="space">
+                    S. Qi, Y. He and Z. Yuan.
+                    <a href="https://arxiv.org/abs/2404.12041v2">
+                        Can We Catch the Elephant? A Survey of the Evolvement of Hallucination Evaluation on Natural
+                        Language Generation
+                    </a>,
+                    <em>arXiv:2404.12041, 2024.</em>
+                </li>
 
-                    <li class="space">
-                      H. Zhang, L. Gui, Y. Lei, Y. Zhai, Y. Zhang, Y. He, H. Wang, Y. Yu, K.F. Wong, B. Liang, R. Xu.
-                      <a href="https://arxiv.org/abs/2402.14228">
+                <li class="space">
+                    H. Zhang, L. Gui, Y. Lei, Y. Zhai, Y. Zhang, Y. He, H. Wang, Y. Yu, K.F. Wong, B. Liang, R. Xu.
+                    <a href="https://arxiv.org/abs/2402.14228">
                         COPR: Continual Human Preference Learning via Optimal Policy Regularization
-                      </a>,
-                      <em>arXiv:2402.14228, 2024.</em>
-                    </li>
+                    </a>,
+                    <em>arXiv:2402.14228, 2024.</em>
+                </li>
 
+                <li class="space">
+                    H. Zhang, Y. Lei, L. Gui, M. Yang, Y. He, H. Wang, R. Xu.
+                    <a href="https://openreview.net/forum?id=86zAUE80pP">
+                        CPPO: Continual Learning for Reinforcement Learning with Human Feedback
+                    </a>,
+                    <em>The 12th International Conference on Learning Representations (ICLR), 2024.</em>
+                </li>
 
-					<li class="space">
-						H. Zhang, Y. Lei, L. Gui, M. Yang, Y. He, H. Wang, R. Xu.
-						<a href="https://openreview.net/forum?id=86zAUE80pP">
-							CPPO: Continual Learning for Reinforcement Learning with Human Feedback
-						</a>,
-						<em>The 12th International Conference on Learning Representations</em> (<b>ICLR</b>), 2024.
-					</li>
+                <li class="space">
+                    H. Yan, L. Gui, M. Wang, K. Zhang and Y. He.
+                    <a href="https://kclpure.kcl.ac.uk/portal/en/publications/explainable-recommender-with-geometric-information-bottleneck">
+                        Explainable Recommender with Geometric Information Bottleneck
+                    </a>,
+                    <em>IEEE Transactions on Knowledge and Data Engineering, to appear.</em>
+                </li>
 
-					<li class="space">
-						H. Yan, L. Gui, M. Wang, K. Zhang and Y. He.
-						<a href="https://arxiv.org/abs/2305.05331">Explainable Recommender with Geometric Information Bottleneck</a>,
-						<em>arXiv:2305.05331.</em>
-					</li>
+                <li class="space">
+                    J. Li, L. Gui, Y. Zhou, D. West, C. Aloisi and Y. He.
+                    <a href="https://arxiv.org/abs/2305.12962">
+                        Exploring Explainable Automated Student Answer Assessment with ChatGPT
+                    </a>,
+                    <em>Findings of EMNLP, 2023.</em>
+                </li>
 
-					<li class="space">
-						J. Li, L. Gui, Y. Zhou, D. West, C. Aloisi and Y. He.
-						<a href="https://arxiv.org/abs/2305.12962">Exploring Explainable Automated Student Answer Assessment with ChatGPT</a>,
-						<em>Findings of EMNLP</em>, 2023.
-					</li>
+                <li class="space">
+                    H. Yan, L. Kong, L. Gui, Y. Chi, E. Xing, Y. He and K. Zhang.
+                    <a href="https://kclpure.kcl.ac.uk/portal/en/publications/counterfactual-generation-with-identifiability-guarantees">
+                        Counterfactual Generation with Identifiability Guarantees
+                    </a>,
+                    <em>The 37th Annual Conference on Neural Information Processing Systems (NeurIPS), 2023.</em>
+                </li>
 
-					<li class="space">
-						H. Yan, L. Kong, L. Gui, Y. Chi, E. Xing, Y. He, K. Zhang.
-						<a href="https://kclpure.kcl.ac.uk/portal/en/publications/counterfactual-generation-with-identifiability-guarantees">
-							Counterfactual Generation with Identifiability Guarantees
-						</a>,
-						<em>The 37th Annual Conference on Neural Information Processing Systems (NeurIPS)</em>, New Orleans, US, 2023.
-					</li>
+                <li class="space">
+                    J. Li, Z. Sun, B. Liang, L. Gui and Y. He.
+                    <a href="https://arxiv.org/abs/2306.03598">
+                        CUE: An Uncertainty Interpretation Framework for Text Classifiers Built on Pre-Trained Language
+                        Models
+                    </a>,
+                    <em>The 39th Conference on Uncertainty in Artificial Intelligence (UAI), Pittsburgh, PA, USA, Aug.
+                        2023.</em>
+                </li>
 
-                    <li class="space">
-                        J. Li, Z. Sun, B. Liang, L. Gui and Y. He.
-                        <a href="">CUE: An Uncertainty Interpretation Framework for Text Classifiers Built on Pre-Trained Language Models</a>,
-                        <em>The 39th Conference on Uncertainty in Artificial Intelligence </em>
-                        (<b>UAI</b>), Aug. 2023.
-                    </li>
+                <li class="space">
+                    J. Li, R. Zhao, Y. He and L. Gui.
+                    <a href="https://arxiv.org/abs/2305.14973">
+                        OverPrompt: Enhancing ChatGPT Capabilities through an Efficient In-Context Learning Approach
+                    </a>,
+                    <em>arXiv:2305.14973.</em>
+                </li>
 
-                    <li class="space">
-                        J. Li, L. Gui, Y. Zhou, D. West, C. Aloisi and Y. He.
-                        <a href="https://arxiv.org/abs/2305.12962">Distilling ChatGPT for Explainable Automated Student Answer Assessment</a>,
-                        <em>arXiv:2305.12962.</em>
-                    </li>
+                <li class="space">
+                    H. Yan, L. Gui, M. Wang, K. Zhang and Y. He.
+                    <a href="https://arxiv.org/abs/2305.05331">
+                        Explainable Recommender with Geometric Information Bottleneck
+                    </a>,
+                    <em>arXiv:2305.05331.</em>
+                </li>
 
-                    <li class="space">
-                        J. Li, R. ZHao, Y. He and L. Gui.
-                        <a href="https://arxiv.org/abs/2305.14973">OverPrompt: Enhancing ChatGPT Capabilities through an Efficient In-Context Learning Approach</a>,
-                        <em>arXiv:2305.14973.</em>
-                    </li>
+                <li class="space">
+                    H. Li, H. Yan, Y. Li, L. Qian, Y. He and L. Gui.
+                    <a href="https://arxiv.org/abs/2302.06198">
+                        Distinguishability Calibration to In-Context Learning
+                    </a>,
+                    <em>Findings of EACL, 2023.</em>
+                </li>
 
-                    <li class="space">
-                        H. Yan, L. Gui, M. Wang, K. Zhang and Y. He.
-                        <a href="https://arxiv.org/abs/2305.05331">Explainable Recommender with Geometric Information Bottleneck</a>,
-                        <em>arXiv:2305.05331.</em>
-                    </li>
+                <li class="space">
+                    H. Yan, L. Gui and Y. He.
+                    <a href="https://direct.mit.edu/coli/article/doi/10.1162/coli_a_00459/112768">
+                        Hierarchical Interpretation of Neural Text Classification
+                    </a>,
+                    <em>Computational Linguistics, to appear.</em>
+                </li>
 
-                    <li class="space">
-                        H. Li, H. Yan, Y. Li, L. Qian, Y. He and L. Gui.
-                        <a href="https://arxiv.org/abs/2302.06198">Distinguishability Calibration to In-Context Learning</a>,
-                        <em>Findings of EACL</em>, May. 2023.
-                    </li>
+                <li class="space">
+                    H. Yan, L. Gui, W. Li and Y. He.
+                    <a href="https://openreview.net/forum?id=BtUxE_8i5l5">
+                        Addressing Token Uniformity in Transformers via Singular Value Transformation
+                    </a>,
+                    <em>The 38th Conference on Uncertainty in Artificial Intelligence (UAI), Eindhoven, Netherlands,
+                        Aug. 2022.</em>
+                </li>
 
-                    <li class="space">
-                        Z. Fang, Y. He, R. Procter, L.A. Alqazlan and D. Liu.
-                        <a href="">A User-Centered, Interactive, Human-in-the-Loop Topic
-                            Modelling System</a>,
-                        <em>The 17th Conference of the European Chapter of the Association for Computational Linguistics </em>
-                        (<b>EACL</b>), May. 2023.
-                    </li>
+            </ul>
 
-                    <li class="space">
-                        H. Yan, L. Gui and Y. He.
-                        <a
-                            href="https://direct.mit.edu/coli/article/48/4/987/112768/Hierarchical-Interpretation-of-Neural-Text">Hierarchical Interpretation of Neural Text
-                            Classification</a>,
-                        <em>Computational Linguistics</em>, 48 (4): 987–1020, 2022.
-                    </li>
-
-                    <li class="space">
-                        H. Yan, L. Gui, W. Li ad Y. He.
-                        <a href="https://openreview.net/forum?id=BtUxE_8i5l5">Addressing Token
-                            Uniformity in Transformers via Singular Value Transformation</a>,
-                        <em>38th Conference on Uncertainty in Artificial Intelligence</em> (<b>UAI</b>), Aug. 2022.
-                    </li>
-
-                    <li class="space">
-                        L. Zhu, Z. Fang, G. Pergola, R. Procter and Y. He.
-                        <a href="https://arxiv.org/abs/2205.03296">Disentangled Learning of Stance and Aspect Topics for
-                            Vaccine Attitude Detection in Social Media</a>,
-                        <em>2022 Annual Conference of the North American Chapter of the Association for Computational
-                            Linguistics </em> (<b>NAACL</b>), Jul. 2022.
-                    </li>
-
-                </ul>
-
-            </div>
         </div>
-        <div id="applications" class="col-xs-3" style="height: 20px; width: 100%;"></div>
     </div>
+    <div id="applications" class="col-xs-3" style="height: 20px; width: 100%;"></div>
+</div>
 
-    <div id="projectaims" class="col-xs-3" style="height: 200px; width: 100%;"></div>
+<div id="projectaims" class="col-xs-3" style="height: 200px; width: 100%;"></div>
 
-    <div class="w3-bottom w3-container w3-grey w3-center w3-opacity">
-        <h5 class="w3-margin">© 2024 Copyright: KCL NLP Group </h5>
-    </div>
+<div class="w3-bottom w3-container w3-grey w3-center w3-opacity">
+    <h5 class="w3-margin">© 2024 Copyright: KCL NLP Group </h5>
+</div>
 
-    <script type="text/javascript">
-        function scrollto(element) {
-            console.log(3);
-            // get the element on the page related to the button
-            var scrollToId = element.getAttribute("data-scroll");
-            document.getElementById(scrollToId).scrollIntoView({ block: "end", behavior: "smooth" });
-            console.log(scrollToId);
-        }
-    </script>
+<script type="text/javascript">
+    function scrollto(element) {
+        console.log(3);
+        // get the element on the page related to the button
+        var scrollToId = element.getAttribute("data-scroll");
+        document.getElementById(scrollToId).scrollIntoView({block: "end", behavior: "smooth"});
+        console.log(scrollToId);
+    }
+</script>
 
 </body>
 
