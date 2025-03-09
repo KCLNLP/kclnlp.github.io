@@ -26,7 +26,7 @@ prompt_no_code = """<div class="col-xs-11 paper-box">
 """
 import os
 import pandas as pd
-
+count = 0
 data = pd.read_csv('NLP.csv')
 for i in range(len(data)):
     picture_name = data['Model name'][i][:15].strip().replace(' ', '_').replace('-', '').replace(':', '_').replace('\n', '').replace('—', '')
@@ -34,7 +34,10 @@ for i in range(len(data)):
     source_code_url = data['Source code URL'][i]
     source_code_description = data['Source code description'][i]
     # print(i+1, picture_name)
-    if source_code_url is None or type(source_code_url) is not str or source_code_url == 'nan':
-        print(prompt_no_code.replace('(picture_name)', picture_name).replace('(Model name)', model_name).replace('(Source code description)', source_code_description))
-    else:
-        print(prompt.replace('(picture_name)', picture_name).replace('(Model name)', model_name).replace('(Source code URL)', source_code_url).replace('(Source code description)', source_code_description))
+    count += 1
+    if "https" not in str(source_code_url) :
+        # print(prompt_no_code.replace('(picture_name)', picture_name).replace('(Model name)', model_name).replace('(Source code description)', source_code_description))
+        print(model_name)
+    # else:
+    #     print(prompt.replace('(picture_name)', picture_name).replace('(Model name)', model_name).replace('(Source code URL)', source_code_url).replace('(Source code description)', source_code_description))
+print(count)
