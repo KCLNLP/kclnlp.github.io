@@ -3,13 +3,13 @@
 
 <head>
     <title>King's College London NLP</title>
-    <link rel="shortcut icon" type="image/x-icon" href="favicon.ico" />
+    <link rel="shortcut icon" type="image/x-icon" href="favicon.ico"/>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
     <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
-        integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+          integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
@@ -135,6 +135,15 @@
             margin: 10px 0;
         }
 
+        .paper-box {
+            border-color: rgba(98, 73, 31, 0.5);
+            margin: 1%;
+            border-style: solid;
+            height: 300px;
+            overflow: hidden;
+            border-radius: 8px;
+        }
+
         button {
             --b: 3px;
             /* border thickness */
@@ -145,8 +154,7 @@
             padding: calc(.05em + var(--s)) calc(.3em + var(--s));
             color: var(--c);
             --_p: var(--s);
-            background:
-                conic-gradient(from 90deg at var(--b) var(--b), #0000 90deg, var(--c) 0) var(--_p) var(--_p)/calc(100% - var(--b) - 2*var(--_p)) calc(100% - var(--b) - 2*var(--_p));
+            background: conic-gradient(from 90deg at var(--b) var(--b), #0000 90deg, var(--c) 0) var(--_p) var(--_p)/calc(100% - var(--b) - 2 * var(--_p)) calc(100% - var(--b) - 2 * var(--_p));
             transition: .3s linear, color 0s, background-color 0s;
             outline: var(--b) solid #0000;
             outline-offset: .2em;
@@ -172,305 +180,240 @@
             border: none;
             margin: .1em;
         }
+
+        .container {
+            display: table;
+            text-align: center;
+        }
+
+        .container > .child {
+            display: table-cell;
+            vertical-align: middle;
+        }
     </style>
 </head>
 
 
 <body>
 
-    <!-- Navbar -->
-    <div id="navbar-placeholder"></div>
+<!-- Navbar -->
 
-    <script>
-        fetch('navbar.html')
-            .then(response => response.text())
-            .then(data => {
-                document.getElementById('navbar-placeholder').innerHTML = data;
-            })
-            .catch(error => console.error('Error loading navbar:', error));
-    </script>
+<div id="navbar-placeholder"></div>
+
+<script>
+    fetch('navbar.html')
+        .then(response => response.text())
+        .then(data => {
+            document.getElementById('navbar-placeholder').innerHTML = data;
+        })
+        .catch(error => console.error('Error loading navbar:', error));
+</script>
 
 
-    <!-- Header -->
-    <div class="backgroundlayer  col-xs-12" style="margin-top: 120px;">
-        <div class="col-xs-12 maintitle">
-            <b>Code & Dataset</b>
-        </div>
+<div class="backgroundlayer  col-xs-12" style="margin-top: 35px;">
+    <div class="col-xs-12 maintitle">
+        <b>Datasets </b>
         <div class="maintext">
             <ul>
-                <li class="space">
-                    <b>NapSS</b>
-                    <a href="https://github.com/LuJunru/NapSS">
-                        <button>Code</button>
-                    </a>
-                    - Paragraph-level Medical Text Simplification
-                </li>
-                <dl style="font-size:16px">
-                    <dt>
-                    </dt>
-                    <dd>
-                        <a href="https://arxiv.org/abs/2302.05574">NapSS: Paragraph-level Medical Text Simplification via
-                            Narrative Prompting and Sentence-matching Summarization</a>,
-                        <em>Findings of EACL</em>, May. 2023.
-                    </dd>
-                </dl>
+                <div class="col-xs-11 paper-box">
+                    <div class="col-xs-6 container">
+                        <div class="child">
+                            <img src="./pictures/model/VADet__Vaccin.png" style="max-height:300px;max-width: 100%;">
+                        </div>
+                    </div>
+                    <div class="col-xs-6">
+                        <a href="https://github.com/somethingx1202/VADet/tree/main/Datasets_Raw"><b
+                                style="font-size: 22px;">
+                            VAD -- Vaccine Attitude Dataset
+                        </b></a><br>
 
-                <li class="space">
-                    <b>Bayesian-Trans</b>
-                    <a href="https://github.com/Xingwei-Warwick/Bayesian-Trans">
-                        <button>Code</button>
-                    </a>
-                    - Extracting Event Temporal Relations
-                </li>
-                <dl style="font-size:16px">
-                    <dt>
-                    </dt>
-                    <dd>
-                        <a href="https://aclanthology.org/2021.emnlp-main.636/">Event Temporal Relation Extraction with
-                            Bayesian Translational Model</a>,
-                        2023
-                    </dd>
-                </dl>
-
-                <li class="space">
-                    <b>dynamic Brand-Topic Model (dBTM)</b>
-                    <a href="https://github.com/BLPXSPG/dBTM">
-                        <button>Code</button>
-                    </a>
-                    - models the evolution of the latent brand polarity
-                    scores and the topic-word distributions over time.
-                </li>
-                <dl style="font-size:16px">
-                    <dt>
-                    </dt>
-                    <dd>
-                        <a href="https://arxiv.org/abs/2301.07183">Tracking Brand-Associated Polarity-Bearing Topics in
-                            User Reviews</a>,
-                        <em>Transactions of the Association for Computational Linguistics</em>, accepted.
-                    </dd>
-                </dl>
-
-                <li class="space">
-                    <b>PHEE</b>
-                    <a href="https://github.com/ZhaoyueSun/PHEE">
-                        <button>Code</button>
-                        <button style="--c: #373B44">Data</button>
-                    </a>
-                    - A Dataset for Pharmacovigilance Event Extraction from Text
-                </li>
-                <dl style="font-size:16px">
-                    <dt>
-                    </dt>
-                    <dd>
-                        <a href="https://arxiv.org/abs/2210.12560">PHEE: A Dataset for Pharmacovigilance Event
-                            Extraction
-                            from Text</a>,
-                        <em>The 2022 Conference on Empirical Methods in Natural Language Processing </em>
-                        (<b>EMNLP</b>),
-                        Dec. 2022.
-                    </dd>
-                </dl>
-
-                <li class="space">
-                    <b>TranCLR</b>
-                    <a href="https://github.com/LuJunru/TranCLR">
-                        <button>Code</button>
-                    </a>
-                    - Event-Centric Question Answering
-                </li>
-                <dl style="font-size:16px">
-                    <dt>
-                    </dt>
-                    <dd>
-                        <a href="https://arxiv.org/abs/2210.12902#">Event-Centric Question Answering via Contrastive
-                            Learning
-                            and Invertible Event Transformation</a>,
-                        <em>Findings of EMNLP</em>, Dec. 2022.
-                    </dd>
-                </dl>
-
-                <li class="space">
-                    <b>HINT</b>
-                    <a href="https://github.com/hanqi-qi/HINT">
-                        <button>Code</button>
-                    </a>
-                    - Hierarchical Interpretation of Neural Text Classification
-                </li>
-                <dl style="font-size:16px">
-                    <dt>
-                    </dt>
-                    <dd>
-                        <a
-                            href="https://direct.mit.edu/coli/article/48/4/987/112768/Hierarchical-Interpretation-of-Neural-Text">
-                            Hierarchical Interpretation of Neural Text Classification</a>,
-                        <em>Computational Linguistics</em>, to appear.
-                    </dd>
-                </dl>
-
-                <li class="space">
-                    <b>XProNet</b>
-                    <a href="https://github.com/Markin-Wang/XProNet">
-                        <button>Code</button>
-                    </a>
-                    - Cross-modal Prototype Driven Network for Radiology Report Generation
-                </li>
-                <dl style="font-size:16px">
-                    <dt>
-                    </dt>
-                    <dd>
-                        <a href="https://arxiv.org/abs/2207.04818">Cross-modal Prototype Driven Network for Radiology
-                            Report Generation</a>,
-                        <em>17th European Conference on Computer Vision</em> (<b>ECCV</b>), Oct. 2022.
-                    </dd>
-                </dl>
-
-                <li class="space">
-                    <b>tokenUni</b>
-                    <a href="https://github.com/hanqi-qi/tokenUni">
-                        <button>Code</button>
-                    </a>
-                    - Addressing Token Uniformity in Transformers via Singular Value Transformation
-                </li>
-                <dl style="font-size:16px">
-                    <dt>
-                    </dt>
-                    <dd>
-                        <a href="https://openreview.net/forum?id=BtUxE_8i5l5">Addressing Token
-                            Uniformity in Transformers via Singular Value Transformation</a>,
-                        <em>38th Conference on Uncertainty in Artificial Intelligence</em> (<b>UAI</b>), Aug. 2022.
-                    </dd>
-                </dl>
-
-                <li class="space">
-                    <b>PANACEA dataset</b>
-                    <a href="https://doi.org/10.5281/zenodo.6493847">
-                        <button style="--c: #373B44">Data</button>
-                    </a>
-                    - Heterogeneous COVID-19 Claims
-                </li>
-                <dl style="font-size:16px">
-                    <dt>
-                    </dt>
-                    <dd>
-                        <a href="https://arxiv.org/abs/2205.02596">Natural Language Inference with Self-Attention for
-                            Veracity Assessment of Pandemic Claims</a>,
-                        <em>2022 Annual Conference of the North American Chapter of the Association for Computational
-                            Linguistics </em> (<b>NAACL</b>), Jul. 2022.
-                    </dd>
-                </dl>
-
-                <li class="space">
-                    <b>VADet</b>
-                    <a href="https://github.com/somethingx1202/VADet">
-                        <button>Code</button>
-                        <button style="--c: #373B44">Data</button>
-                    </a>
-                    - Vaccine Attitude Detection
-                </li>
-                <dl style="font-size:16px">
-                    <dt>
-                    </dt>
-                    <dd>
-                        <a href="https://arxiv.org/abs/2205.03296">Disentangled Learning of Stance and Aspect Topics for
-                            Vaccine Attitude Detection in Social Media</a>,
-                        <em>2022 Annual Conference of the North American Chapter of the Association for Computational
-                            Linguistics </em> (<b>NAACL</b>), Jul. 2022.
-                    </dd>
-                </dl>
-
-                <li class="space">
-                    <b>hyper-event-TempRel</b>
-                    <a href="hhttps://github.com/Xingwei-Warwick/hyper-event-TempRel">
-                        <button>Code</button>
-                    </a>
-                    - Poincaré Event Temporal Embeddings and Hyperbolic GRU for Event TempRel Extraction
-                </li>
-                <dl style="font-size:16px">
-                    <dt>
-                    </dt>
-                    <dd>
-                        <a href="https://aclanthology.org/2021.emnlp-main.636/">Extracting Event Temporal Relations via
-                            Hyperbolic Geometry</a>,
-                        <em>Conference on Empirical Methods in Natural Language Processing</em>
-                        (<b>EMNLP</b>), Nov. 2021.
-                    </dd>
-                </dl>
+                        The dataset contains 2,800 tweets relating to COVID-19 vaccines. Each tweet is annotated with a
+                        stance label and a text span characterizing the aspect.
 
 
+                    </div>
+                </div>
 
+                <div class="col-xs-11 paper-box">
+                    <div class="col-xs-6 container">
+                        <div class="child">
+                            <img src="./pictures/model/NapSS_Narrative.png" style="max-height:300px;max-width: 100%;">
+                        </div>
+                    </div>
+                    <div class="col-xs-6">
+                        <a href="https://doi.org/10.5281/zenodo.7690014"><b style="font-size: 22px;">
+                            NapSS Dataset</b></a><br>
+                        Napss conducted a manual evaluation of the outputs generated by the simplification models to
+                        provide additional insights into simplicity, fluency and factuality. Total 200 instances
+                        evaluated by 6 trained annotators and 2 domain expert annotators.
+                    </div>
+                </div>
 
-                <li class="space">
-                    <b>Position Bias Mitigation</b>
-                    <a href="https://github.com/hanqi-qi/Position-Bias-Mitigation-in-Emotion-Cause-Analysis">
-                        <button>Code</button>
-                    </a>
-                    - A Knowledge-Aware Graph Model for Emotion Cause Extraction
-                </li>
-                <dl style="font-size:16px">
-                    <dt>
-                    </dt>
-                    <dd>
-                        <a href="https://arxiv.org/abs/2106.03518">Position Bias Mitigation: A Knowledge-Aware Graph
-                            Model for Emotion Cause Extraction</a>,
-                        <em>The 59th Annual Meeting of the Association for Computational Linguistics</em>
-                        (<b>ACL</b>), Aug. 2021.
-                    </dd>
-                </dl>
+                <div class="col-xs-11 paper-box">
+                    <div class="col-xs-6 container">
+                        <div class="child">
+                            <img src="./pictures/model/PHEE.png" style="max-height:300px;max-width: 100%;">
+                        </div>
+                    </div>
+                    <div class="col-xs-6">
+                        <a href="https://doi.org/10.5281/zenodo.7689970"><b style="font-size: 22px;">
+                            PHEE Dataset</b></a><br>
+                        The PHEE dataset contains over 5,000 finely annotated pharmacovigilance events from public
+                        medical case reports. Two types of events, the adverse events and the potential therapeutic
+                        events, are annotated. For each event, we annotate the event trigger and hierarchical arguments.
+                        The main arguments (coarse-grained spans) include subject, treatment and effect. Further
+                        fine-grained sub-arguments - age, gender, race, number of patients (labelled as population) and
+                        preexisting conditions (labelled as subject.disorder) for the subject argument and drug (and
+                        their combinations), dosage, frequency, route, time-elapsed, duration, target disorder (labelled
+                        as treatment.disorder) for the treatment argument - are then annotated upon main arguments.
+                    </div>
+                </div>
 
-                <li class="space">
-                    <b>topical_wordvec_models</b>
-                    <a href="https://github.com/somethingx02/topical_wordvec_models">
-                        <button>Code</button>
-                    </a>
-                    - A Neural Generative Model for Joint Learning Topics and Topic-Specific Word Embeddings
-                </li>
-                <dl style="font-size:16px">
-                    <dt>
-                    </dt>
-                    <dd>
-                        <a href="https://aclanthology.org/2020.tacl-1.31/">A Neural Generative Model for Joint Learning
-                            Topics
-                            and Topic-Specific Word Embeddings</a>,
-                        <em>Transactions of the Association for Computational Linguistics</em>, accepted.
-                    </dd>
-                </dl>
+                <div class="col-xs-11 paper-box">
+                    <div class="col-xs-6 container">
+                        <div class="child">
+                            <img src="./pictures/model/OpenToM__Theo.png" style="max-height:300px;max-width: 100%;">
+                        </div>
+                    </div>
+                    <div class="col-xs-6">
+                        <a href="https://huggingface.co/datasets/SeacowX/OpenToM"><b style="font-size: 22px;">
+                            OpenToM -- Thoery-of-Mind benchmarks</b></a><br>
 
+                        The dataset contains 696 narratives (100 of which are long narratives) depicting a simple scene
+                        in real life. Each narrative is accompanied by 23 first-order and second-order theory-of-mind
+                        questions. In total, there are 13,708 questions.
+                    </div>
+                </div>
 
+                <div class="col-xs-11 paper-box">
+                    <div class="col-xs-6 container">
+                        <div class="child">
+                            <img src="./pictures/model/Conan.png" style="max-height:300px;max-width: 100%;">
+                        </div>
+                    </div>
+                    <div class="col-xs-6">
+                        <a href="https://github.com/BLPXSPG/Conan"><b style="font-size: 22px;">
+                            Conan Dataset</b></a><br>
+                        role-oriented relationships from the perspectives of various characters
+                    </div>
+                </div>
 
+                <div class="col-xs-11 paper-box">
+                    <div class="col-xs-6 container">
+                        <div class="child">
+                            <img src="./pictures/model/MemoChat.png" style="max-height:300px;max-width: 100%;">
+                        </div>
+                    </div>
+                    <div class="col-xs-6">
+                        <a href="https://github.com/LuJunru/MemoChat/tree/main/data"><b style="font-size: 22px;">
+                            MemoChat Dataset</b></a><br>
+                        insturction tuning data constructed from public data, as well as small human-annotated testing
+                        set, can be found in source codes
+                    </div>
+                </div>
 
+                <div class="col-xs-11 paper-box">
+                    <div class="col-xs-6 container">
+                        <div class="child">
+                            <img src="./pictures/model/FIPO__Freeform.png" style="max-height:300px;max-width: 100%;">
+                        </div>
+                    </div>
+                    <div class="col-xs-6">
+                        <a href="https://huggingface.co/datasets/Junrulu/Prompt_Preference_Dataset"><b
+                                style="font-size: 22px;">
+                            FIPO Dataset</b></a><br>
+                        30k preference samples for Automatic Prompt Optimization
+                    </div>
+                </div>
 
+                <div class="col-xs-11 paper-box">
+                    <div class="col-xs-6 container">
+                        <div class="child">
+                            <img src="./pictures/model/Challenges_in_t.png" style="max-height:300px;max-width: 100%;">
+                        </div>
+                    </div>
+                    <div class="col-xs-6">
+                        <a href="https://github.com/oyarsa/event_extraction"><b style="font-size: 22px;">
+                            Cause Even Extraction Dataset</b></a><br>
+                        Synthetic data based on the Fine-grained Causal Relations dataset for training entailment
+                        models.
+                    </div>
+                </div>
 
+                <div class="col-xs-11 paper-box">
+                    <div class="col-xs-6 container">
+                        <div class="child">
+                            <img src="./pictures/model/constructionmo.png" style="max-height:300px;max-width: 100%;">
+                        </div>
+                    </div>
+                    <div class="col-xs-6">
+                        <a href="https://github.com/xnyuwg/cmm"><b style="font-size: 22px;">
+                            ESG dataset</b></a><br>
+                        An ESG dataset comprises 1,093 publicly available ESG annual reports, sourced from 563 distinct
+                        companies, and spans the period from 2001 to 2022.
+                        The reports vary in length, ranging from 4 pages to
+                        521 pages, with an average of 72 pages.
+                    </div>
+                </div>
 
+                <div class="col-xs-11 paper-box">
+                    <div class="col-xs-6 container">
+                        <div class="child">
+                            <img src="./pictures/model/DIVA_architectu.png" style="max-height:300px;max-width: 100%;">
+                        </div>
+                    </div>
+                    <div class="col-xs-6">
+                        <a href="https://drive.google.com/file/d/1Cphjnh1VGnTeA76hWohOG1RfeQLT1BLH/view"><b
+                                style="font-size: 22px;">
+                            DIVA Dataset</b></a><br>
+                        Semi-synthetic data were constructed for estimating causal effects from observational textual
+                        data. We collected transcripts from companies across twelve different sectors for earnings calls
+                        held between May 2001 and October 2019. The dataset was constructed to analyze two distinct
+                        treatment variables—political risk and sentiment—under two separate scenarios: stock volatility
+                        and stock movement. We split the dataset into training, validation, and test sets in an 8:1:6
+                        ratio.
+                    </div>
+                </div>
 
-
+                <div class="col-xs-11 paper-box">
+                    <div class="col-xs-6 container">
+                        <div class="child">
+                            <img src="./pictures/model/NewsQuote__New.png" style="max-height:300px;max-width: 100%;">
+                        </div>
+                    </div>
+                    <div class="col-xs-6">
+                        <a href="https://github.com/WenjiaZh/NewsQuote"><b style="font-size: 22px;">
+                            NewsQuote — News Source and Quotation Dataset</b></a><br>
+                        A dataset built on quote extraction and attribution for expert recommendation, consisting of
+                        24,031 quote-speaker pairs that appeared on a COVID-19 news corpus.
+                    </div>
+                </div>
 
 
             </ul>
 
         </div>
-
-        <div id="applications" class="col-xs-3" style="height: 20px; width: 100%;"></div>
     </div>
-
-    <div id="projectaims" class="col-xs-3" style="height: 200px; width: 100%;"></div>
-
-
+    <div id="applications" class="col-xs-3" style="height: 20px; width: 100%;"></div>
+</div>
 
 
+<div id="projectaims" class="col-xs-3" style="height: 200px; width: 100%;"></div>
 
-    <div class="w3-bottom w3-container w3-grey w3-center w3-opacity">
-        <h5 class="w3-margin">© 2024 Copyright: KCL NLP Group </h5>
-    </div>
 
-    <script type="text/javascript">
-        function scrollto(element) {
-            console.log(3);
-            // get the element on the page related to the button
-            var scrollToId = element.getAttribute("data-scroll");
-            document.getElementById(scrollToId).scrollIntoView({ block: "end", behavior: "smooth" });
-            console.log(scrollToId);
-        }
-    </script>
+<div class="w3-bottom w3-container w3-grey w3-center w3-opacity">
+    <h5 class="w3-margin">© 2024 Copyright: KCL NLP Group </h5>
+</div>
+
+<script type="text/javascript">
+    function scrollto(element) {
+        console.log(3);
+        // get the element on the page related to the button
+        var scrollToId = element.getAttribute("data-scroll");
+        document.getElementById(scrollToId).scrollIntoView({block: "end", behavior: "smooth"});
+        console.log(scrollToId);
+    }
+</script>
 
 </body>
 

@@ -1,0 +1,40 @@
+prompt = """<div class="col-xs-11 paper-box">
+    <div class="col-xs-6 container">
+        <div class="child">
+            <img src="./pictures/model/(picture_name).png" style="max-height:300px;max-width: 100%;">
+        </div>
+    </div>
+    <div class="col-xs-6">
+        <a href="(Source code URL)"><b style="font-size: 22px;">
+                (Model name)</b></a><br>
+        (Source code description)
+    </div>
+</div>
+"""
+
+prompt_no_code = """<div class="col-xs-11 paper-box">
+    <div class="col-xs-6 container">
+        <div class="child">
+            <img src="./pictures/model/(picture_name).png" style="max-height:300px;max-width: 100%;">
+        </div>
+    </div>
+    <div class="col-xs-6">
+        (Model name)<br>
+        (Source code description)
+    </div>
+</div>
+"""
+import os
+import pandas as pd
+
+data = pd.read_csv('NLP.csv')
+for i in range(len(data)):
+    picture_name = data['Model name'][i][:15].strip().replace(' ', '_').replace('-', '').replace(':', '_').replace('\n', '').replace('—', '')
+    model_name = data['Model name'][i]
+    source_code_url = data['Source code URL'][i]
+    source_code_description = data['Source code description'][i]
+    # print(i+1, picture_name)
+    if source_code_url is None or type(source_code_url) is not str or source_code_url == 'nan':
+        print(prompt_no_code.replace('(picture_name)', picture_name).replace('(Model name)', model_name).replace('(Source code description)', source_code_description))
+    else:
+        print(prompt.replace('(picture_name)', picture_name).replace('(Model name)', model_name).replace('(Source code URL)', source_code_url).replace('(Source code description)', source_code_description))
