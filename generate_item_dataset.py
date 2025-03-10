@@ -16,6 +16,8 @@ import os
 import pandas as pd
 count = 0
 data = pd.read_csv('NLP.csv')
+data = data.sort_values(by='year', ascending=True).reset_index(drop=True)
+
 for i in range(len(data)-1, 0, -1):
     picture_name = data['Model name'][i][:15].strip().replace(' ', '_').replace('-', '').replace(':', '_').replace('\n', '').replace('—', '')
     dataset_name = data['Dataset Name'][i]
