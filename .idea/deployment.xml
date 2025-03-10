@@ -86,6 +86,13 @@
           </mappings>
         </serverdata>
       </paths>
+      <paths name="k23075279@localhost:9000 agent (8)">
+        <serverdata>
+          <mappings>
+            <mapping local="$PROJECT_DIR$" web="/" />
+          </mappings>
+        </serverdata>
+      </paths>
       <paths name="k23075279@localhost:9000 password">
         <serverdata>
           <mappings>
