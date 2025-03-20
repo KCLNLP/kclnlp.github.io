@@ -51,6 +51,7 @@
             text-align: left;
         }
 
+
         .topic {
             margin-top: 10px;
             color: white;
@@ -58,7 +59,15 @@
             text-align: left;
         }
 
-        .jumpbutton {
+
+        .w3-top {
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 9999; /* 确保导航栏层级足够高 */
+            background-color: white; /* 可选，避免透明导致误点击 */
+        }
+.jumpbutton {
             background-color: rgba(43, 43, 43, 0);
             border: none;
             color: white;

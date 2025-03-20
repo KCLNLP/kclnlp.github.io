@@ -3,13 +3,13 @@
 
 <head>
     <title>King's College London NLP</title>
-    <link rel="shortcut icon" type="image/x-icon" href="favicon.ico" />
+    <link rel="shortcut icon" type="image/x-icon" href="favicon.ico"/>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
     <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
-        integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+          integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
@@ -49,12 +49,23 @@
             text-align: left;
         }
 
+
         .topic {
             margin-top: 10px;
             color: white;
             font-size: 35px;
             text-align: left;
         }
+
+
+        .w3-top {
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 9999; /* 确保导航栏层级足够高 */
+            background-color: white; /* 可选，避免透明导致误点击 */
+        }
+
 
         .jumpbutton {
             background-color: rgba(43, 43, 43, 0);
@@ -143,14 +154,15 @@
 
 <body>
 
-    <!-- Navbar -->
+<!-- Navbar -->
 
 <div class="w3-top toptopic">
     <div class="col-xs-3">
         <div style="height: 10px;"></div>
-    <a href="./index.html" style="color: rgb(219, 219, 219); font-size: 23px; height: 40px; margin-left: 10px; text-decoration: none; font-weight: bold;">
-        King's College London NLP
-    </a>
+        <a href="./index.html"
+           style="color: rgb(219, 219, 219); font-size: 23px; height: 40px; margin-left: 10px; text-decoration: none; font-weight: bold;">
+            King's College London NLP
+        </a>
         <div style="height: 2px;"></div>
     </div>
     <div class="col-xs-8">
@@ -187,296 +199,325 @@
 </div>
 
 
-    <!-- Header -->
-    <div class="backgroundlayer  col-xs-12"  style="margin-top: 120px;">
-        <div class="col-xs-8 maintitle">
-            <b>About</b>
-            <div class="maintext">
-                <p>
-                    The Natural Language Processing (NLP) Group at KCL is comprised of PhD and postdoctoral
-                    students, professors and others who are interested in solving computational problems related to the
-                    understanding of human language. This encompasses a wide range of topics including sentiment
-                    analysis, topic/event extraction, question answering, cross-modal retrieval, text illustration,
-                    social media analysis and many more, typically approached with machine learning.
-                </p>
-                <div id="challenges" class="col-xs-3" style="height: 20px; width: 100%;"></div>
-            </div>
-        </div>
-        <div class="col-xs-4">
-            <div class="col-xs-12 logo">
-                <img src="./pictures/logo/KCLNLP.png" alt="Challenges" style="width:100px">
-            </div>
-            <div class="col-xs-12 logo">
-                <img src="./pictures/logo/KCL.png" alt="Challenges" style="width:150px">
-            </div>
-        </div>
-    </div>
-
-
-    <div class="backgroundlayer  col-xs-12" style="margin-top: 35px;">
-        <div class="col-xs-12 maintitle">
-            <b>News</b>
-        </div>
+<!-- Header -->
+<div class="backgroundlayer  col-xs-12" style="margin-top: 120px;">
+    <div class="col-xs-8 maintitle">
+        <b>About</b>
         <div class="maintext">
-
-            <ul>
-                <li class="space">
-                  Mar 2025, Yulan He secured a 3-year grant from the EPSRC to develop an AI-enabled high-stakes assessment tool, in collaboration with AQA.
-                </li>
-
-                <li class="space">
-                  Feb 2025, Yulan He gave a plenary talk on "Advanced in Interpretable Language Modelling" at the 11th Vienna International Conference on Mathematical Modelling (<a href="https://www.mathmod.at/">MATHMOD 2025</a>).
-                </li>
-
-                <li class="space">
-                  Jan 2025, Xingwei Tan has
-                  <a href="https://arxiv.org/abs/2406.18449">a paper on salient event graph generation using cascaded LLMs</a>
-                  accepted to <a href="https://2025.naacl.org/">NAACL 2025</a>.
-                </li>
-
-                <li class="space">
-                  Jan 2025, Yulan He received funding from the Department for Education in the UK to develop a personalised assessment and feedback tool for secondary school science. [<a href="https://www.kcl.ac.uk/news/kings-to-build-ai-tool-for-teachers-as-part-of-governments-ai-drive">news</a>]
-                </li>
-
-                <li class="space">
-                  Dec 2024, we have 3 papers accepted to <a href="https://coling2025.org/">COLING 2025</a> and 3 papers to <a href="https://aaai.org/conference/aaai/aaai-25/">AAAI 2025</a>.
-                </li>
-
-                <li class="space">
-                  Sep 2024, Yulan He gave a keynote on
-                  <a href="https://drive.google.com/file/d/1mHOCtnh6_rE58SVA-sXQoHeBlAQEeUM1/view?usp=drive_link">Enhancing LLM Reasoning through Reflection and Refinement</a>
-                  at <a href="https://2024.inlgmeeting.org/">INLG 2024</a>.
-                </li>
-
-                <li class="space">
-                  Sep 2024, we have 5 papers accepted to <a href="https://2024.emnlp.org/">EMNLP 2024</a>.
-                </li>
-
-                <li class="space">
-                  July 2024, Yulan He gave
-                  <a href="https://drive.google.com/drive/folders/1JqYiclfQXLri-WM4Oc0FITVXb0S1fezj?usp=drive_link">a tutorial on Machine Reading Comprehension with Large Language Models</a>
-                  in <a href="https://deeplearn.irdta.eu/2024/">DeepLearn 2024</a> and the Westlake University AI Open Course.
-                </li>
-
-                <li class="space">
-                  May 2024, we have 6 papers accepted to <a href="https://2024.aclweb.org/">ACL 2024</a>.
-                </li>
-
-                <li class="space">
-                  Mar 2024, Xingwei Tan has
-                  <a href="https://arxiv.org/abs/2404.01532">a paper on event temporal graph generation from text</a>
-                  accepted to <a href="https://2024.naacl.org/">NAACL 2024</a>.
-                </li>
-
-                <li class="space">
-                  Mar 2024, Wenjia Zhang has a paper on Multi-Layer Ranking with LLMs for News Source Recommendation accepted to <a href="https://sigir-2024.github.io/">SIGIR 2024</a>.
-                </li>
-                <li class="space">
-                    Feb 2024, 3 papers accepted to <a href="https://lrec-coling-2024.org/">LREC-COLING 2024</a>.
-                </li>
-
-                <li class="space">
-                    Jan 2024, we have 2 papers accepted to <a href="https://2024.eacl.org/">EACL 2024</a> and 1 paper to
-					<a href="https://iclr.cc/">ICLR 2024</a>.
-                </li>
-
-                <li class="space">
-                    Jan 2024, Jun Wang has a paper on Class Activation Map Guided Attention Network for Radiology Report Generation
-					accepted to IEEE Journal of Biomedical and Health Informatics.
-                </li>
-
-                <li class="space">
-                    Dec 2023, Hanqi Yan has a paper on
-					<a href="https://kclpure.kcl.ac.uk/portal/en/publications/explainable-recommender-with-geometric-information-bottleneck">
-					explainable recommender system</a> accepted to IEEE Transactions on Knowledge and Data Engineering.
-                </li>
-
-                <li class="space">
-					Nov 2023, Yulan He received a <a href="https://www.ukri.org/news/19-million-to-accelerate-trustworthy-and-responsible-ai/">
-					grant supported by Innovate UK under the Accelerating Trustworthy AI: Phase 2 Collaborative R&D call,</a>
-					led by AI for Global Goals.
-                </li>
-
-                <li class="space">
-                    Oct 2023, we have 5 papers accepted to <a href="https://2023.emnlp.org/">EMNLP 2023</a>.
-                </li>
-
-                <li class="space">
-                  Oct 2023, Yulan He gave a keynote on "
-                  <a href="https://drive.google.com/file/d/14X8cL75VbO1mt6yEnJjUDb22p8ERHBHd/view?usp=sharing">Interpretable Natural Language Understanding</a>
-                  " at
-                  <a href="https://uobevents.eventsair.com/cikm2023/">CIKM 2023</a>.
-                </li>
-
-                <li class="space">
-                  Sep 2023, Hanqi Yan has a paper on Counterfactual Generation with Identifiability Guarantees accepted to
-                  <a href="https://nips.cc/Conferences/2023">NeurIPS 2023</a>.
-                </li>
-
-                <li class="space">
-                  July 2023, together with colleagues from Thomson Reuters Labs and Amazon Alexa AI, Lin Gui and Yulan He delivered
-                  <a href="https://drive.google.com/file/d/1Jq3X8ATV5-OZAEdUPnLg3ihlmgqS8n0H/view">a tutorial on Uncertainty Quantification for Text Classification</a>
-                  in <a href="https://sigir.org/sigir2023/">SIGIR 2023</a>.
-                </li>
-
-                <li class="space">
-                  May 2023, Yulan He delivered a talk on "
-                  <a href="https://drive.google.com/file/d/1e1LEuh5PGyBGcge5vFaVbuXbZ4vUEUWy/view?usp=share_link">Have LLMs solved NLP</a>
-                  " in the
-                  <a href="https://www.kcl.ac.uk/events/large-language-models-natural-language-processing">King's Festival of Artificial Intelligence</a>.
-                </li>
-
-                <li class="space">
-                  May 2023, Jiazheng has a paper on uncertainty interpretation of text classifiers built on pre-trained language models accepted to
-                  <a href="https://www.auai.org/uai2023/">UAI 2023</a>.
-                </li>
-
-                <li class="space">
-                  May 2023, 2 papers accepted to
-                  <a href="https://2023.aclweb.org/">ACL 2023</a>.
-                </li>
-
-                <li class="space">
-                  April 2023, Runcong has a paper on Unsupervised Contrastive Opinion Extraction accepted by
-                  <a href="https://sigir.org/sigir2023/">SIGIR 2023</a>.
-                </li>
-
-                <li class="space">
-                  February 2023, 5 papers accepted to
-                  <a href="https://2023.eacl.org/">EACL 2023</a>.
-                </li>
-
-                <li class="space">
-                  January 2023, a paper on "
-                  <a href="https://arxiv.org/abs/2301.07183">Tracking Brand-Associated Polarity-Bearing Topics in User Reviews</a>
-                  " has been accepted by the Transactions of the Association for Computational Linguistics.
-                </li>
-
-                <li class="space">
-                  December 2022, Yulan He gave an invited talk on "
-                  <a href="https://drive.google.com/file/d/1_NCTVzqW7E36Drg7SeRga4Lxz5f9CzgJ/view?usp=sharing">NLP Research to Drive FinTech: Now and Next</a>
-                  " in the
-                  <a href="https://www.wbs.ac.uk/research/research-centres-and-networks/gillmore-centre-financial-technology/">Gillmore Centre for Financial Technology</a>
-                  at Warwick Business School in December 2022.
-                </li>
-
-                <li class="space">
-                  October 2022, Yulan He and her co-authors, Hassan Saif and Harith Alani, won the SWSA Ten-Year Award in
-                  <a href="https://iswc2022.semanticweb.org/">ISWC 2022</a> for their paper "
-                  <a href="https://link.springer.com/chapter/10.1007/978-3-642-35176-1_32">Semantic Sentiment Analysis on Twitter</a>
-                  " published in ISWC 2012.
-                </li>
-
-                <li class="space">
-                  October 2022, Lin Gui and Yulan He have been awarded an EPSRC New Horizons grant on "A Lebesgue Integral based Approximation for Language Modelling".
-                </li>
-
-                <li class="space">
-                  October 2022, 2 papers accepted to
-                  <a href="https://2022.emnlp.org/">EMNLP 2022</a>.
-                </li>
-
-                <li class="space">
-                  August 2022, Yulan He delivered
-                  <a href="https://drive.google.com/file/d/1l_EXxs-sSIlzJYpc-IgPhci1ABZASGSh/view?usp=sharing">a tutorial on sentiment analysis</a>
-                  in the Oxford Machine Learning Summer School.
-                </li>
-
-                <li class="space">
-                  August 2022, a paper on
-                  <a href="https://arxiv.org/abs/2202.09792">hierarchical interpretable neural text classification</a>
-                  is accepted by the
-                  <a href="https://direct.mit.edu/coli">Computational Linguistics</a> journal.
-                </li>
-
-                <li class="space">
-                  July 2022, Gabriele Pergola will take the Assistant Professor post in the department in September. Congratulations!
-                </li>
-
-                <li class="space">
-                  June 2022, Jun Wang has a paper on
-                  <a href="https://arxiv.org/abs/2207.04818">radiology report generation</a>
-                  accepted to
-                  <a href="https://eccv2022.ecva.net/">ECCV 2022</a>.
-                </li>
-
-                <li class="space">
-                  May 2022, Yulan He's NLP work was featured in
-                  <a href="https://www.paccsresearch.org.uk/blog/applying-natural-language-processing-to-real-world-problems/">a blog article</a>
-                  on the Partnership for Conflict, Crime & Security Research (
-                  <a href="https://www.paccsresearch.org.uk/">PaCCS</a>) website.
-                </li>
-
-                <li class="space">
-                  May 2022, Gabriele Pergola has been awarded the 2022 Faculty of Science, Engineering, and Medicine (SEM) Thesis Prize in Computer Science.
-                </li>
-
-                <li class="space">
-                  May 2022, we have a paper accepted to
-                  <a href="https://www.auai.org/uai2022/">UAI 2022</a>.
-                </li>
-
-                <li class="space">
-                  April 2022, 3 papers accepted to
-                  <a href="https://2022.naacl.org/">NAACL 2022</a>.
-                </li>
-
-                <li class="space">
-                  March 2022, Yulan He was invited to give a talk on machine reasoning for natural language understanding in
-                  <a href="https://www.turing.ac.uk/ai-uk">AI UK 2022</a>.
-                </li>
-
-                <li class="space">
-                  February 2022, 2 papers accepted to
-                  <a href="https://www.2022.aclweb.org/">ACL 2022</a>.
-                </li>
-
-                <li class="space">
-                  February 2022, Yulan He was invited to give a talk on hierarchical interpretation of text classification in the University of Cambridge.
-                </li>
-
-                <li class="space">
-                  February 2022, Yulan He was invited to give a talk on event-centric text understanding in Google.
-                </li>
-
-                <li class="space">
-                  January 2022, Yulan He was featured in
-                  <a href="https://futurumcareers.com/">Futurum</a>, an online magazine, discussing her work on
-                  <a href="https://futurumcareers.com/teaching-computers-to-understand-our-language">teaching computers to understand human language</a>
-                  and offering guidance to young people interested in AI and NLP.
-                </li>
-
-                <li class="space">
-                  January 2022, a paper accepted to
-                  <a href="https://www2022.thewebconf.org/">WWW 2022</a>.
-                </li>
-            </ul>
-
+            <p>
+                The Natural Language Processing (NLP) Group at KCL is comprised of PhD and postdoctoral
+                students, professors and others who are interested in solving computational problems related to the
+                understanding of human language. This encompasses a wide range of topics including sentiment
+                analysis, topic/event extraction, question answering, cross-modal retrieval, text illustration,
+                social media analysis and many more, typically approached with machine learning.
+            </p>
+            <div id="challenges" class="col-xs-3" style="height: 20px; width: 100%;"></div>
         </div>
+    </div>
+    <div class="col-xs-4">
+        <div class="col-xs-12 logo">
+            <img src="./pictures/logo/KCLNLP.png" alt="Challenges" style="width:100px">
+        </div>
+        <div class="col-xs-12 logo">
+            <img src="./pictures/logo/KCL.png" alt="Challenges" style="width:150px">
+        </div>
+    </div>
+</div>
 
-        <div id="applications" class="col-xs-3" style="height: 20px; width: 100%;"></div>
+
+<div class="backgroundlayer  col-xs-12" style="margin-top: 35px;">
+    <div class="col-xs-12 maintitle">
+        <b>News</b>
+    </div>
+    <div class="maintext">
+
+        <ul>
+            <li class="space">
+                Mar 2025, Yulan He secured a 3-year grant from the EPSRC to develop an AI-enabled high-stakes assessment
+                tool, in collaboration with AQA.
+            </li>
+
+            <li class="space">
+                Feb 2025, Yulan He gave a plenary talk on "Advanced in Interpretable Language Modelling" at the 11th
+                Vienna International Conference on Mathematical Modelling (<a href="https://www.mathmod.at/">MATHMOD
+                2025</a>).
+            </li>
+
+            <li class="space">
+                Jan 2025, Xingwei Tan has
+                <a href="https://arxiv.org/abs/2406.18449">a paper on salient event graph generation using cascaded
+                    LLMs</a>
+                accepted to <a href="https://2025.naacl.org/">NAACL 2025</a>.
+            </li>
+
+            <li class="space">
+                Jan 2025, Yulan He received funding from the Department for Education in the UK to develop a
+                personalised assessment and feedback tool for secondary school science. [<a
+                    href="https://www.kcl.ac.uk/news/kings-to-build-ai-tool-for-teachers-as-part-of-governments-ai-drive">news</a>]
+            </li>
+
+            <li class="space">
+                Dec 2024, we have 3 papers accepted to <a href="https://coling2025.org/">COLING 2025</a> and 3 papers to
+                <a href="https://aaai.org/conference/aaai/aaai-25/">AAAI 2025</a>.
+            </li>
+
+            <li class="space">
+                Sep 2024, Yulan He gave a keynote on
+                <a href="https://drive.google.com/file/d/1mHOCtnh6_rE58SVA-sXQoHeBlAQEeUM1/view?usp=drive_link">Enhancing
+                    LLM Reasoning through Reflection and Refinement</a>
+                at <a href="https://2024.inlgmeeting.org/">INLG 2024</a>.
+            </li>
+
+            <li class="space">
+                Sep 2024, we have 5 papers accepted to <a href="https://2024.emnlp.org/">EMNLP 2024</a>.
+            </li>
+
+            <li class="space">
+                July 2024, Yulan He gave
+                <a href="https://drive.google.com/drive/folders/1JqYiclfQXLri-WM4Oc0FITVXb0S1fezj?usp=drive_link">a
+                    tutorial on Machine Reading Comprehension with Large Language Models</a>
+                in <a href="https://deeplearn.irdta.eu/2024/">DeepLearn 2024</a> and the Westlake University AI Open
+                Course.
+            </li>
+
+            <li class="space">
+                May 2024, we have 6 papers accepted to <a href="https://2024.aclweb.org/">ACL 2024</a>.
+            </li>
+
+            <li class="space">
+                Mar 2024, Xingwei Tan has
+                <a href="https://arxiv.org/abs/2404.01532">a paper on event temporal graph generation from text</a>
+                accepted to <a href="https://2024.naacl.org/">NAACL 2024</a>.
+            </li>
+
+            <li class="space">
+                Mar 2024, Wenjia Zhang has a paper on Multi-Layer Ranking with LLMs for News Source Recommendation
+                accepted to <a href="https://sigir-2024.github.io/">SIGIR 2024</a>.
+            </li>
+            <li class="space">
+                Feb 2024, 3 papers accepted to <a href="https://lrec-coling-2024.org/">LREC-COLING 2024</a>.
+            </li>
+
+            <li class="space">
+                Jan 2024, we have 2 papers accepted to <a href="https://2024.eacl.org/">EACL 2024</a> and 1 paper to
+                <a href="https://iclr.cc/">ICLR 2024</a>.
+            </li>
+
+            <li class="space">
+                Jan 2024, Jun Wang has a paper on Class Activation Map Guided Attention Network for Radiology Report
+                Generation
+                accepted to IEEE Journal of Biomedical and Health Informatics.
+            </li>
+
+            <li class="space">
+                Dec 2023, Hanqi Yan has a paper on
+                <a href="https://kclpure.kcl.ac.uk/portal/en/publications/explainable-recommender-with-geometric-information-bottleneck">
+                    explainable recommender system</a> accepted to IEEE Transactions on Knowledge and Data Engineering.
+            </li>
+
+            <li class="space">
+                Nov 2023, Yulan He received a <a
+                    href="https://www.ukri.org/news/19-million-to-accelerate-trustworthy-and-responsible-ai/">
+                grant supported by Innovate UK under the Accelerating Trustworthy AI: Phase 2 Collaborative R&D
+                call,</a>
+                led by AI for Global Goals.
+            </li>
+
+            <li class="space">
+                Oct 2023, we have 5 papers accepted to <a href="https://2023.emnlp.org/">EMNLP 2023</a>.
+            </li>
+
+            <li class="space">
+                Oct 2023, Yulan He gave a keynote on "
+                <a href="https://drive.google.com/file/d/14X8cL75VbO1mt6yEnJjUDb22p8ERHBHd/view?usp=sharing">Interpretable
+                    Natural Language Understanding</a>
+                " at
+                <a href="https://uobevents.eventsair.com/cikm2023/">CIKM 2023</a>.
+            </li>
+
+            <li class="space">
+                Sep 2023, Hanqi Yan has a paper on Counterfactual Generation with Identifiability Guarantees accepted to
+                <a href="https://nips.cc/Conferences/2023">NeurIPS 2023</a>.
+            </li>
+
+            <li class="space">
+                July 2023, together with colleagues from Thomson Reuters Labs and Amazon Alexa AI, Lin Gui and Yulan He
+                delivered
+                <a href="https://drive.google.com/file/d/1Jq3X8ATV5-OZAEdUPnLg3ihlmgqS8n0H/view">a tutorial on
+                    Uncertainty Quantification for Text Classification</a>
+                in <a href="https://sigir.org/sigir2023/">SIGIR 2023</a>.
+            </li>
+
+            <li class="space">
+                May 2023, Yulan He delivered a talk on "
+                <a href="https://drive.google.com/file/d/1e1LEuh5PGyBGcge5vFaVbuXbZ4vUEUWy/view?usp=share_link">Have
+                    LLMs solved NLP</a>
+                " in the
+                <a href="https://www.kcl.ac.uk/events/large-language-models-natural-language-processing">King's Festival
+                    of Artificial Intelligence</a>.
+            </li>
+
+            <li class="space">
+                May 2023, Jiazheng has a paper on uncertainty interpretation of text classifiers built on pre-trained
+                language models accepted to
+                <a href="https://www.auai.org/uai2023/">UAI 2023</a>.
+            </li>
+
+            <li class="space">
+                May 2023, 2 papers accepted to
+                <a href="https://2023.aclweb.org/">ACL 2023</a>.
+            </li>
+
+            <li class="space">
+                April 2023, Runcong has a paper on Unsupervised Contrastive Opinion Extraction accepted by
+                <a href="https://sigir.org/sigir2023/">SIGIR 2023</a>.
+            </li>
+
+            <li class="space">
+                February 2023, 5 papers accepted to
+                <a href="https://2023.eacl.org/">EACL 2023</a>.
+            </li>
+
+            <li class="space">
+                January 2023, a paper on "
+                <a href="https://arxiv.org/abs/2301.07183">Tracking Brand-Associated Polarity-Bearing Topics in User
+                    Reviews</a>
+                " has been accepted by the Transactions of the Association for Computational Linguistics.
+            </li>
+
+            <li class="space">
+                December 2022, Yulan He gave an invited talk on "
+                <a href="https://drive.google.com/file/d/1_NCTVzqW7E36Drg7SeRga4Lxz5f9CzgJ/view?usp=sharing">NLP
+                    Research to Drive FinTech: Now and Next</a>
+                " in the
+                <a href="https://www.wbs.ac.uk/research/research-centres-and-networks/gillmore-centre-financial-technology/">Gillmore
+                    Centre for Financial Technology</a>
+                at Warwick Business School in December 2022.
+            </li>
+
+            <li class="space">
+                October 2022, Yulan He and her co-authors, Hassan Saif and Harith Alani, won the SWSA Ten-Year Award in
+                <a href="https://iswc2022.semanticweb.org/">ISWC 2022</a> for their paper "
+                <a href="https://link.springer.com/chapter/10.1007/978-3-642-35176-1_32">Semantic Sentiment Analysis on
+                    Twitter</a>
+                " published in ISWC 2012.
+            </li>
+
+            <li class="space">
+                October 2022, Lin Gui and Yulan He have been awarded an EPSRC New Horizons grant on "A Lebesgue Integral
+                based Approximation for Language Modelling".
+            </li>
+
+            <li class="space">
+                October 2022, 2 papers accepted to
+                <a href="https://2022.emnlp.org/">EMNLP 2022</a>.
+            </li>
+
+            <li class="space">
+                August 2022, Yulan He delivered
+                <a href="https://drive.google.com/file/d/1l_EXxs-sSIlzJYpc-IgPhci1ABZASGSh/view?usp=sharing">a tutorial
+                    on sentiment analysis</a>
+                in the Oxford Machine Learning Summer School.
+            </li>
+
+            <li class="space">
+                August 2022, a paper on
+                <a href="https://arxiv.org/abs/2202.09792">hierarchical interpretable neural text classification</a>
+                is accepted by the
+                <a href="https://direct.mit.edu/coli">Computational Linguistics</a> journal.
+            </li>
+
+            <li class="space">
+                July 2022, Gabriele Pergola will take the Assistant Professor post in the department in September.
+                Congratulations!
+            </li>
+
+            <li class="space">
+                June 2022, Jun Wang has a paper on
+                <a href="https://arxiv.org/abs/2207.04818">radiology report generation</a>
+                accepted to
+                <a href="https://eccv2022.ecva.net/">ECCV 2022</a>.
+            </li>
+
+            <li class="space">
+                May 2022, Yulan He's NLP work was featured in
+                <a href="https://www.paccsresearch.org.uk/blog/applying-natural-language-processing-to-real-world-problems/">a
+                    blog article</a>
+                on the Partnership for Conflict, Crime & Security Research (
+                <a href="https://www.paccsresearch.org.uk/">PaCCS</a>) website.
+            </li>
+
+            <li class="space">
+                May 2022, Gabriele Pergola has been awarded the 2022 Faculty of Science, Engineering, and Medicine (SEM)
+                Thesis Prize in Computer Science.
+            </li>
+
+            <li class="space">
+                May 2022, we have a paper accepted to
+                <a href="https://www.auai.org/uai2022/">UAI 2022</a>.
+            </li>
+
+            <li class="space">
+                April 2022, 3 papers accepted to
+                <a href="https://2022.naacl.org/">NAACL 2022</a>.
+            </li>
+
+            <li class="space">
+                March 2022, Yulan He was invited to give a talk on machine reasoning for natural language understanding
+                in
+                <a href="https://www.turing.ac.uk/ai-uk">AI UK 2022</a>.
+            </li>
+
+            <li class="space">
+                February 2022, 2 papers accepted to
+                <a href="https://www.2022.aclweb.org/">ACL 2022</a>.
+            </li>
+
+            <li class="space">
+                February 2022, Yulan He was invited to give a talk on hierarchical interpretation of text classification
+                in the University of Cambridge.
+            </li>
+
+            <li class="space">
+                February 2022, Yulan He was invited to give a talk on event-centric text understanding in Google.
+            </li>
+
+            <li class="space">
+                January 2022, Yulan He was featured in
+                <a href="https://futurumcareers.com/">Futurum</a>, an online magazine, discussing her work on
+                <a href="https://futurumcareers.com/teaching-computers-to-understand-our-language">teaching computers to
+                    understand human language</a>
+                and offering guidance to young people interested in AI and NLP.
+            </li>
+
+            <li class="space">
+                January 2022, a paper accepted to
+                <a href="https://www2022.thewebconf.org/">WWW 2022</a>.
+            </li>
+        </ul>
+
     </div>
 
-
-    <div id="projectaims" class="col-xs-3" style="height: 200px; width: 100%;"></div>
-
-
+    <div id="applications" class="col-xs-3" style="height: 20px; width: 100%;"></div>
+</div>
 
 
+<div id="projectaims" class="col-xs-3" style="height: 200px; width: 100%;"></div>
 
-    <div class="w3-bottom w3-container w3-grey w3-center w3-opacity">
-        <h5 class="w3-margin">© 2025 Copyright: KCL NLP Group </h5>
-    </div>
 
-    <script type="text/javascript">
-        function scrollto(element) {
-            console.log(3);
-            // get the element on the page related to the button
-            var scrollToId = element.getAttribute("data-scroll");
-            document.getElementById(scrollToId).scrollIntoView({ block: "end", behavior: "smooth" });
-            console.log(scrollToId);
-        }
-    </script>
+<div class="w3-bottom w3-container w3-grey w3-center w3-opacity">
+    <h5 class="w3-margin">© 2025 Copyright: KCL NLP Group </h5>
+</div>
+
+<script type="text/javascript">
+    function scrollto(element) {
+        console.log(3);
+        // get the element on the page related to the button
+        var scrollToId = element.getAttribute("data-scroll");
+        document.getElementById(scrollToId).scrollIntoView({block: "end", behavior: "smooth"});
+        console.log(scrollToId);
+    }
+</script>
 
 </body>
 
