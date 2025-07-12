@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>King's College London NLP - Invited Talks</title>
+    <link rel="shortcut icon" type="image/x-icon" href="favicon.ico" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+        integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="./styles.css">
+    <style>
+        body,
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
+            font-family: "Lato", sans-serif
+        }
+
+        .w3-bar,
+        h1,
+        button {
+            font-family: "Montserrat", sans-serif
+        }
+
+        .fa-anchor,
+        .fa-coffee {
+            font-size: 200px
+        }
+
+        .homebackground {
+            background-image: url('./pictures/background/home.webp');
+            overflow: hidden;
+        }
+
+        .maintopic {
+            margin-top: 150px;
+            color: white;
+            font-size: 65px;
+            text-align: left;
+        }
+
+        .topic {
+            margin-top: 10px;
+            color: white;
+            font-size: 35px;
+            text-align: left;
+        }
+
+        .w3-top {
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 9999;
+            background-color: white;
+        }
+
+        .jumpbutton {
+            background-color: rgba(43, 43, 43, 0.9);
+            border: none;
+            color: white;
+            padding: 15px 32px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin: 4px 2px;
+            cursor: pointer;
+        }
+
+        .maintitle {
+            margin-top: 10px;
+            color: rgba(98, 73, 31, 0.691);
+            font-size: 35px;
+            text-align: left;
+            padding-bottom: 20px;
+            background-color: white;
+        }
+
+        .maintitle:after {
+            background-color: grey;
+            content: '';
+            display: block;
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            right: 10px;
+            bottom: 10px;
+            z-index: -1;
+        }
+
+        .maintext {
+            color: rgb(107, 107, 107);
+            font-size: 17px;
+            text-align: left;
+        }
+
+        .background1 {
+            background-color: rgba(76, 83, 82, 0.2)
+        }
+
+        .toptopic {
+            width: 100%;
+            background-color: rgb(49, 49, 49);
+            z-index: 100;
+        }
+
+        .navbarbutton {
+            background-color: black;
+            border: none;
+            color: white;
+            padding: 15px 32px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin: 4px 2px;
+            cursor: pointer;
+        }
+
+        .logo {
+            margin: 10px;
+            display: table-cell;
+            vertical-align: middle;
+            text-align: center
+        }
+
+        .backgroundlayer {
+            margin-left: 15%;
+            width: 70%;
+        }
+
+        li.space {
+            margin: 10px 0;
+        }
+
+        .paper-box {
+            border-color: rgba(98, 73, 31, 0.5);
+            margin: 1%;
+            border-style: solid;
+            overflow: hidden;
+            border-radius: 8px;
+            padding: 5px;
+        }
+
+        button {
+            --b: 3px;
+            --s: .15em;
+            --c: #BD5532;
+            padding: calc(.05em + var(--s)) calc(.3em + var(--s));
+            color: var(--c);
+            --_p: var(--s);
+            background:
+                conic-gradient(from 90deg at var(--b) var(--b), #0000 90deg, var(--c) 0) var(--_p) var(--_p)/calc(100% - var(--b) - 2*var(--_p)) calc(100% - var(--b) - 2*var(--_p));
+            transition: .3s linear, color 0s, background-color 0s;
+            outline: var(--b) solid #0000;
+            outline-offset: .2em;
+        }
+
+        button:hover,
+        button:focus-visible {
+            --_p: 0px;
+            outline-color: var(--c);
+            outline-offset: .05em;
+        }
+
+        button:active {
+            background: var(--c);
+            color: #fff;
+        }
+
+        button {
+            font-family: system-ui, sans-serif;
+            font-weight: bold;
+            font-size: 15px;
+            cursor: pointer;
+            border: none;
+            margin: .1em;
+        }
+
+        .container {
+            display: table;
+            text-align: center;
+        }
+
+        .container>.child {
+            display: table-cell;
+            padding: 5px;
+            vertical-align: middle;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Navbar -->
+    <div class="w3-top toptopic">
+        <div class="col-xs-3">
+            <div style="height: 10px;"></div>
+            <a href="./index.html" style="color: rgb(219, 219, 219); font-size: 23px; height: 40px; margin-left: 10px; text-decoration: none; font-weight: bold;">
+                King's College London NLP
+            </a>
+            <div style="height: 2px;"></div>
+        </div>
+        <div class="col-xs-8">
+            <ul class="nav nav-pills">
+                <li class="nav-item">
+                    <a class="nav-link" href="./about.html">News</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="./research.html">Research</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="./projects.html">Projects</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="./activities.html">Activities</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="./team.html">Team</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="./publications.html">Publications</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="./code.html">Code</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="./datasets.html">Datasets</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="./contact.html">Contact</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- Header -->
+    <div class="backgroundlayer col-xs-12" style="margin-top: 120px;">
+        <div class="col-xs-9 maintitle">
+            <b>Invited Talks</b>
+        </div>
+    </div>
+
+    <div class="backgroundlayer col-xs-12" style="margin-top: 35px;">
+        <div class="col-xs-12 maintitle">
+            <div class="maintext">
+                <ul>
+                    <div class="col-xs-11 paper-box">
+                        <div class="col-xs-12">
+                            <a href="./spectra-talk-detail.html" style="text-decoration: none; color: inherit;">
+                                <b style="font-size: 22px; color: rgba(98, 73, 31, 0.8); cursor: pointer;">
+                                    SPECTRA: Faster Large Language Model Inference with Optimized Internal and External Speculation
+                                </b>
+                            </a>
+                            <br><br>
+                            <span style="font-size: 18px; color: rgba(98, 73, 31, 0.8); font-weight: bold;">
+                                👨‍🏫 Speaker: Le-Minh Nguyen
+                            </span>
+                            <br><br>
+                            <span style="font-size: 16px; color: rgba(98, 73, 31, 0.8); font-weight: bold;">
+                                📅 Time: 2025/07/16
+                            </span>
+                            <br><br>
+                            <div style="font-size: 14px; color: #666; font-style: italic;">
+                                Click the title above to view full details, abstract, and recording.
+                            </div>
+                        </div>
+                    </div>
+                </ul>
+            </div>
+        </div>
+        <div id="applications" class="col-xs-3" style="height: 20px; width: 100%;"></div>
+    </div>
+
+    <div id="projectaims" class="col-xs-3" style="height: 200px; width: 100%;"></div>
+
+    <div class="w3-bottom w3-container w3-grey w3-center w3-opacity">
+        <h5 class="w3-margin">© 2025 Copyright: KCL NLP Group </h5>
+    </div>
+
+    <script type="text/javascript">
+        function scrollto(element) {
+            console.log(3);
+            var scrollToId = element.getAttribute("data-scroll");
+            document.getElementById(scrollToId).scrollIntoView({ block: "end", behavior: "smooth" });
+            console.log(scrollToId);
+        }
+    </script>
+
+</body>
+
+</html> 
