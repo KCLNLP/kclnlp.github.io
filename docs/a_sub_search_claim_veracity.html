@@ -63,7 +63,7 @@
             width: 100%;
             top: 0;
             z-index: 9999; /* 确保导航栏层级足够高 */
-            background-color: white; /* 可选，避免透明导致误点击 */
+            background-color: transparent; /* 可选，避免透明导致误点击 */
         }
 .jumpbutton {
             background-color: rgba(43, 43, 43, 0.9);
@@ -83,19 +83,7 @@
             color: rgba(98, 73, 31, 0.691);
             font-size: 45px;
             text-align: left;
-            background-color: white;
-        }
-
-        .maintitle:after {
-            background-color: grey;
-            content: '';
-            display: block;
-            position: absolute;
-            top: 10px;
-            left: 10px;
-            right: 10px;
-            bottom: 10px;
-            z-index: -1;
+            background-color: transparent;
         }
 
         .subtitle {
@@ -104,7 +92,7 @@
             font-size: 25px;
             text-align: left;
             padding-top: 5px;
-            background-color: white;
+            background-color: transparent;
         }
 
         .maintext {
