@@ -1,61 +1,309 @@
----
-layout: default
-title: "King's College London NLP"
-nav_active: "code"
----
+<!DOCTYPE html>
+<html lang="en">
 
-<div class="backgroundlayer  col-12" style="margin-top: 40px;">
-    <div class="col-12 maintitle">
+<head>
+    <title>King's College London NLP</title>
+    <link rel="shortcut icon" type="image/x-icon" href="favicon.ico"/>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+          integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="./styles.css">
+    <style>
+        body,
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
+            font-family: "Lato", sans-serif
+        }
+
+        .w3-bar,
+        h1,
+        button {
+            font-family: "Montserrat", sans-serif
+        }
+
+        .fa-anchor,
+        .fa-coffee {
+            font-size: 200px
+        }
+
+        .homebackground {
+            background-image: url('./pictures/background/home.webp');
+            overflow: hidden;
+        }
+
+        .maintopic {
+            margin-top: 150px;
+            color: white;
+            font-size: 65px;
+            text-align: left;
+        }
+
+
+        .topic {
+            margin-top: 10px;
+            color: white;
+            font-size: 35px;
+            text-align: left;
+        }
+
+
+        .w3-top {
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 9999; /* 确保导航栏层级足够高 */
+            background-color: white; /* 可选，避免透明导致误点击 */
+        }
+.jumpbutton {
+            background-color: rgba(43, 43, 43, 0.9);
+            border: none;
+            color: white;
+            padding: 15px 32px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin: 4px 2px;
+            cursor: pointer;
+        }
+
+        .maintitle {
+            margin-top: 10px;
+            color: rgba(98, 73, 31, 0.691);
+            font-size: 35px;
+            text-align: left;
+            padding-bottom: 20px;
+            background-color: white;
+        }
+
+        .maintitle:after {
+            background-color: grey;
+            content: '';
+            display: block;
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            right: 10px;
+            bottom: 10px;
+            z-index: -1;
+        }
+
+        .maintext {
+            color: rgb(107, 107, 107);
+            font-size: 17px;
+            text-align: left;
+        }
+
+        .background1 {
+            background-color: rgba(76, 83, 82, 0.2)
+        }
+
+        .toptopic {
+            width: 100%;
+            background-color: rgb(49, 49, 49);
+            z-index: 100;
+        }
+
+        .navbarbutton {
+            background-color: black;
+            border: none;
+            color: white;
+            padding: 15px 32px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin: 4px 2px;
+            cursor: pointer;
+        }
+
+        .logo {
+            margin: 10px;
+            display: table-cell;
+            vertical-align: middle;
+            text-align: center
+        }
+
+        .backgroundlayer {
+            margin-left: 15%;
+            width: 70%;
+        }
+
+        li.space {
+            margin: 10px 0;
+        }
+
+        .paper-box {
+            border-color: rgba(98, 73, 31, 0.5);
+            margin: 1%;
+            border-style: solid;
+            height: 300px;
+            overflow: hidden;
+            border-radius: 8px;
+        }
+
+        button {
+            --b: 3px;
+            /* border thickness */
+            --s: .15em;
+            /* size of the corner */
+            --c: #BD5532;
+
+            padding: calc(.05em + var(--s)) calc(.3em + var(--s));
+            color: var(--c);
+            --_p: var(--s);
+            background: conic-gradient(from 90deg at var(--b) var(--b), #0000 90deg, var(--c) 0) var(--_p) var(--_p)/calc(100% - var(--b) - 2 * var(--_p)) calc(100% - var(--b) - 2 * var(--_p));
+            transition: .3s linear, color 0s, background-color 0s;
+            outline: var(--b) solid #0000;
+            outline-offset: .2em;
+        }
+
+        button:hover,
+        button:focus-visible {
+            --_p: 0px;
+            outline-color: var(--c);
+            outline-offset: .05em;
+        }
+
+        button:active {
+            background: var(--c);
+            color: #fff;
+        }
+
+        button {
+            font-family: system-ui, sans-serif;
+            font-weight: bold;
+            font-size: 15px;
+            cursor: pointer;
+            border: none;
+            margin: .1em;
+        }
+
+        .container {
+            display: table;
+            text-align: center;
+        }
+
+        .container > .child {
+            display: table-cell;
+            vertical-align: middle;
+        }
+    </style>
+</head>
+
+
+<body>
+
+<!-- Navbar -->
+
+<div class="w3-top toptopic">
+    <div class="col-xs-3">
+        <div style="height: 10px;"></div>
+    <a href="./index.html" style="color: rgb(219, 219, 219); font-size: 23px; height: 40px; margin-left: 10px; text-decoration: none; font-weight: bold;">
+        King's College London NLP
+    </a>
+        <div style="height: 2px;"></div>
+    </div>
+    <div class="col-xs-8">
+        <ul class="nav nav-pills">
+            <li class="nav-item">
+                <a class="nav-link" href="./about.html">News</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="./research.html">Research</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="./projects.html">Projects</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="./activities.html">Activities</a>
+            </li>
+
+            <li class="nav-item">
+                <a class="nav-link" href="./team.html">Team</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="./publications.html">Publications</a>
+            </li>
+            <li class="nav-item active font-weight-bold">
+                <a class="nav-link" href="./code.html">Code</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="./datasets.html">Datasets</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="./contact.html">Contact</a>
+            </li>
+        </ul>
+    </div>
+</div>
+
+
+
+
+<div class="backgroundlayer  col-xs-12" style="margin-top: 120px;">
+    <div class="col-xs-12 maintitle">
         <b>Codes</b>
         <div class="maintext">
             <ul>
 
-<div class="col-lg-11 paper-box">
-    <div class="col-lg-6 container">
+<div class="col-xs-11 paper-box">
+    <div class="col-xs-6 container">
         <div class="child">
             <img src="./pictures/model/LLMLINK.png" style="max-height:300px;max-width: 100%;">
         </div>
     </div>
-    <div class="col-lg-6">
+    <div class="col-xs-6">
         <a href="https://github.com/somethingx1202/LlmLink"><b style="font-size: 22px;">
                 LLMLINK</b></a><br>
         Repository for the paper "LLMLINK: Dual LLMs for Dynamic Entity Linking on Long Narratives with Collaborative Memorisation and Prompt Optimisation" appears in  COLING2025
     </div>
 </div>
 
-<div class="col-lg-11 paper-box">
-    <div class="col-lg-6 container">
+<div class="col-xs-11 paper-box">
+    <div class="col-xs-6 container">
         <div class="child">
             <img src="./pictures/model/PROgressive_PER.png" style="max-height:300px;max-width: 100%;">
         </div>
     </div>
-    <div class="col-lg-6">
+    <div class="col-xs-6">
         <a href="https://anonymous.4open.science/r/PROPER-63E5/"><b style="font-size: 22px;">
                 PROgressive PERsonalization (PROPER)</b></a><br>
         PROgressive PERsonalization (PROPER), a novel progressive learning framework inspired by meso-level theory in social science. PROPER bridges population-level and user-level models by grouping users based on preferences and adapting LLMs in stages. It combines a Mixture-of-Experts (MoE) structure with Low Ranked Adaptation (LoRA), using a user-aware router to assign users to appropriate groups automatically. Additionally, a LoRA-aware router is proposed to facilitate the integration of individual user LoRAs with group-level LoRAs.
     </div>
 </div>
 
-<div class="col-lg-11 paper-box">
-    <div class="col-lg-6 container">
+<div class="col-xs-11 paper-box">
+    <div class="col-xs-6 container">
         <div class="child">
             <img src="./pictures/model/Thought_Tree_Gu.png" style="max-height:300px;max-width: 100%;">
         </div>
     </div>
-    <div class="col-lg-6">
+    <div class="col-xs-6">
         <a href="https://github.com/lijiazheng99/thought_tree_assessment"><b style="font-size: 22px;">
                 Thought Tree Guided Rationale Generation Framework</b></a><br>
         We propose a novel framework capable of generating more faithful rationales by mimicking the human assessment process by querying LLMs to generate a thought tree. We then summarise intermediate assessment decisions from each thought tree path for creating synthetic rationale data and rationale preference data.
     </div>
 </div>
 
-<div class="col-lg-11 paper-box">
-    <div class="col-lg-6 container">
+<div class="col-xs-11 paper-box">
+    <div class="col-xs-6 container">
         <div class="child">
             <img src="./pictures/model/OpenToM__Theo.png" style="max-height:300px;max-width: 100%;">
         </div>
     </div>
-    <div class="col-lg-6">
+    <div class="col-xs-6">
         <a href="https://github.com/seacowx/OpenToM"><b style="font-size: 22px;">
                 OpenToM -- Theory-of-Mind Benchmark</b></a><br>
 
@@ -65,26 +313,26 @@ A benchmark for evaluating LLMs' theory-of-mind capabilities in reasoning about 
     </div>
 </div>
 
-<div class="col-lg-11 paper-box">
-    <div class="col-lg-6 container">
+<div class="col-xs-11 paper-box">
+    <div class="col-xs-6 container">
         <div class="child">
             <img src="./pictures/model/Conan.png" style="max-height:300px;max-width: 100%;">
         </div>
     </div>
-    <div class="col-lg-6">
+    <div class="col-xs-6">
         <a href="https://github.com/BLPXSPG/Conan"><b style="font-size: 22px;">
                 Conan</b></a><br>
         Source code for "Large Language Models Fall Short: Understanding Complex Relationships in Detective Narratives"
     </div>
 </div>
 
-<div class="col-lg-11 paper-box">
-    <div class="col-lg-6 container">
+<div class="col-xs-11 paper-box">
+    <div class="col-xs-6 container">
         <div class="child">
             <img src="./pictures/model/FIPO__Freeform.png" style="max-height:300px;max-width: 100%;">
         </div>
     </div>
-    <div class="col-lg-6">
+    <div class="col-xs-6">
         <a href="https://github.com/LuJunru/FIPO_Project"><b style="font-size: 22px;">
                 FIPO: Free-form Instruction-oriented Prompt Optimization with Preference Dataset and Modular Fine-tuning Schema
 </b></a><br>
@@ -93,26 +341,26 @@ We present Free-form Instruction-oriented Prompt Optimization (FIPO). This appro
     </div>
 </div>
 
-<div class="col-lg-11 paper-box">
-    <div class="col-lg-6 container">
+<div class="col-xs-11 paper-box">
+    <div class="col-xs-6 container">
         <div class="child">
             <img src="./pictures/model/Revisit_Monosem.png" style="max-height:300px;max-width: 100%;">
         </div>
     </div>
-    <div class="col-lg-6">
+    <div class="col-xs-6">
         <a href="https://github.com/hanqi-qi/Revisit_monosemanticity"><b style="font-size: 22px;">
                 Revisit Monosemanticity from a Feature Decorrelation Perspective</b></a><br>
         To better interpret the intrinsic mechanism of large language models (LLMs), recent studies focus on monosemanticity on its basic units. A monosemantic neuron is dedicated to a single and specific concept, which forms a one-to-one correlation between neurons and concepts. Despite extensive research in monosemanticity probing, it remains unclear whether monosemanticity is beneficial or harmful to model capacity. To explore this question, we revisit monosemanticity from the feature decorrelation perspective and advocate for its encouragement.
     </div>
 </div>
 
-<div class="col-lg-11 paper-box">
-    <div class="col-lg-6 container">
+<div class="col-xs-11 paper-box">
+    <div class="col-xs-6 container">
         <div class="child">
             <img src="./pictures/model/CAMANet.png" style="max-height:300px;max-width: 100%;">
         </div>
     </div>
-    <div class="col-lg-6">
+    <div class="col-xs-6">
         <a href="https://github.com/Markin-Wang/CAMANet"><b style="font-size: 22px;">
                 CAMANet</b></a><br>
         CAMANet: Class Activation Map Guided Attention Network
@@ -121,26 +369,26 @@ A model which explicitly promotes cross-modal alignment by employing aggregated 
     </div>
 </div>
 
-<div class="col-lg-11 paper-box">
-    <div class="col-lg-6 container">
+<div class="col-xs-11 paper-box">
+    <div class="col-xs-6 container">
         <div class="child">
             <img src="./pictures/model/Challenges_in_t.png" style="max-height:300px;max-width: 100%;">
         </div>
     </div>
-    <div class="col-lg-6">
+    <div class="col-xs-6">
         <a href="https://github.com/oyarsa/event_extraction"><b style="font-size: 22px;">
                 Challenges in the Evaluation of the Causal Event Extraction Task</b></a><br>
         Sourcce code and data for "Challenges in the Evaluation of the Causal Event Extraction Task"
     </div>
 </div>
 
-<div class="col-lg-11 paper-box">
-    <div class="col-lg-6 container">
+<div class="col-xs-11 paper-box">
+    <div class="col-xs-6 container">
         <div class="child">
             <img src="./pictures/model/InformationAug.png" style="max-height:300px;max-width: 100%;">
         </div>
     </div>
-    <div class="col-lg-6">
+    <div class="col-xs-6">
         <a href="https://github.com/xyzCS/InfoAC"><b style="font-size: 22px;">
                 Information-Augmented and ConsistencyEnhanced fine-tuning approach (InfoAC</b></a><br>
         We propose a novel Information-Augmented and ConsistencyEnhanced fine-tuning approach to alleviate the sensitivity of CausalLMs to the order of in-context examples.
@@ -148,13 +396,13 @@ A model which explicitly promotes cross-modal alignment by employing aggregated 
     </div>
 </div>
 
-<div class="col-lg-11 paper-box">
-    <div class="col-lg-6 container">
+<div class="col-xs-11 paper-box">
+    <div class="col-xs-6 container">
         <div class="child">
             <img src="./pictures/model/Mirror(Multiple.png" style="max-height:300px;max-width: 100%;">
         </div>
     </div>
-    <div class="col-lg-6">
+    <div class="col-xs-6">
         <a href="https://github.com/hanqi-qi/Mirror"><b style="font-size: 22px;">
                 Mirror(Multiple-perspective self-
 reflection method for knowledge-rich reasoning)</b></a><br>
@@ -162,52 +410,52 @@ reflection method for knowledge-rich reasoning)</b></a><br>
     </div>
 </div>
 
-<div class="col-lg-11 paper-box">
-    <div class="col-lg-6 container">
+<div class="col-xs-11 paper-box">
+    <div class="col-xs-6 container">
         <div class="child">
             <img src="./pictures/model/Leveraging_Chat.png" style="max-height:300px;max-width: 100%;">
         </div>
     </div>
-    <div class="col-lg-6">
+    <div class="col-xs-6">
         <a href="https://github.com/ZhaoyueSun/phee-with-chatgpt"><b style="font-size: 22px;">
                 Leveraging ChatGPT in Pharmacovigilance Event Extraction</b></a><br>
         An empirical study that evaluates ChatGPT's ability on pharmacovigilance event extraction. Several zero-shot and few-shot solutions are proposed and compared with finetuned small models. We also evaluated the effect of introducing ChatGPT generated instances for data augmentation.
     </div>
 </div>
 
-<div class="col-lg-11 paper-box">
-    <div class="col-lg-6 container">
+<div class="col-xs-11 paper-box">
+    <div class="col-xs-6 container">
         <div class="child">
             <img src="./pictures/model/Unified_Task_Em.png" style="max-height:300px;max-width: 100%;">
         </div>
     </div>
-    <div class="col-lg-6">
+    <div class="col-xs-6">
         <a href="https://github.com/xnyuwg/fute"><b style="font-size: 22px;">
                 Unified Task Embeddings Across Multiple Models</b></a><br>
         A framework for unified task embeddings (FUTE), harmonizing task embeddings from various models, including smaller language models and LLMs with varied prompts, within a single vector space. Such uniformity enables comparison and analysis of similarities amongst different models, broadening the scope and utility of existing task embedding methods in multi-model scenarios, while maintaining their performance comparable to architecture-specific methods.
     </div>
 </div>
 
-<div class="col-lg-11 paper-box">
-    <div class="col-lg-6 container">
+<div class="col-xs-11 paper-box">
+    <div class="col-xs-6 container">
         <div class="child">
             <img src="./pictures/model/ExDDI__Explaini.png" style="max-height:300px;max-width: 100%;">
         </div>
     </div>
-    <div class="col-lg-6">
+    <div class="col-xs-6">
         <a href="https://github.com/ZhaoyueSun/ExDDI"><b style="font-size: 22px;">
                 ExDDI: Explaining Drug-Drug Interaction Predictions with Natural Language</b></a><br>
         ExDDI: Explaining Drug-Drug Interaction Predictions with Natural Language. A set of models that generate natural language explanations for DDI predictions.
     </div>
 </div>
 
-<div class="col-lg-11 paper-box">
-    <div class="col-lg-6 container">
+<div class="col-xs-11 paper-box">
+    <div class="col-xs-6 container">
         <div class="child">
             <img src="./pictures/model/dynamicBrandT.png" style="max-height:300px;max-width: 100%;">
         </div>
     </div>
-    <div class="col-lg-6">
+    <div class="col-xs-6">
         <a href="https://github.com/BLPXSPG/dBTM"><b style="font-size: 22px;">
                 dynamic
 Brand-Topic Model (dBTM),</b></a><br>
@@ -215,13 +463,13 @@ Brand-Topic Model (dBTM),</b></a><br>
     </div>
 </div>
 
-<div class="col-lg-11 paper-box">
-    <div class="col-lg-6 container">
+<div class="col-xs-11 paper-box">
+    <div class="col-xs-6 container">
         <div class="child">
             <img src="./pictures/model/BayesianTransl.png" style="max-height:300px;max-width: 100%;">
         </div>
     </div>
-    <div class="col-lg-6">
+    <div class="col-xs-6">
         <a href="https://github.com/Xingwei-Warwick/Bayesian-Trans"><b style="font-size: 22px;">
                 Bayesian
 Translational model (Bayesian-Trans)</b></a><br>
@@ -229,26 +477,26 @@ Translational model (Bayesian-Trans)</b></a><br>
     </div>
 </div>
 
-<div class="col-lg-11 paper-box">
-    <div class="col-lg-6 container">
+<div class="col-xs-11 paper-box">
+    <div class="col-xs-6 container">
         <div class="child">
             <img src="./pictures/model/NapSS_Narrative.png" style="max-height:300px;max-width: 100%;">
         </div>
     </div>
-    <div class="col-lg-6">
+    <div class="col-xs-6">
         <a href="https://github.com/LuJunru/NapSS"><b style="font-size: 22px;">
                 NapSS Narrative Prompting and Sentencematching Summarization</b></a><br>
         We propose a summarize-then-simplify two-stage strategy, which we call NapSS, identifying the relevant content to simplify while ensuring that the original narrative flow is preserved. In this approach, we first generate reference summaries via sentence matching between the original and the simplified abstracts.  Then, to ensure the narrative consistency of the simplified text, we synthesize auxiliary narrative prompts combining key phrases derived from the syntactical analyses of the original text.
     </div>
 </div>
 
-<div class="col-lg-11 paper-box">
-    <div class="col-lg-6 container">
+<div class="col-xs-11 paper-box">
+    <div class="col-xs-6 container">
         <div class="child">
             <img src="./pictures/model/CUE_PLMbased_C.png" style="max-height:300px;max-width: 100%;">
         </div>
     </div>
-    <div class="col-lg-6">
+    <div class="col-xs-6">
         <a href="https://github.com/lijiazheng99/CUE"><b style="font-size: 22px;">
                 CUE PLM-based Classifier Uncertainty Interpretation framework</b></a><br>
 
@@ -256,13 +504,13 @@ A PLM-based text classifier uncertainty interpretation framework based on a vari
     </div>
 </div>
 
-<div class="col-lg-11 paper-box">
-    <div class="col-lg-6 container">
+<div class="col-xs-11 paper-box">
+    <div class="col-xs-6 container">
         <div class="child">
             <img src="./pictures/model/AERA_Automated.png" style="max-height:300px;max-width: 100%;">
         </div>
     </div>
-    <div class="col-lg-6">
+    <div class="col-xs-6">
         <a href="https://github.com/lijiazheng99/aera"><b style="font-size: 22px;">
                 AERA Automated Explainable Student Response Assessment Framework</b></a><br>
 
@@ -270,39 +518,39 @@ A rationale generation framework that ultizes LLM's few-shot capabilities on pro
     </div>
 </div>
 
-<div class="col-lg-11 paper-box">
-    <div class="col-lg-6 container">
+<div class="col-xs-11 paper-box">
+    <div class="col-xs-6 container">
         <div class="child">
             <img src="./pictures/model/Disentangled_Op.png" style="max-height:300px;max-width: 100%;">
         </div>
     </div>
-    <div class="col-lg-6">
+    <div class="col-xs-6">
         <a href="https://github.com/somethingx1202/DOC"><b style="font-size: 22px;">
                 Disentangled Opinion Clustering (DOC)</b></a><br>
         Repository for the paper "Disentangling Aspect and Stance via a Siamese Autoencoder for Aspect Clustering of Vaccination Opinions" appears in  Findings of ACL 2023
     </div>
 </div>
 
-<div class="col-lg-11 paper-box">
-    <div class="col-lg-6 container">
+<div class="col-xs-11 paper-box">
+    <div class="col-xs-6 container">
         <div class="child">
             <img src="./pictures/model/OverPrompt.png" style="max-height:300px;max-width: 100%;">
         </div>
     </div>
-    <div class="col-lg-6">
+    <div class="col-xs-6">
         <a href="https://github.com/lijiazheng99/OverPrompt"><b style="font-size: 22px;">
                 OverPrompt </b></a><br>
         OverPrompt is a prompting technique that leverages the in-context learning capability of LLMs to handle multiple task inputs, thereby reducing token and time costs for each query.
     </div>
 </div>
 
-<div class="col-lg-11 paper-box">
-    <div class="col-lg-6 container">
+<div class="col-xs-11 paper-box">
+    <div class="col-xs-6 container">
         <div class="child">
             <img src="./pictures/model/MemoChat.png" style="max-height:300px;max-width: 100%;">
         </div>
     </div>
-    <div class="col-lg-6">
+    <div class="col-xs-6">
         <a href="https://github.com/LuJunru/MemoChat"><b style="font-size: 22px;">
                 MemoChat</b></a><br>
         MemoChat: Tuning LLMs to Use Memos for Consistent Long-Range Open-Domain Conversation
@@ -311,13 +559,13 @@ We propose MemoChat, a pipeline for refining instructions that enables large lan
     </div>
 </div>
 
-<div class="col-lg-11 paper-box">
-    <div class="col-lg-6 container">
+<div class="col-xs-11 paper-box">
+    <div class="col-xs-6 container">
         <div class="child">
             <img src="./pictures/model/DIVA_architectu.png" style="max-height:300px;max-width: 100%;">
         </div>
     </div>
-    <div class="col-lg-6">
+    <div class="col-xs-6">
         <a href="https://github.com/zyxnlp/DIVA?tab=readme-ov-file"><b style="font-size: 22px;">
                 DIVA architecture</b></a><br>
         - DIVA -- Disentangling Interaction of VAriables framework  for causal inference
@@ -326,13 +574,13 @@ A framework tailored to mitigate the bias issue by unveiling interactions betwee
     </div>
 </div>
 
-<div class="col-lg-11 paper-box">
-    <div class="col-lg-6 container">
+<div class="col-xs-11 paper-box">
+    <div class="col-xs-6 container">
         <div class="child">
             <img src="./pictures/model/NewsQuote__New.png" style="max-height:300px;max-width: 100%;">
         </div>
     </div>
-    <div class="col-lg-6">
+    <div class="col-xs-6">
         <a href="https://github.com/WenjiaZh/NewsQuote"><b style="font-size: 22px;">
                 NewsQuote — News Source and Quotation Dataset</b></a><br>
 
@@ -340,13 +588,13 @@ A dataset built on quote extraction and attribution for expert recommendation, c
     </div>
 </div>
 
-<div class="col-lg-11 paper-box">
-    <div class="col-lg-6 container">
+<div class="col-xs-11 paper-box">
+    <div class="col-xs-6 container">
         <div class="child">
             <img src="./pictures/model/Transformation.png" style="max-height:300px;max-width: 100%;">
         </div>
     </div>
-    <div class="col-lg-6">
+    <div class="col-xs-6">
         <a href="https://github.com/donttal/TARA"><b style="font-size: 22px;">
                 Transformation based Adaptation for
 Ratio bAlanced (TARA)</b></a><br>
@@ -354,13 +602,13 @@ Ratio bAlanced (TARA)</b></a><br>
     </div>
 </div>
 
-<div class="col-lg-11 paper-box">
-    <div class="col-lg-6 container">
+<div class="col-xs-11 paper-box">
+    <div class="col-xs-6 container">
         <div class="child">
             <img src="./pictures/model/Counterfactual.png" style="max-height:300px;max-width: 100%;">
         </div>
     </div>
-    <div class="col-lg-6">
+    <div class="col-xs-6">
         <a href="https://github.com/hanqi-qi/Matte_Multi-domain-Counterfactual-Generation-with-identifiability-guarantee.git"><b style="font-size: 22px;">
                 Counterfactual Generation with Identifiability
 Guarantees</b></a><br>
@@ -368,13 +616,13 @@ Guarantees</b></a><br>
     </div>
 </div>
 
-<div class="col-lg-11 paper-box">
-    <div class="col-lg-6 container">
+<div class="col-xs-11 paper-box">
+    <div class="col-xs-6 container">
         <div class="child">
             <img src="./pictures/model/constructionmo.png" style="max-height:300px;max-width: 100%;">
         </div>
     </div>
-    <div class="col-lg-6">
+    <div class="col-xs-6">
         <a href="https://github.com/xnyuwg/cmm"><b style="font-size: 22px;">
                 construction-modellingmodification (CMM)</b></a><br>
         Resources for the paper: "A Scalable Framework for Table of Contents Extraction from Complex ESG Annual Reports"
@@ -383,13 +631,13 @@ A framework for Toc extraction, consisting of three steps: (1) Constructing an i
     </div>
 </div>
 
-<div class="col-lg-11 paper-box">
-    <div class="col-lg-6 container">
+<div class="col-xs-11 paper-box">
+    <div class="col-xs-6 container">
         <div class="child">
             <img src="./pictures/model/ProxyNodes_Clu.png" style="max-height:300px;max-width: 100%;">
         </div>
     </div>
-    <div class="col-lg-6">
+    <div class="col-xs-6">
         <a href="https://github.com/xnyuwg/procnet"><b style="font-size: 22px;">
                 Proxy
 Nodes Clustering Network (ProCNet)</b></a><br>
@@ -399,52 +647,52 @@ An approach for document-level multi-event extraction with event proxy nodes and
     </div>
 </div>
 
-<div class="col-lg-11 paper-box">
-    <div class="col-lg-6 container">
+<div class="col-xs-11 paper-box">
+    <div class="col-xs-6 container">
         <div class="child">
             <img src="./pictures/model/PHEE.png" style="max-height:300px;max-width: 100%;">
         </div>
     </div>
-    <div class="col-lg-6">
+    <div class="col-xs-6">
         <a href="https://github.com/ZhaoyueSun/PHEE"><b style="font-size: 22px;">
                 PHEE</b></a><br>
         The repository contains the source codes and dataset for the paper: "PHEE: A Dataset for Pharmacovigilance Event Extraction from Text".  The code includes the implementation of event extraction baselines on the PHEE dataset, i.e., a sequence labelling model, an extractive QA model and a generative QA model.
     </div>
 </div>
 
-<div class="col-lg-11 paper-box">
-    <div class="col-lg-6 container">
+<div class="col-xs-11 paper-box">
+    <div class="col-xs-6 container">
         <div class="child">
             <img src="./pictures/model/Hierarchical_In.png" style="max-height:300px;max-width: 100%;">
         </div>
     </div>
-    <div class="col-lg-6">
+    <div class="col-xs-6">
         <a href="https://github.com/hanqi-qi/HINT"><b style="font-size: 22px;">
                 Hierarchical Interpretable Neural Text Classifier (Hint)</b></a><br>
         The repository contains the inplementation of paper "Hierarchical Interpretation of Neural Text Classification".                                                                                            Unsupervised self-explanatory framework for document classification. It can extract word-, sentence-, and topic-level rationales explaining the document-level decision.
     </div>
 </div>
 
-<div class="col-lg-11 paper-box">
-    <div class="col-lg-6 container">
+<div class="col-xs-11 paper-box">
+    <div class="col-xs-6 container">
         <div class="child">
             <img src="./pictures/model/SoftDecay.png" style="max-height:300px;max-width: 100%;">
         </div>
     </div>
-    <div class="col-lg-6">
+    <div class="col-xs-6">
         <a href="https://github.com/hanqi-qi/tokenUni"><b style="font-size: 22px;">
                 SoftDecay</b></a><br>
         The repository contains the inplementation of paper "Addressing Token Uniformity in Transformers via Singular Value Transformation".                                                                  Token uniformity implies more vanished dimensions in the embedding space. _SoftDecay_ is proposed to a range of transformer-based language models and improved performance is observed in STS evaluation and a range of GLUE tasks.
     </div>
 </div>
 
-<div class="col-lg-11 paper-box">
-    <div class="col-lg-6 container">
+<div class="col-xs-11 paper-box">
+    <div class="col-xs-6 container">
         <div class="child">
             <img src="./pictures/model/TranCLR.png" style="max-height:300px;max-width: 100%;">
         </div>
     </div>
-    <div class="col-lg-6">
+    <div class="col-xs-6">
         <a href="https://github.com/LuJunru/TranCLR"><b style="font-size: 22px;">
                 TranCLR</b></a><br>
         Event-Centric Question Answering via Contrastive Learning and Invertible Event Transformation
@@ -453,13 +701,13 @@ A novel QA model with contrastive learning and invertible event transformation f
     </div>
 </div>
 
-<div class="col-lg-11 paper-box">
-    <div class="col-lg-6 container">
+<div class="col-xs-11 paper-box">
+    <div class="col-xs-6 container">
         <div class="child">
             <img src="./pictures/model/XProNet__Cross.png" style="max-height:300px;max-width: 100%;">
         </div>
     </div>
-    <div class="col-lg-6">
+    <div class="col-xs-6">
         <a href="https://github.com/Markin-Wang/XProNet"><b style="font-size: 22px;">
                 XProNet: Cross-Modal Prototype Driven Network</b></a><br>
 
@@ -468,13 +716,13 @@ Apache 2.0 license.
     </div>
 </div>
 
-<div class="col-lg-11 paper-box">
-    <div class="col-lg-6 container">
+<div class="col-xs-11 paper-box">
+    <div class="col-xs-6 container">
         <div class="child">
             <img src="./pictures/model/VADet__Vaccin.png" style="max-height:300px;max-width: 100%;">
         </div>
     </div>
-    <div class="col-lg-6">
+    <div class="col-xs-6">
         <a href="https://github.com/somethingx1202/VADet"><b style="font-size: 22px;">
                 VADet -- Vaccine Attitude Detection model</b></a><br>
 
@@ -483,13 +731,13 @@ A latent representation learning model that jointly learns a stance classifier a
     </div>
 </div>
 
-<div class="col-lg-11 paper-box">
-    <div class="col-lg-6 container">
+<div class="col-xs-11 paper-box">
+    <div class="col-xs-6 container">
         <div class="child">
             <img src="./pictures/model/BTIC__Bertba.png" style="max-height:300px;max-width: 100%;">
         </div>
     </div>
-    <div class="col-lg-6">
+    <div class="col-xs-6">
         <a href="https://github.com/WenjiaZh/BTIC"><b style="font-size: 22px;">
                 BTIC -- Bert-based Multimodal Fake News Detection Framework</b></a><br>
 
@@ -497,26 +745,26 @@ A Bert-based multimodal fake news detection framework, which captures both textu
     </div>
 </div>
 
-<div class="col-lg-11 paper-box">
-    <div class="col-lg-6 container">
+<div class="col-xs-11 paper-box">
+    <div class="col-xs-6 container">
         <div class="child">
             <img src="./pictures/model/KnowledgeAware.png" style="max-height:300px;max-width: 100%;">
         </div>
     </div>
-    <div class="col-lg-6">
+    <div class="col-xs-6">
         <a href="https://github.com/hanqi-qi/Position-Bias-Mitigation-in-Emotion-Cause-Analysis"><b style="font-size: 22px;">
                 Knowledge-Aware Graph (KAG) Model</b></a><br>
         The repository contains the inplementation of paper "Position Bias Mitigation: A Knowledge-Aware Graph Model for Emotion Cause Extraction".                                    Commonsense Knowledge, i.e., ConceptNet is applied as invariant feature to tackle the distribution shift and Position Bias.
     </div>
 </div>
 
-<div class="col-lg-11 paper-box">
-    <div class="col-lg-6 container">
+<div class="col-xs-11 paper-box">
+    <div class="col-xs-6 container">
         <div class="child">
             <img src="./pictures/model/Extracting_Even.png" style="max-height:300px;max-width: 100%;">
         </div>
     </div>
-    <div class="col-lg-6">
+    <div class="col-xs-6">
         <a href="https://github.com/Xingwei-Warwick/hyper-event-TempRel"><b style="font-size: 22px;">
                 Extracting Event Temporal Relations via Hyperbolic Geometry</b></a><br>
         This repository contains the source code for hyperbolic-based representation learning methods for Event TempRel Extraction. GPL-3.0 license
@@ -527,5 +775,27 @@ A Bert-based multimodal fake news detection framework, which captures both textu
 
         </div>
     </div>
-    <div id="applications" class="col-lg-3" style="height: 20px; width: 100%;"></div>
+    <div id="applications" class="col-xs-3" style="height: 20px; width: 100%;"></div>
 </div>
+
+
+<div id="projectaims" class="col-xs-3" style="height: 200px; width: 100%;"></div>
+
+
+<div class="w3-bottom w3-container w3-grey w3-center w3-opacity">
+    <h5 class="w3-margin">© 2026 Copyright: KCL NLP Group </h5>
+</div>
+
+<script type="text/javascript">
+    function scrollto(element) {
+        console.log(3);
+        // get the element on the page related to the button
+        var scrollToId = element.getAttribute("data-scroll");
+        document.getElementById(scrollToId).scrollIntoView({block: "end", behavior: "smooth"});
+        console.log(scrollToId);
+    }
+</script>
+
+</body>
+
+</html>
