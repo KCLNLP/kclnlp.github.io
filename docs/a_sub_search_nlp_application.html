@@ -1,292 +1,10 @@
-<!DOCTYPE html>
-<html lang="en">
+---
+layout: default
+title: "King's College London NLP"
+---
 
-<head>
-    <title>King's College London NLP</title>
-    <link rel="shortcut icon" type="image/x-icon" href="favicon.ico" />
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
-    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
-        integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="./styles.css">
-    <style>
-        body,
-        h1,
-        h2,
-        h3,
-        h4,
-        h5,
-        h6 {
-            font-family: "Lato", sans-serif
-        }
-
-        .w3-bar,
-        h1,
-        button {
-            font-family: "Montserrat", sans-serif
-        }
-
-        .fa-anchor,
-        .fa-coffee {
-            font-size: 200px
-        }
-
-        .homebackground {
-            background-image: url('./pictures/background/home.webp');
-            overflow: hidden;
-        }
-
-        .maintopic {
-            margin-top: 150px;
-            color: white;
-            font-size: 65px;
-            text-align: left;
-        }
-
-
-        .topic {
-            margin-top: 10px;
-            color: white;
-            font-size: 35px;
-            text-align: left;
-        }
-
-
-        .w3-top {
-            position: fixed;
-            width: 100%;
-            top: 0;
-            z-index: 9999; /* 确保导航栏层级足够高 */
-            background-color: white; /* 可选，避免透明导致误点击 */
-        }
-.jumpbutton {
-            background-color: rgba(43, 43, 43, 0.9);
-            border: none;
-            color: white;
-            padding: 15px 32px;
-            text-align: center;
-            text-decoration: none;
-            display: inline-block;
-            font-size: 16px;
-            margin: 4px 2px;
-            cursor: pointer;
-        }
-
-        .maintitle {
-            margin-top: 10px;
-            color: rgba(98, 73, 31, 0.691);
-            font-size: 45px;
-            text-align: left;
-            background-color: white;
-        }
-
-        .maintitle:after {
-            background-color: grey;
-            content: '';
-            display: block;
-            position: absolute;
-            top: 10px;
-            left: 10px;
-            right: 10px;
-            bottom: 10px;
-            z-index: -1;
-        }
-
-        .subtitle {
-            margin-top: 20px;
-            color: rgba(98, 73, 31, 0.691);
-            font-size: 25px;
-            text-align: left;
-            padding-top: 10px;
-            background-color: white;
-        }
-
-        .subsubtitle {
-            margin-top: 10px;
-            color: rgba(98, 73, 31, 0.691);
-            font-size: 17px;
-            text-align: left;
-            background-color: white;
-        }
-
-        .maintext {
-            color: rgb(107, 107, 107);
-            font-size: 17px;
-            text-align: left;
-        }
-
-        .background1 {
-            background-color: rgba(76, 83, 82, 0.2)
-        }
-
-        .toptopic {
-            width: 100%;
-            background-color: rgb(49, 49, 49);
-            z-index: 100;
-        }
-
-        .navbarbutton {
-            background-color: black;
-            border: none;
-            color: white;
-            padding: 15px 32px;
-            text-align: center;
-            text-decoration: none;
-            display: inline-block;
-            font-size: 16px;
-            margin: 4px 2px;
-            cursor: pointer;
-        }
-
-        .logo {
-            margin: 10px;
-            display: table-cell;
-            vertical-align: middle;
-            text-align: center
-        }
-
-        .backgroundlayer {
-            margin-left: 15%;
-            width: 70%;
-        }
-
-        li.space {
-            margin: 10px 0;
-        }
-
-        .paper-box {
-            border-color: rgba(98, 73, 31, 0.5);
-            margin: 1%;
-            border-style: solid;
-            height: 300px;
-            overflow: hidden;
-            border-radius: 8px;
-        }
-
-        button {
-            --b: 3px;
-            /* border thickness */
-            --s: .15em;
-            /* size of the corner */
-            --c: #BD5532;
-
-            padding: calc(.05em + var(--s)) calc(.3em + var(--s));
-            color: var(--c);
-            --_p: var(--s);
-            background:
-                conic-gradient(from 90deg at var(--b) var(--b), #0000 90deg, var(--c) 0) var(--_p) var(--_p)/calc(100% - var(--b) - 2*var(--_p)) calc(100% - var(--b) - 2*var(--_p));
-            transition: .3s linear, color 0s, background-color 0s;
-            outline: var(--b) solid #0000;
-            outline-offset: .2em;
-        }
-
-        button:hover,
-        button:focus-visible {
-            --_p: 0px;
-            outline-color: var(--c);
-            outline-offset: .05em;
-        }
-
-        button:active {
-            background: var(--c);
-            color: #fff;
-        }
-
-        button {
-            font-family: system-ui, sans-serif;
-            font-weight: bold;
-            font-size: 15px;
-            cursor: pointer;
-            border: none;
-            margin: .1em;
-        }
-
-        .container {
-            display: table;
-            text-align: center;
-        }
-
-        .container>.child {
-            display: table-cell;
-            vertical-align: middle;
-        }
-
-        #sidebar {
-            color: rgb(116, 116, 116);
-            margin-top: 20vh;
-            height: 260px;
-            padding: 0;
-            position: fixed;
-            left: 0;
-            top: 0;
-            width: 240px;
-            z-index: 2;
-        }
-
-        #sidebar-nav {
-            margin-top: 10px;
-        }
-
-        .topicbar {
-            color: black
-        }
-    </style>
-</head>
-
-
-<body>
-
-    <!-- Navbar -->
-<div class="w3-top toptopic">
-    <div class="col-xs-3">
-        <div style="height: 10px;"></div>
-    <a href="./index.html" style="color: rgb(219, 219, 219); font-size: 23px; height: 40px; margin-left: 10px; text-decoration: none; font-weight: bold;">
-        King's College London NLP
-    </a>
-        <div style="height: 2px;"></div>
-    </div>
-    <div class="col-xs-8">
-        <ul class="nav nav-pills">
-            <li class="nav-item">
-                <a class="nav-link" href="./about.html">News</a>
-            </li>
-            <li class="nav-item active font-weight-bold">
-                <a class="nav-link" href="./research.html">Research</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="./projects.html">Projects</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="./activities.html">Activities</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="./team.html">Team</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="./publications.html">Publications</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="./code.html">Code</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="./datasets.html">Datasets</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="./contact.html">Contact</a>
-            </li>
-        </ul>
-    </div>
-</div>
-
-
-    <div class="col-xs-12">
-        <div class="col-xs-1">
+<div class="col-12">
+        <div class="col-lg-1">
             <div id="sidebar" role="navigation">
                 <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
                     <span class="sr-only">Toggle navigation</span>
@@ -316,32 +34,32 @@
             </div>
         </div>
 
-        <div class="col-xs-10">
+        <div class="col-lg-10">
 
 
             <!-- Header -->
-            <div class="backgroundlayer  col-xs-12" style="margin-top: 120px;">
-                <div class="col-xs-9 maintitle">
+            <div class="backgroundlayer  col-12" style="margin-top: 40px;">
+                <div class="col-lg-9 maintitle">
                     <b>NLP Applications</b>
                     <div class="maintext" id="biomedical">
                         We employ NLP methods across diverse domains, encompassing finance, education, biomedicine, healthcare, and social media.
-                        <div id="challenges" class="col-xs-3" style="height: 20px; width: 100%;"></div>
+                        <div id="challenges" class="col-lg-3" style="height: 20px; width: 100%;"></div>
                     </div>
                 </div>
-                <div class="col-xs-3">
-                    <div class="col-xs-12 logo">
+                <div class="col-lg-3">
+                    <div class="col-12 logo">
                         <img src="./pictures/logo/KCLNLP.png" alt="Challenges" style="width:150px">
                     </div>
-                    <div class="col-xs-12 logo">
+                    <div class="col-12 logo">
                         <img src="./pictures/logo/KCL.png" alt="Challenges" style="width:210px">
                     </div>
                 </div>
             </div>
 
-            <div class="backgroundlayer  col-xs-12" style="margin-top: 35px;">
-                <div class="col-xs-12 maintitle">
+            <div class="backgroundlayer  col-12" style="margin-top: 35px;">
+                <div class="col-12 maintitle">
                     <div></div>
-                    <div class="col-xs-12" id="sentiment-topic"></div>
+                    <div class="col-12" id="sentiment-topic"></div>
 
                     <div class="subtitle"><b>NLP for Health</b></div>
                     <div class="maintext">
@@ -353,7 +71,7 @@
 						veracity assessment, topical phrase extraction from
 						clinical reports, and understanding patient
 						reviews.
-                        <div id="challenges" class="col-xs-3" style="height: 20px; width: 100%;"></div>
+                        <div id="challenges" class="col-lg-3" style="height: 20px; width: 100%;"></div>
                     </div>
 
                     <div class="subsubtitle"><b>Participants</b></div>
@@ -466,7 +184,7 @@
 						mining of customer reviews, ESG report analysis,
 						and causal inference from earnings call
 						transcripts.
-                        <div id="challenges" class="col-xs-3" style="height: 20px; width: 100%;"></div>
+                        <div id="challenges" class="col-lg-3" style="height: 20px; width: 100%;"></div>
                     </div>
 
                     <div class="subsubtitle"><b>Project</b></div>
@@ -528,7 +246,7 @@
 <!--                    <div class="subtitle"><b>NLP for Education</b></div>-->
 <!--                    <div class="maintext">-->
 <!--                        We collaborate with AQA to develop explainable student answer scoring systems for GCSE Science.-->
-<!--                        <div id="challenges" class="col-xs-3" style="height: 20px; width: 100%;"></div>-->
+<!--                        <div id="challenges" class="col-lg-3" style="height: 20px; width: 100%;"></div>-->
 <!--                    </div>-->
 
 <!--                    <div class="subsubtitle"><b>Projects</b></div>-->
@@ -570,7 +288,7 @@
 						extraction and visualisation on Twitter, and
 						analysis of persuasive argumentation in political
 						debates.
-                        <div id="challenges" class="col-xs-3" style="height: 20px; width: 100%;"></div>
+                        <div id="challenges" class="col-lg-3" style="height: 20px; width: 100%;"></div>
                     </div>
                     <div class="subsubtitle"><b>Participants</b></div>
                     <div class="maintext">Miguel Arana-Catania, Lin Gui, John Dougrez-Lewis, Wenjia Zhang, Lixing Zhu</div>
@@ -680,38 +398,10 @@
 
 
                 </div>
-                <div id="applications" class="col-xs-3" style="height: 20px; width: 100%;"></div>
+                <div id="applications" class="col-lg-3" style="height: 20px; width: 100%;"></div>
             </div>
 
 
         </div>
-        <div class="col-xs-1"></div>
+        <div class="col-lg-1"></div>
     </div>
-
-
-
-
-
-    <div id="projectaims" class="col-xs-3" style="height: 200px; width: 100%;"></div>
-
-
-
-
-
-    <div class="w3-bottom w3-container w3-grey w3-center w3-opacity">
-        <h5 class="w3-margin">© 2026 Copyright: KCL NLP Group </h5>
-    </div>
-
-    <script type="text/javascript">
-        function scrollto(element) {
-            console.log(3);
-            // get the element on the page related to the button
-            var scrollToId = element.getAttribute("data-scroll");
-            document.getElementById(scrollToId).scrollIntoView({ block: "end", behavior: "smooth" });
-            console.log(scrollToId);
-        }
-    </script>
-
-</body>
-
-</html>

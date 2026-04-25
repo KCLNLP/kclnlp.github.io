@@ -1,0 +1,227 @@
+/* ========== Base styles ========== */
+body, h1, h2, h3, h4, h5, h6 {
+    font-family: "Lato", sans-serif;
+}
+h1, button {
+    font-family: "Montserrat", sans-serif;
+}
+
+a {
+    text-decoration: underline;
+}
+
+/* ========== Navbar ========== */
+.navbar {
+    z-index: 9999;
+}
+.navbar .nav-link {
+    color: rgb(160, 160, 160) !important;
+    font-size: 15px;
+    padding: 8px 10px;
+    text-decoration: none;
+}
+.navbar .nav-link:hover {
+    background-color: rgb(66, 66, 66);
+    color: rgb(200, 200, 200) !important;
+}
+.navbar .nav-link.active {
+    background-color: rgb(66, 66, 66) !important;
+    color: #fff !important;
+}
+.navbar-brand {
+    text-decoration: none !important;
+}
+
+/* ========== Main content area ========== */
+.site-content {
+    padding-top: 80px; /* space for fixed navbar */
+}
+
+.backgroundlayer {
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 900px;
+    padding: 0 15px;
+}
+
+.maintitle {
+    margin-top: 10px;
+    color: rgba(98, 73, 31, 0.691);
+    font-size: 35px;
+    text-align: left;
+    padding-bottom: 20px;
+}
+
+.maintext {
+    color: rgb(107, 107, 107);
+    font-size: 17px;
+    text-align: left;
+}
+
+.maintext a {
+    text-decoration: underline;
+}
+.maintext a:hover {
+    text-decoration: underline;
+    color: blue;
+}
+
+li.space {
+    margin: 10px 0;
+}
+
+/* ========== Home page ========== */
+.homebackground {
+    background-image: url('../pictures/logo/KCL_background.jpg');
+    background-size: cover;
+    background-position: center;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.home-overlay {
+    background-color: rgba(245, 245, 245, 0.74);
+    padding: 40px;
+    border-radius: 4px;
+    max-width: 900px;
+    width: 90%;
+}
+
+/* ========== Team page ========== */
+.teammemberpic {
+    width: 150px;
+    height: 150px;
+    overflow: hidden;
+    margin: 0 auto;
+    border-radius: 50%;
+}
+
+.alumnimemberpic {
+    width: 80px;
+    height: 80px;
+    overflow: hidden;
+    margin: 0 auto;
+    border-radius: 50%;
+}
+
+.teammember {
+    width: 200px;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+/* ========== Contact page ========== */
+.fillmessage {
+    background-color: rgb(224, 224, 224);
+    border: none;
+    min-height: 45px;
+    width: 100%;
+    max-width: 400px;
+    padding: 8px 12px;
+    margin-bottom: 15px;
+    display: block;
+}
+
+/* ========== Research cards ========== */
+.jumpbutton {
+    background-color: rgba(43, 43, 43, 0.9);
+    border: none;
+    color: white;
+    padding: 12px 24px;
+    text-align: center;
+    text-decoration: none !important;
+    display: inline-block;
+    font-size: 16px;
+    cursor: pointer;
+}
+.jumpbutton:hover {
+    color: rgb(140, 211, 252);
+}
+
+/* ========== Responsive images ========== */
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* ========== Media Queries ========== */
+
+/* Tablet */
+@media (max-width: 991px) {
+    .backgroundlayer {
+        max-width: 100%;
+        padding: 0 20px;
+    }
+
+    .maintitle {
+        font-size: 28px;
+    }
+
+    .maintext {
+        font-size: 16px;
+    }
+
+    .teammember {
+        width: 160px;
+        margin-left: 20px;
+    }
+
+    .home-overlay {
+        width: 95%;
+        padding: 25px;
+    }
+}
+
+/* Mobile */
+@media (max-width: 576px) {
+    .site-content {
+        padding-top: 70px;
+    }
+
+    .backgroundlayer {
+        padding: 0 12px;
+    }
+
+    .maintitle {
+        font-size: 24px;
+        padding-bottom: 10px;
+    }
+
+    .maintext {
+        font-size: 15px;
+    }
+
+    .homebackground {
+        min-height: auto;
+        padding: 80px 10px 30px;
+    }
+
+    .home-overlay {
+        padding: 20px;
+    }
+
+    .teammember {
+        width: 140px;
+        margin-left: 10px;
+    }
+
+    .teammemberpic {
+        width: 100px;
+        height: 100px;
+    }
+
+    .teammemberpic img {
+        width: 100px !important;
+    }
+
+    .fillmessage {
+        max-width: 100%;
+    }
+
+    /* Stack about section logo below text on mobile */
+    .about-section .row > div {
+        width: 100%;
+    }
+}
