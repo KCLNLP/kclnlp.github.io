@@ -1,400 +1,440 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <title>News — KCL NLP Group</title>
-    <link rel="shortcut icon" type="image/x-icon" href="favicon.ico" />
+    <title>King's College London NLP</title>
+    <link rel="shortcut icon" type="image/x-icon" href="favicon.ico"/>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
     <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YcnS/1tMKQ6ALaCys3YkfDRMJln18EZfXS8" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@300;400;600;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+          integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="./styles.css">
     <style>
-        :root {
-            --kcl-burgundy: #6B1D3D;
-            --kcl-dark: #1a1a2e;
-            --kcl-warm: rgba(98, 73, 31, 0.85);
-            --text-muted: #5a6370;
-            --bg-light: #f8f9fa;
-        }
-        * { margin: 0; padding: 0; box-sizing: border-box; }
-        body {
-            font-family: 'Source Sans 3', sans-serif;
-            color: #333;
-            line-height: 1.7;
-        }
-        h1, h2, h3 { font-family: 'Playfair Display', serif; }
-
-        /* Navbar */
-        .navbar {
-            background-color: var(--kcl-dark) !important;
-            padding: 0.6rem 1.5rem;
-            box-shadow: 0 2px 20px rgba(0,0,0,0.15);
-        }
-        .navbar-brand {
-            font-family: 'Source Sans 3', sans-serif;
-            font-weight: 700;
-            font-size: 1.2rem;
-            color: #e8e8e8 !important;
-            letter-spacing: 0.3px;
-        }
-        .navbar-brand:hover { color: #fff !important; }
-        .navbar-nav .nav-link {
-            color: rgba(255,255,255,0.7) !important;
-            font-size: 0.9rem;
-            font-weight: 400;
-            padding: 0.5rem 0.85rem !important;
-            transition: color 0.2s;
-            position: relative;
-        }
-        .navbar-nav .nav-link:hover,
-        .navbar-nav .nav-link.active {
-            color: #fff !important;
-        }
-        .navbar-nav .nav-link.active::after {
-            content: '';
-            position: absolute;
-            bottom: 2px;
-            left: 0.85rem;
-            right: 0.85rem;
-            height: 2px;
-            background: var(--kcl-burgundy);
-            border-radius: 2px;
-        }
-        .navbar-toggler {
-            border: 1px solid rgba(255,255,255,0.3);
-            padding: 0.3rem 0.6rem;
-        }
-        .navbar-toggler-icon {
-            background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%28255, 255, 255, 0.8%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+        body,
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
+            font-family: "Lato", sans-serif
         }
 
-        /* Page Header */
-        .page-header {
-            background: linear-gradient(135deg, var(--kcl-dark) 0%, var(--kcl-burgundy) 100%);
-            padding: 120px 0 50px;
-        }
-        .page-header h1 {
-            color: #fff;
-            font-size: 2.5rem;
-        }
-        .page-header p {
-            color: rgba(255,255,255,0.75);
-            font-size: 1.05rem;
-            max-width: 700px;
-        }
-        .header-logos {
-            display: flex;
-            align-items: center;
-            justify-content: flex-end;
-            gap: 20px;
-        }
-        .header-logos img {
-            filter: brightness(0) invert(1);
-            opacity: 0.8;
+        .w3-bar,
+        h1,
+        button {
+            font-family: "Montserrat", sans-serif
         }
 
-        /* About Section */
-        .about-section {
-            background: var(--bg-light);
-            border-bottom: 1px solid #e9ecef;
-        }
-        .about-text {
-            color: var(--text-muted);
-            font-size: 1.05rem;
-            line-height: 1.85;
+        .fa-anchor,
+        .fa-coffee {
+            font-size: 200px
         }
 
-        /* News Section */
-        .news-section { padding: 4rem 0 5rem; }
-        .section-title {
-            font-size: 2rem;
-            color: var(--kcl-burgundy);
-            margin-bottom: 2rem;
-            padding-bottom: 0.8rem;
-            border-bottom: 3px solid var(--kcl-burgundy);
-            display: inline-block;
-        }
-        .news-list {
-            list-style: none;
-            padding: 0;
-        }
-        .news-list li {
-            padding: 1rem 0;
-            border-bottom: 1px solid #eee;
-            color: var(--text-muted);
-            font-size: 1rem;
-            line-height: 1.7;
-        }
-        .news-list li:last-child { border-bottom: none; }
-        .news-list a {
-            color: var(--kcl-burgundy);
-            text-decoration: none;
-            font-weight: 600;
-            transition: color 0.2s;
-        }
-        .news-list a:hover {
-            color: #4a1129;
-            text-decoration: underline;
+        .homebackground {
+            background-image: url('./pictures/background/home.webp');
+            overflow: hidden;
         }
 
-        /* Footer */
-        footer {
-            background-color: var(--kcl-dark);
-            color: rgba(255,255,255,0.6);
-            padding: 2rem 0;
+        .maintopic {
+            margin-top: 150px;
+            color: white;
+            font-size: 65px;
+            text-align: left;
+        }
+
+
+        .topic {
+            margin-top: 10px;
+            color: white;
+            font-size: 35px;
+            text-align: left;
+        }
+
+
+        .w3-top {
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 9999; /* 确保导航栏层级足够高 */
+            background-color: white; /* 可选，避免透明导致误点击 */
+        }
+
+
+        .jumpbutton {
+            background-color: rgba(43, 43, 43, 0);
+            border: none;
+            color: white;
             text-align: center;
-            font-size: 0.9rem;
+            font-size: 20px;
+            margin: 0 auto;
+            cursor: pointer;
+            padding-right: 6px;
+            border: none;
+            outline: none;
         }
 
-        /* Responsive */
-        @media (max-width: 991px) {
-            .page-header h1 { font-size: 2rem; }
-            .header-logos {
-                justify-content: flex-start;
-                margin-top: 1.5rem;
-            }
-            .navbar-collapse {
-                background: var(--kcl-dark);
-                padding: 1rem 0;
-                margin-top: 0.5rem;
-                border-radius: 8px;
-            }
+        .jumpbutton:hover {
+            color: rgb(140, 211, 252);
         }
-        @media (max-width: 576px) {
-            .page-header { padding: 100px 0 40px; }
-            .page-header h1 { font-size: 1.7rem; }
-            .section-title { font-size: 1.5rem; }
+
+        .maintitle {
+            margin-top: 10px;
+            color: rgba(98, 73, 31, 0.691);
+            font-size: 35px;
+            text-align: left;
+            padding-bottom: 20px;
+            background-color: white;
+        }
+
+        .maintitle:after {
+            background-color: grey;
+            content: '';
+            display: block;
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            right: 10px;
+            bottom: 10px;
+            z-index: -1;
+        }
+
+        .maintext {
+            color: rgb(107, 107, 107);
+            font-size: 17px;
+            text-align: left;
+        }
+
+        .background1 {
+            background-color: rgba(76, 83, 82, 0.2)
+        }
+
+        .toptopic {
+            width: 100%;
+            background-color: rgb(49, 49, 49);
+        }
+
+        .navbarbutton {
+            background-color: black;
+            border: none;
+            color: white;
+            padding: 15px 32px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin: 4px 2px;
+            cursor: pointer;
+        }
+
+        .logo {
+            margin: 10px;
+            display: table-cell;
+            vertical-align: middle;
+            text-align: center
+        }
+
+        .backgroundlayer {
+            margin-left: 15%;
+            width: 70%;
+        }
+
+        li.space {
+            margin: 10px 0;
         }
     </style>
 </head>
+
+
 <body>
 
 <!-- Navbar -->
-<nav class="navbar navbar-expand-lg fixed-top">
-    <div class="container">
-        <a class="navbar-brand" href="./index.html">King's College London NLP</a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
-            <ul class="navbar-nav">
-                <li class="nav-item"><a class="nav-link active" href="./about.html">News</a></li>
-                <li class="nav-item"><a class="nav-link" href="./research.html">Research</a></li>
-                <li class="nav-item"><a class="nav-link" href="./projects.html">Projects</a></li>
-                <li class="nav-item"><a class="nav-link" href="./activities.html">Activities</a></li>
-                <li class="nav-item"><a class="nav-link" href="./team.html">Team</a></li>
-                <li class="nav-item"><a class="nav-link" href="./publications.html">Publications</a></li>
-                <li class="nav-item"><a class="nav-link" href="./code.html">Code</a></li>
-                <li class="nav-item"><a class="nav-link" href="./datasets.html">Datasets</a></li>
-                <li class="nav-item"><a class="nav-link" href="./contact.html">Contact</a></li>
-            </ul>
+
+<div class="w3-top toptopic">
+    <div class="col-xs-3">
+        <div style="height: 10px;"></div>
+        <a href="./index.html"
+           style="color: rgb(219, 219, 219); font-size: 23px; height: 40px; margin-left: 10px; text-decoration: none; font-weight: bold;">
+            King's College London NLP
+        </a>
+        <div style="height: 2px;"></div>
+    </div>
+    <div class="col-xs-8">
+        <ul class="nav nav-pills">
+            <li class="nav-item active font-weight-bold">
+                <a class="nav-link" href="./about.html">News</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="./research.html">Research</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="./projects.html">Projects</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="./activities.html">Activities</a>
+            </li>
+
+            <li class="nav-item">
+                <a class="nav-link" href="./team.html">Team</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="./publications.html">Publications</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="./code.html">Code</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="./datasets.html">Datasets</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="./contact.html">Contact</a>
+            </li>
+        </ul>
+    </div>
+</div>
+
+
+<!-- Header -->
+<div class="backgroundlayer  col-xs-12" style="margin-top: 120px;">
+    <div class="col-xs-8 maintitle">
+        <b>About</b>
+        <div class="maintext">
+            <p>
+                The Natural Language Processing (NLP) Group at KCL is comprised of PhD and postdoctoral
+                students, professors and others who are interested in solving computational problems related to the
+                understanding of human language. This encompasses a wide range of topics including improving the robustness of Large Language Model (LLM) reasoning, agentic AI, long-context QA, model interpretability, model efficiency, safety alignment, retrieval-augmented generation, multilingual NLP, AI for education, health, and science.
+            </p>
+            <div id="challenges" class="col-xs-3" style="height: 20px; width: 100%;"></div>
         </div>
     </div>
-</nav>
-
-<!-- Page Header -->
-<section class="page-header">
-    <div class="container">
-        <div class="row align-items-center">
-            <div class="col-lg-8">
-                <h1>About &amp; News</h1>
-                <p class="mt-3 mb-0">
-                    The Natural Language Processing (NLP) Group at KCL is comprised of PhD and postdoctoral
-                    students, professors and others who are interested in solving computational problems related to the
-                    understanding of human language. This encompasses a wide range of topics including improving the robustness of Large Language Model (LLM) reasoning, agentic AI, long-context QA, model interpretability, model efficiency, safety alignment, retrieval-augmented generation, multilingual NLP, AI for education, health, and science.
-                </p>
-            </div>
-            <div class="col-lg-4">
-                <div class="header-logos">
-                    <img src="./pictures/logo/KCLNLP.png" alt="KCL NLP Logo" style="width:90px">
-                    <img src="./pictures/logo/KCL.png" alt="KCL Logo" style="width:130px">
-                </div>
-            </div>
+    <div class="col-xs-4">
+        <div class="col-xs-12 logo">
+            <img src="./pictures/logo/KCLNLP.png" alt="Challenges" style="width:100px">
+        </div>
+        <div class="col-xs-12 logo">
+            <img src="./pictures/logo/KCL.png" alt="Challenges" style="width:150px">
         </div>
     </div>
-</section>
+</div>
 
-<!-- News Section -->
-<section class="news-section">
-    <div class="container">
-        <h2 class="section-title">News</h2>
-        <ul class="news-list">
-            <li>
+
+<div class="backgroundlayer  col-xs-12" style="margin-top: 35px;">
+    <div class="col-xs-12 maintitle">
+        <b>News</b>
+    </div>
+    <div class="maintext">
+
+        <ul>
+            <li class="space">
                 Apr 2026, three papers accepted to
                 <a href="https://2026.aclweb.org/" target="_blank">ACL 2026</a>.
             </li>
-            <li>
+
+            <li class="space">
                 Mar 2026, the Turing AI Fellowship project "Event-Centric Framework for Natural Language Understanding"
                 won the Best Research Project at the
-                <a href="https://aiawards.co.uk/" target="_blank">UK AI &amp; Robotics Awards 2026</a>.
+                <a href="https://aiawards.co.uk/" target="_blank">UK AI & Robotics Awards 2026</a>.
             </li>
-            <li>
+
+            <li class="space">
                 Mar 2026, the EMNLP 2025 paper
                 "<a href="https://arxiv.org/abs/2502.21074" target="_blank">CODI: Compressing chain-of-thought into
                 continuous space via self-distillation</a>"
                 won the Best Research Paper at the
-                <a href="https://aiawards.co.uk/" target="_blank">UK AI &amp; Robotics Awards 2026</a>.
+                <a href="https://aiawards.co.uk/" target="_blank">UK AI & Robotics Awards 2026</a>.
             </li>
-            <li>
+
+            <li class="space">
                 Jan 2026, Yulan gave a keynote entitled "Many Minds: Rethinking LLM Personalisation" in the AAAI 2026
                 Workshop on Personalization in the Era of Large Foundation Models.
             </li>
-            <li>
+
+            <li class="space">
                 Jan 2026, we have a paper accepted to
                 <a href="https://iclr.cc/" target="_blank">ICLR 2026</a>, and another to
                 <a href="https://2026.eacl.org/" target="_blank">EACL 2026</a>.
             </li>
-            <li>
+
+            <li class="space">
                 Nov 2025, Yulan gave a keynote on "The Reasoning Paradox in Large Language Models" at the
                 <a href="http://lmg.cipsc.org.cn/conference/lmg2025/index.html" target="_blank">4th National Large Model
                     Intelligent Generation Conference</a>, Chengdu, China.
             </li>
-            <li>
+
+
+            <li class="space">
                 Sep 2025, Yulan gave a keynote on "Thinking" in LLMs at the
                 <a href="https://www.ukairs.ac.uk/" target="_blank">UK AI Research Symposium 2025</a>, Newcastle, UK.
             </li>
-            <li>
+
+            <li class="space">
                 Sep 2025, Yulan gave a keynote on advancing radiology report generation with LLMs at the
                 <a href="https://aiih.cc/" target="_blank">International Conference on AI for Healthcare 2025</a>,
                 Cambridge, UK.
             </li>
-            <li>
+
+            <li class="space">
                 Sep 2025, Yulan delivered a lecture on encoder-decoder architecture in the
                 <a href="https://athnlp.github.io/" target="_blank">Athens NLP Summer School</a>, Athens, Greece.
             </li>
-            <li>
+
+            <li class="space">
                 Sep 2025, 9 papers accepted to
                 <a href="https://2025.emnlp.org/" target="_blank">EMNLP 2025</a>.
             </li>
-            <li>
+
+            <li class="space">
                 July 2025, Yulan He secured a 3-year EPSRC grant to develop an AI-enabled high-stakes assessment tool in
                 collaboration with AQA.
                 <a href="https://www.ukri.org/news/uk-businesses-and-academia-partner-up-in-cutting-edge-research/"
                    target="_blank">news</a>
             </li>
-            <li>
-                July 2025, Yanzheng Xiang's
+
+            <li class="space">
+                July 2025, Yanzheng Xiang’s
                 <a href="https://arxiv.org/abs/2504.00255" target="_blank">SciReplicate-Bench paper</a>
                 was accepted to
                 <a href="https://colmweb.org/" target="_blank">COLM 2025</a>.
             </li>
-            <li>
+
+            <li class="space">
                 Jun 2025, Yulan delivered a lecture on "Self-Evolution of LLMs" at the
                 <a href="https://univ-cotedazur.eu/events/deep-learning-school" target="_blank">Deep Learning School</a>,
-                Universit&eacute; C&ocirc;te d'Azur, Nice, France.
+                Université Côte d'Azur, Nice, France.
             </li>
-            <li>
+
+            <li class="space">
                 May 2025, 14 papers accepted to
                 <a href="https://2025.aclweb.org/" target="_blank">ACL 2025</a>.
             </li>
-            <li>
+
+            <li class="space">
                 May 2025, Yulan He was appointed as the Lead of the Digital and AI Innovation theme of the
                 <a href="https://www.kcl.ac.uk/news/kings-historic-donation-health-mother-baby-human-ai-partnership"
-                   target="_blank">&pound;35M EMBRACE project</a>
+                   target="_blank">£35M EMBRACE project</a>
                 led by Prof. Josip Car, funded by Inkfish.
             </li>
-            <li>
+            <li class="space">
                 May 2025, 3 papers accepted to <a href="https://www.mathmod.at/">ICML 2025</a>.
             </li>
-            <li>
+            <li class="space">
                 Feb 2025, Yulan He gave a plenary talk on "Advanced in Interpretable Language Modelling" at the 11th
                 Vienna International Conference on Mathematical Modelling (<a href="https://www.mathmod.at/">MATHMOD
                 2025</a>).
             </li>
-            <li>
+
+            <li class="space">
                 Jan 2025, Xingwei Tan has
                 <a href="https://arxiv.org/abs/2406.18449">a paper on salient event graph generation using cascaded
                     LLMs</a>
                 accepted to <a href="https://2025.naacl.org/">NAACL 2025</a>.
             </li>
-            <li>
+
+            <li class="space">
                 Jan 2025, Yulan He received funding from the Department for Education in the UK to develop a
                 personalised assessment and feedback tool for secondary school science. [<a
                     href="https://www.kcl.ac.uk/news/kings-to-build-ai-tool-for-teachers-as-part-of-governments-ai-drive">news</a>]
             </li>
-            <li>
+
+            <li class="space">
                 Dec 2024, we have 3 papers accepted to <a href="https://coling2025.org/">COLING 2025</a> and 3 papers to
                 <a href="https://aaai.org/conference/aaai/aaai-25/">AAAI 2025</a>.
             </li>
-            <li>
+
+            <li class="space">
                 Sep 2024, Yulan He gave a keynote on
                 <a href="https://drive.google.com/file/d/1mHOCtnh6_rE58SVA-sXQoHeBlAQEeUM1/view?usp=drive_link">Enhancing
                     LLM Reasoning through Reflection and Refinement</a>
                 at <a href="https://2024.inlgmeeting.org/">INLG 2024</a>.
             </li>
-            <li>
+
+            <li class="space">
                 Sep 2024, we have 5 papers accepted to <a href="https://2024.emnlp.org/">EMNLP 2024</a>.
             </li>
-            <li>
+
+            <li class="space">
                 July 2024, Yulan He gave
                 <a href="https://drive.google.com/drive/folders/1JqYiclfQXLri-WM4Oc0FITVXb0S1fezj?usp=drive_link">a
                     tutorial on Machine Reading Comprehension with Large Language Models</a>
                 in <a href="https://deeplearn.irdta.eu/2024/">DeepLearn 2024</a> and the Westlake University AI Open
                 Course.
             </li>
-            <li>
+
+            <li class="space">
                 May 2024, we have 6 papers accepted to <a href="https://2024.aclweb.org/">ACL 2024</a>.
             </li>
-            <li>
+
+            <li class="space">
                 Mar 2024, Xingwei Tan has
                 <a href="https://arxiv.org/abs/2404.01532">a paper on event temporal graph generation from text</a>
                 accepted to <a href="https://2024.naacl.org/">NAACL 2024</a>.
             </li>
-            <li>
+
+            <li class="space">
                 Mar 2024, Wenjia Zhang has a paper on Multi-Layer Ranking with LLMs for News Source Recommendation
                 accepted to <a href="https://sigir-2024.github.io/">SIGIR 2024</a>.
             </li>
-            <li>
+            <li class="space">
                 Feb 2024, 3 papers accepted to <a href="https://lrec-coling-2024.org/">LREC-COLING 2024</a>.
             </li>
-            <li>
+
+            <li class="space">
                 Jan 2024, we have 2 papers accepted to <a href="https://2024.eacl.org/">EACL 2024</a> and 1 paper to
                 <a href="https://iclr.cc/">ICLR 2024</a>.
             </li>
-            <li>
+
+            <li class="space">
                 Jan 2024, Jun Wang has a paper on Class Activation Map Guided Attention Network for Radiology Report
                 Generation
                 accepted to IEEE Journal of Biomedical and Health Informatics.
             </li>
-            <li>
+
+            <li class="space">
                 Dec 2023, Hanqi Yan has a paper on
                 <a href="https://kclpure.kcl.ac.uk/portal/en/publications/explainable-recommender-with-geometric-information-bottleneck">
                     explainable recommender system</a> accepted to IEEE Transactions on Knowledge and Data Engineering.
             </li>
-            <li>
+
+            <li class="space">
                 Nov 2023, Yulan He received a <a
                     href="https://www.ukri.org/news/19-million-to-accelerate-trustworthy-and-responsible-ai/">
-                grant supported by Innovate UK under the Accelerating Trustworthy AI: Phase 2 Collaborative R&amp;D
+                grant supported by Innovate UK under the Accelerating Trustworthy AI: Phase 2 Collaborative R&D
                 call,</a>
                 led by AI for Global Goals.
             </li>
-            <li>
+
+            <li class="space">
                 Oct 2023, we have 5 papers accepted to <a href="https://2023.emnlp.org/">EMNLP 2023</a>.
             </li>
-            <li>
+
+            <li class="space">
                 Oct 2023, Yulan He gave a keynote on "
                 <a href="https://drive.google.com/file/d/14X8cL75VbO1mt6yEnJjUDb22p8ERHBHd/view?usp=sharing">Interpretable
                     Natural Language Understanding</a>
                 " at
                 <a href="https://uobevents.eventsair.com/cikm2023/">CIKM 2023</a>.
             </li>
-            <li>
+
+            <li class="space">
                 Sep 2023, Hanqi Yan has a paper on Counterfactual Generation with Identifiability Guarantees accepted to
                 <a href="https://nips.cc/Conferences/2023">NeurIPS 2023</a>.
             </li>
-            <li>
+
+            <li class="space">
                 July 2023, together with colleagues from Thomson Reuters Labs and Amazon Alexa AI, Lin Gui and Yulan He
                 delivered
                 <a href="https://drive.google.com/file/d/1Jq3X8ATV5-OZAEdUPnLg3ihlmgqS8n0H/view">a tutorial on
                     Uncertainty Quantification for Text Classification</a>
                 in <a href="https://sigir.org/sigir2023/">SIGIR 2023</a>.
             </li>
-            <li>
+
+            <li class="space">
                 May 2023, Yulan He delivered a talk on "
                 <a href="https://drive.google.com/file/d/1e1LEuh5PGyBGcge5vFaVbuXbZ4vUEUWy/view?usp=share_link">Have
                     LLMs solved NLP</a>
@@ -402,30 +442,36 @@
                 <a href="https://www.kcl.ac.uk/events/large-language-models-natural-language-processing">King's Festival
                     of Artificial Intelligence</a>.
             </li>
-            <li>
+
+            <li class="space">
                 May 2023, Jiazheng has a paper on uncertainty interpretation of text classifiers built on pre-trained
                 language models accepted to
                 <a href="https://www.auai.org/uai2023/">UAI 2023</a>.
             </li>
-            <li>
+
+            <li class="space">
                 May 2023, 2 papers accepted to
                 <a href="https://2023.aclweb.org/">ACL 2023</a>.
             </li>
-            <li>
+
+            <li class="space">
                 April 2023, Runcong has a paper on Unsupervised Contrastive Opinion Extraction accepted by
                 <a href="https://sigir.org/sigir2023/">SIGIR 2023</a>.
             </li>
-            <li>
+
+            <li class="space">
                 February 2023, 5 papers accepted to
                 <a href="https://2023.eacl.org/">EACL 2023</a>.
             </li>
-            <li>
+
+            <li class="space">
                 January 2023, a paper on "
                 <a href="https://arxiv.org/abs/2301.07183">Tracking Brand-Associated Polarity-Bearing Topics in User
                     Reviews</a>
                 " has been accepted by the Transactions of the Association for Computational Linguistics.
             </li>
-            <li>
+
+            <li class="space">
                 December 2022, Yulan He gave an invited talk on "
                 <a href="https://drive.google.com/file/d/1_NCTVzqW7E36Drg7SeRga4Lxz5f9CzgJ/view?usp=sharing">NLP
                     Research to Drive FinTech: Now and Next</a>
@@ -434,101 +480,131 @@
                     Centre for Financial Technology</a>
                 at Warwick Business School in December 2022.
             </li>
-            <li>
+
+            <li class="space">
                 October 2022, Yulan He and her co-authors, Hassan Saif and Harith Alani, won the SWSA Ten-Year Award in
                 <a href="https://iswc2022.semanticweb.org/">ISWC 2022</a> for their paper "
                 <a href="https://link.springer.com/chapter/10.1007/978-3-642-35176-1_32">Semantic Sentiment Analysis on
                     Twitter</a>
                 " published in ISWC 2012.
             </li>
-            <li>
+
+            <li class="space">
                 October 2022, Lin Gui and Yulan He have been awarded an EPSRC New Horizons grant on "A Lebesgue Integral
                 based Approximation for Language Modelling".
             </li>
-            <li>
+
+            <li class="space">
                 October 2022, 2 papers accepted to
                 <a href="https://2022.emnlp.org/">EMNLP 2022</a>.
             </li>
-            <li>
+
+            <li class="space">
                 August 2022, Yulan He delivered
                 <a href="https://drive.google.com/file/d/1l_EXxs-sSIlzJYpc-IgPhci1ABZASGSh/view?usp=sharing">a tutorial
                     on sentiment analysis</a>
                 in the Oxford Machine Learning Summer School.
             </li>
-            <li>
+
+            <li class="space">
                 August 2022, a paper on
                 <a href="https://arxiv.org/abs/2202.09792">hierarchical interpretable neural text classification</a>
                 is accepted by the
                 <a href="https://direct.mit.edu/coli">Computational Linguistics</a> journal.
             </li>
-            <li>
+
+            <li class="space">
                 July 2022, Gabriele Pergola will take the Assistant Professor post in the department in September.
                 Congratulations!
             </li>
-            <li>
+
+            <li class="space">
                 June 2022, Jun Wang has a paper on
                 <a href="https://arxiv.org/abs/2207.04818">radiology report generation</a>
                 accepted to
                 <a href="https://eccv2022.ecva.net/">ECCV 2022</a>.
             </li>
-            <li>
+
+            <li class="space">
                 May 2022, Yulan He's NLP work was featured in
                 <a href="https://www.paccsresearch.org.uk/blog/applying-natural-language-processing-to-real-world-problems/">a
                     blog article</a>
-                on the Partnership for Conflict, Crime &amp; Security Research (
+                on the Partnership for Conflict, Crime & Security Research (
                 <a href="https://www.paccsresearch.org.uk/">PaCCS</a>) website.
             </li>
-            <li>
+
+            <li class="space">
                 May 2022, Gabriele Pergola has been awarded the 2022 Faculty of Science, Engineering, and Medicine (SEM)
                 Thesis Prize in Computer Science.
             </li>
-            <li>
+
+            <li class="space">
                 May 2022, we have a paper accepted to
                 <a href="https://www.auai.org/uai2022/">UAI 2022</a>.
             </li>
-            <li>
+
+            <li class="space">
                 April 2022, 3 papers accepted to
                 <a href="https://2022.naacl.org/">NAACL 2022</a>.
             </li>
-            <li>
+
+            <li class="space">
                 March 2022, Yulan He was invited to give a talk on machine reasoning for natural language understanding
                 in
                 <a href="https://www.turing.ac.uk/ai-uk">AI UK 2022</a>.
             </li>
-            <li>
+
+            <li class="space">
                 February 2022, 2 papers accepted to
                 <a href="https://www.2022.aclweb.org/">ACL 2022</a>.
             </li>
-            <li>
+
+            <li class="space">
                 February 2022, Yulan He was invited to give a talk on hierarchical interpretation of text classification
                 in the University of Cambridge.
             </li>
-            <li>
+
+            <li class="space">
                 February 2022, Yulan He was invited to give a talk on event-centric text understanding in Google.
             </li>
-            <li>
+
+            <li class="space">
                 January 2022, Yulan He was featured in
                 <a href="https://futurumcareers.com/">Futurum</a>, an online magazine, discussing her work on
                 <a href="https://futurumcareers.com/teaching-computers-to-understand-our-language">teaching computers to
                     understand human language</a>
                 and offering guidance to young people interested in AI and NLP.
             </li>
-            <li>
+
+            <li class="space">
                 January 2022, a paper accepted to
                 <a href="https://www2022.thewebconf.org/">WWW 2022</a>.
             </li>
         </ul>
-    </div>
-</section>
 
-<!-- Footer -->
-<footer>
-    <div class="container">
-        <p class="mb-0">&copy; 2026 Copyright: KCL NLP Group</p>
     </div>
-</footer>
 
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
-    integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <div id="applications" class="col-xs-3" style="height: 20px; width: 100%;"></div>
+</div>
+
+
+<div id="projectaims" class="col-xs-3" style="height: 200px; width: 100%;"></div>
+
+
+<div class="w3-bottom w3-container w3-grey w3-center w3-opacity">
+    <h5 class="w3-margin">© 2026 Copyright: KCL NLP Group </h5>
+</div>
+
+<script type="text/javascript">
+    function scrollto(element) {
+        console.log(3);
+        // get the element on the page related to the button
+        var scrollToId = element.getAttribute("data-scroll");
+        document.getElementById(scrollToId).scrollIntoView({block: "end", behavior: "smooth"});
+        console.log(scrollToId);
+    }
+</script>
+
 </body>
+
 </html>
