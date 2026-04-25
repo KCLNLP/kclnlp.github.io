@@ -1,4 +1,9 @@
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Responsive Layout</title>
+<style>
 /********** Base styles **********/
+
 
     .navbar-default .navbar-nav > .open > a,
     .navbar-default .navbar-nav > .open > a:focus {
@@ -16,7 +21,7 @@
     .nav-pills a {
       color: rgb(160, 160, 160);
       font-size: 16px;
-      padding: 8px 10px;
+      padding: 8px 10px;  /* 内边距调小 */
       text-decoration: none;
     }
 
@@ -36,7 +41,7 @@
 
     /* 调整每个导航项的间距 */
     .nav-item {
-      margin: 0 5px;
+      margin: 0 5px;  /* 根据需要调小这个值 */
       text-align: center;
       margin-top: 5px;
     }
@@ -61,5 +66,7 @@
     /* 如果需要在鼠标悬停时加深下划线样式 */
     .maintext a:hover {
         text-decoration: underline;
-        color: blue;
+        color: blue; /* 可选：更明显的悬停颜色 */
     }
+
+  </style>
