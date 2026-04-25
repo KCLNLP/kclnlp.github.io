@@ -68,7 +68,7 @@
             width: 100%;
             top: 0;
             z-index: 9999; /* 确保导航栏层级足够高 */
-            background-color: transparent; /* 可选，避免透明导致误点击 */
+            background-color: white; /* 可选，避免透明导致误点击 */
         }
 .jumpbutton {
             background-color: rgba(43, 43, 43, 0.9);
@@ -89,7 +89,19 @@
             font-size: 35px;
             text-align: left;
             padding-bottom: 20px;
-            background-color: transparent;
+            background-color: white;
+        }
+
+        .maintitle:after {
+            background-color: grey;
+            content: '';
+            display: block;
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            right: 10px;
+            bottom: 10px;
+            z-index: -1;
         }
 
         .maintext {

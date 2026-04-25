@@ -61,7 +61,7 @@
             width: 100%;
             top: 0;
             z-index: 9999;
-            background-color: transparent;
+            background-color: white;
         }
 
         .jumpbutton {
@@ -83,7 +83,19 @@
             font-size: 35px;
             text-align: left;
             padding-bottom: 20px;
-            background-color: transparent;
+            background-color: white;
+        }
+
+        .maintitle:after {
+            background-color: grey;
+            content: '';
+            display: block;
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            right: 10px;
+            bottom: 10px;
+            z-index: -1;
         }
 
         .maintext {
